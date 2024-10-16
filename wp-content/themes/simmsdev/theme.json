@@ -1249,6 +1249,26 @@
           "color": "#4c0519",
           "name": "Rose 950",
           "slug": "rose-950"
+        },
+        {
+          "color": "#00676d",
+          "name": "Primary-green",
+          "slug": "primary-green"
+        },
+        {
+          "color": "#002829",
+          "name": "Secondary-green",
+          "slug": "secondary-green"
+        },
+        {
+          "color": "#cec778",
+          "name": "Simms-gold",
+          "slug": "simms-gold"
+        },
+        {
+          "color": "#534e50",
+          "name": "Simms-rust",
+          "slug": "simms-rust"
         }
       ]
     },
