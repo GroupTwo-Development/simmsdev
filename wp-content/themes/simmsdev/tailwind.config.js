@@ -13,7 +13,12 @@ const config = {
       },
     },
     extend: {
-      colors: {}, // Extend Tailwind's default colors
+      colors: {
+        'primary-green': '#00676D',
+        'secondary-green': '#002829',
+        'simms-gold': '#CEC778',
+        'simms-rust': '#534E50',
+      }, // Extend Tailwind's default colors
       fontFamily: {
         Playfair_Display: ['Playfair Display', 'serif'],
         Lato: ['Lato', 'sans-serif'],
