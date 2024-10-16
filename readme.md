@@ -8,6 +8,7 @@
 An example of how write beautiful and modern templates, with modern CI/CD practices using github actions and the Roots/Sage theme using [wpengine.com](https://wpengine.com)
 
 To produce beautiful themes like
+
 ```blade
 <a class="sr-only focus:not-sr-only" href="#main">
   {{ __('Skip to content') }}
@@ -27,11 +28,13 @@ To produce beautiful themes like
 ```
 
 ## To get started
+
 You can either [clone and modify this repo](#clone-this-repo) as a starter or [copy these steps to recreate a fresh install on your own](docs/fresh.md).
 
 ## Clone this repo
 
 1. First clone this repo with a sage theme
+
 ```bash
 git clone https://github.com/wpengine/example-sage-theme <wordpress-dir>
 cd <wordpress-dir>
@@ -39,20 +42,20 @@ cd <wordpress-dir>
 
 2. Setup a new ssh private key in GithHub and WP Engine via https://wpengine.com/support/github-action-deploy/#Setup_Instructions
 
-
 3. Add GitHub Action Secrets
 
 Add the following secrets to your repo:
+
 - `WPE_SSHG_KEY_PRIVATE`: Your SSH private key.
-- `THEME_NAME`: The name of your WordPress theme in `wp-content/themes/{theme-name}`.
+- `simmsdev`: The name of your WordPress theme in `wp-content/themes/{theme-name}`.
 - `DEV_ENVIRONMENT`: Your WPEngine site's development environment name (e.g., `sitename-dev`).
 - `STG_ENVIRONMENT`: Your WPEngine site's staging environment name (e.g., `sitename-stg`).
 - `PROD_ENVIRONMENT`: Your WPEngine site's production environment name (e.g., `sitename`).
 
-
 4. Push the repo to your own GitHub and the [post-deploy.sh](post-deploy.sh) will activate the theme if it's not already, and clear the cache during [GitHub deploys](.github/workflows/action.yml#L55-L58) 🎉.
 
 ## Frequently Asked Questions
+
 - I thought WP Engine doesn't support Sage/Roots theme?
   - Sage was never fully supported due to the way Sage out of the box conflicted with our security best practices. In late 2022, we started to make changes to fully support pre-compiling Sage templates to enable official support if they follow the way this repo deploys with [`post-deploy.sh`](https://github.com/wpengine/example-sage-theme/blob/main/post-deploy.sh) script, that ultimately runs `wp acorn view:cache`.
 - Sage wasn't supported until late 2022?
@@ -67,7 +70,9 @@ Add the following secrets to your repo:
 ## Alternatives
 
 Also check out [local, our effortless way to develop WordPress sites locally](https://localwp.com/). Just be sure to run
+
 ```bash
 wp acorn view:cache
 ```
+
 after pushing changes to wpengine.com.
