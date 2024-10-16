@@ -16,7 +16,7 @@ export default async (app) => {
   app
     .entry('app', ['@scripts/app', '@styles/app'])
     .entry('editor', ['@scripts/editor', '@styles/editor'])
-    .assets(['images']);
+    .assets(['images', 'fonts']);
 
   /**
    * Set public path
@@ -34,7 +34,7 @@ export default async (app) => {
    */
   app
     .setUrl('http://localhost:3000')
-    .setProxyUrl('http://example.test')
+    .setProxyUrl('http://simmsdev-app.test/')
     .watch(['resources/views', 'app']);
 
   /**
