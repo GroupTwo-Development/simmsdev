@@ -1287,6 +1287,16 @@
           "fontFamily": "ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,\"Liberation Mono\",\"Courier New\",monospace",
           "name": "Ui-monospace",
           "slug": "mono"
+        },
+        {
+          "fontFamily": "Playfair Display,serif",
+          "name": "Playfair Display",
+          "slug": "Playfair_Display"
+        },
+        {
+          "fontFamily": "Lato,sans-serif",
+          "name": "Lato",
+          "slug": "Lato"
         }
       ],
       "fontSizes": [
