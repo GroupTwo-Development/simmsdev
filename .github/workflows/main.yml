@@ -19,28 +19,28 @@ jobs:
         with:
           node-version: 20
           cache: "yarn"
-          cache-dependency-path: wp-content/themes/${{env.simmsdev }}/yarn.lock
+          cache-dependency-path: wp-content/themes/simmsdev/yarn.lock
 
       - name: Install Yarn
         run: npm install -g yarn
 
       - name: Check for yarn.lock file
         run: |
-          if [ ! -f wp-content/themes/${{ env.simmsdev }}/yarn.lock ]; then
+          if [ ! -f wp-content/themes/simmsdev/yarn.lock ]; then
             echo "yarn.lock file is missing. Please ensure it exists in the specified directory."
             exit 1
           fi
 
       - name: Install js/css dependencies
         run: yarn install
-        working-directory: wp-content/themes/${{ env.simmsdev }}
+        working-directory: wp-content/themes/simmsdev
 
       - name: Build js/css
         run: yarn build
-        working-directory: wp-content/themes/${{ env.simmsdev }}
+        working-directory: wp-content/themes/simmsdev
 
       - name: Clean up node modules (not needed to deploy)
-        run: rm -rf wp-content/themes/${{ env.simmsdev }}/node_modules
+        run: rm -rf wp-content/themes/simmsdev/node_modules
 
       - name: Deploy to WPE
         uses: wpengine/github-action-wpe-site-deploy@v3
@@ -68,7 +68,7 @@ jobs:
 
       - name: Install PHP dependencies
         run: |
-          cd wp-content/themes/${{ env.simmsdev }}
+          cd wp-content/themes/simmsdev
           composer install --prefer-dist --no-scripts --no-interaction --optimize-autoloader
 
       - name: Deploy to wpengine.com
