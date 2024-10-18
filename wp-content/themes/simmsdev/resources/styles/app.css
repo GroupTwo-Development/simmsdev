@@ -6,3 +6,84 @@
 html {
   font-family: 'Lato', sans-serif;
 }
+
+.nav-desktop li a {
+  @apply font-semibold text-white;
+}
+
+.nav-desktop .dropdown-menu {
+  display: none;
+}
+
+.nav-desktop li.group:hover .dropdown-menu {
+  display: block;
+}
+
+.group:hover .dropdown-menu {
+  @apply block;
+}
+
+.dropdown-menu li a {
+  @apply font-semibold text-secondary-green;
+}
+
+.group .nav-link {
+  @apply px-4 py-3  2xl:text-[17px] hover:bg-secondary-green hover:text-white transition-all flex items-center justify-between;
+}
+
+.nav .dropdown-submenu {
+  @apply absolute hidden left-full top-0 ml-4 w-48 bg-white shadow-lg;
+}
+
+.group:hover .dropdown-submenu {
+  @apply block;
+}
+
+.dropdown-menu {
+  @apply absolute hidden bg-white  border-secondary-green min-w-[230px];
+}
+
+/* MODAL CONTACT FORM AREA */
+.cta-modal-area form {
+  @apply w-full;
+}
+
+.cta-modal-area form .modal-form {
+  @apply w-full flex flex-col items-center justify-between;
+}
+
+.cta-modal-area form .modal-form .item {
+  @apply flex flex-row items-center justify-between w-full gap-3 mb-5;
+}
+
+.cta-modal-area form .modal-form .item-3 {
+  @apply flex flex-row items-center justify-between w-full gap-3 mb-0;
+}
+
+.cta-modal-area form .modal-form .item p {
+  @apply w-full block;
+}
+
+.cta-modal-area form .modal-form .item label {
+  @apply w-full block text-left font-[500] font-Lato capitalize;
+}
+
+.cta-modal-area form .modal-form .item label span {
+  @apply w-full block;
+}
+
+.cta-modal-area form .modal-form .item label span input {
+  @apply w-full block border-[1px] border-simms-rust p-2;
+}
+
+.cta-modal-area form .modal-form .item label span select {
+  @apply w-full block border-[1px] border-simms-rust p-2;
+}
+
+.cta-modal-area form .modal-form .item label span textarea {
+  @apply w-full block border-[1px] border-simms-rust p-2 h-20;
+}
+
+.main {
+  @apply mt-[90px] lg:mt-[105px];
+}

@@ -1269,6 +1269,11 @@
           "color": "#534e50",
           "name": "Simms-rust",
           "slug": "simms-rust"
+        },
+        {
+          "color": "#534e50",
+          "name": "Simms-border-color",
+          "slug": "simms-border-color"
         }
       ]
     },

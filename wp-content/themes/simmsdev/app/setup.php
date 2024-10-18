@@ -46,6 +46,7 @@ add_action('after_setup_theme', function () {
      */
     register_nav_menus([
         'primary_navigation' => __('Primary Navigation', 'sage'),
+        'primary_navigation_mobile' => __('Primary Navigation Mobile', 'sage'),
     ]);
 
     /**
@@ -122,3 +123,5 @@ add_action('widgets_init', function () {
         'id' => 'sidebar-footer',
     ] + $config);
 });
+
+add_theme_support( 'custom-logo' );
