@@ -1,10 +1,16 @@
 import domReady from '@roots/sage/client/dom-ready';
+import { mobileToggle } from './common/mobileToggle';
+import '@fortawesome/fontawesome-free/js/all.js';
+import Alpine from 'alpinejs';
 
+window.Alpine = Alpine;
+
+Alpine.start();
 /**
  * Application entrypoint
  */
 domReady(async () => {
-  // ...
+  mobileToggle();
 });
 
 /**
