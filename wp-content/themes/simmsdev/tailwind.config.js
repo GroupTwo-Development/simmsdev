@@ -7,7 +7,6 @@ const config = {
         DEFAULT: '1rem',
         // sm: '1rem',
         // md: '1rem',
-        // lg: '1rem',
         // xl: '5rem',
         // '2xl': '6rem',
       },
@@ -18,6 +17,7 @@ const config = {
         'secondary-green': '#002829',
         'simms-gold': '#CEC778',
         'simms-rust': '#534E50',
+        'simms-border-color': '#534e50',
       }, // Extend Tailwind's default colors
       fontFamily: {
         Playfair_Display: ['Playfair Display', 'serif'],
