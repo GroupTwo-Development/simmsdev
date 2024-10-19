@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<ruleset name="YourTheme PHPCS Rules">
+    <!-- Directories and files to be scanned -->
+    <file>./app</file>
+    <file>./resources</file>
+    <file>./config</file>
+    <file>./routes</file>
+    <file>./index.php</file>
+    <file>./functions.php</file>
+
+    <!-- Directories and files to be excluded -->
+    <exclude-pattern>./vendor/*</exclude-pattern>
+    <exclude-pattern>./node_modules/*</exclude-pattern>
+    
+    <!-- PHP version compatibility -->
+    <config name="php_version" value="7.4"/>
+
+    <!-- Define coding standard (WordPress, PSR12, etc.) -->
+    <rule ref="PSR12">
+        <!-- Additional rules can be added here -->
+        <!-- You can also reference other standards, like WordPress or Squiz -->
+    </rule>
+
+    <!-- Warnings will be treated as errors -->
+    <arg name="--error-severity=1"/>
+    <arg name="--warning-severity=6"/>
+
+    <!-- Report format -->
+    <arg name="--report" value="full"/>
+
+</ruleset>
