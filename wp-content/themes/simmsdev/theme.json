@@ -1314,6 +1314,16 @@
           "slug": "mono"
         },
         {
+          "fontFamily": "agenda,sans-serif",
+          "name": "Agenda",
+          "slug": "agenda"
+        },
+        {
+          "fontFamily": "arno-pro-subhead,serif",
+          "name": "Arno-pro-subhead",
+          "slug": "arno_pro_subhead"
+        },
+        {
           "fontFamily": "Playfair Display,serif",
           "name": "Playfair Display",
           "slug": "Playfair_Display"
