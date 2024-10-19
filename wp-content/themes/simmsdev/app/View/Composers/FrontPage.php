@@ -25,7 +25,8 @@ class FrontPage extends Composer
         // Instantiate the Programs composer and get the latest programs
         return [
             'sliders' => $this->BannerSlider(),
-            'section_one' => $this->sectionOne()
+            'section_one' => $this->sectionOne(),
+            'section_two' => $this->sectionTwo()
         ];
     }
 
@@ -61,6 +62,25 @@ class FrontPage extends Composer
             'section_cta_link' => $section_cta_link,
             'section_content' => $section_content,
             'section_image' => $section_image
+        ];
+     }
+
+     public function sectionTwo()
+     {
+        $image_left = get_field('image_left') ?? null;
+        $sub_title = get_field('sub_title_sec_two') ?? null;
+        $title_section = get_field('title_section_two') ?? null;
+        $content = get_field('content_sec_two') ?? null;
+        $link_sec_two = get_field('link_sec_two') ?? null;
+        $image_right = get_field('image_right_sec_two') ?? null;
+
+        return [
+            'image_left' => $image_left,
+            'sub_title' => $sub_title,
+            'title_section' => $title_section,
+            'content' => $content,
+            'link_sec_two' => $link_sec_two,
+            'image_right' => $image_right
         ];
      }
 }

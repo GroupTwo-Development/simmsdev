@@ -112,3 +112,7 @@ p {
 .right-img img {
   @apply bg-cover bg-center w-full object-cover sm:h-[290px] lg:h-[500px];
 }
+
+.section_two_img img {
+  @apply bg-cover bg-center w-full object-cover object-center h-[450px] md:h-[500px] lg:h-[500px];
+}

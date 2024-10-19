@@ -32,6 +32,7 @@
 
             <!-- Modal panel -->
             <x-cta-modal />
+            
         </div>
     </div>
 </div>

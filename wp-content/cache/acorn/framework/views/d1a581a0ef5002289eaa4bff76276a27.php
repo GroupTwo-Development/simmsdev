@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?php (do_action('get_header')); ?>
     <?php (wp_head()); ?>
+
+    
   </head>
 
   <body <?php (body_class()); ?>>
@@ -22,11 +24,7 @@
         <?php echo $__env->yieldContent('content'); ?>
       </main>
 
-      <?php if (! empty(trim($__env->yieldContent('sidebar')))): ?>
-        <aside class="sidebar">
-          <?php echo $__env->yieldContent('sidebar'); ?>
-        </aside>
-      <?php endif; ?>
+      
 
       <?php echo $__env->make('sections.footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
     </div>

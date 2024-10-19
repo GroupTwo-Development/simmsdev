@@ -35,13 +35,13 @@
 
 @if ($section_one)
     <div class="mt-32  lg:mt-48 relative"></div>
-    <section id="section_one" class="bg-cover object-cover min-h-[650px] lg:min-h-[500px] z-0 relative" style="background-image:linear-gradient(rgba(236, 236, 236, 0.251), rgba(234, 234, 234, 0.247)), url('{{ $section_one['background_image'] }}')">
+    <section id="section_one" class="bg-cover object-cover min-h-[750px] lg:min-h-[500px] z-0 relative" style="background-image:linear-gradient(rgba(236, 236, 236, 0.251), rgba(234, 234, 234, 0.247)), url('{{ $section_one['background_image'] }}')">
         <div class="relative ">
             
             <div class="container mx-auto">
                 <div class="relative">
                     <div class="bg-white shadow-2xl rounded-md  lg:flex lg:flex-row lg:w-full lg:justify-between absolute -top-16 lg:-mt-18">
-                        <div class="py-10 px-5 lg:w-1/2 flex flex-col content-center justify-center">
+                        <div class="py-10 px-5 xl:px-10 lg:w-1/2 flex flex-col content-center justify-center">
                             <span class="block font-semibold text-primary-green uppercase tracking-[0.15em] mb-3 text-sm">{{ $section_one['section_subtitle'] }}</span>
                             <h2 class="font-normal text-2xl lg:text-3xl xl:text-4xl mb-3 font-arno_pro_subhead xl:pr-16">{{ $section_one['section_title'] }}</h2>
                             <div class="mb-5 xl:pr-14">
@@ -49,9 +49,9 @@
                             </div>
     
                             @if ($section_one['section_cta_link'])
-                            <div>
-                                <x-cta-link href="{{ $section_one['section_cta_link']['url'] }}" class="text-primary-green border-b-primary-green mt-3 md:mt-5 hover:text-simms-gold transition-all ease-in-out">{{ $section_one['section_cta_link']['title'] }}</x-cta-link>
-                            </div>
+                                <div>
+                                    <x-cta-link href="{{ $section_one['section_cta_link']['url'] }}" class="text-primary-green border-b-primary-green mt-3 md:mt-5 hover:text-simms-gold transition-all ease-in-out">{{ $section_one['section_cta_link']['title'] }}</x-cta-link>
+                                </div>
                             @endif
                         </div>
                         <div class="lg:w-1/2 relative">
@@ -75,8 +75,56 @@
 @endif
 
 
-<section>
-    <div class="container mx-auto">
-        <h1></h1>
-    </div>
-</section>
+
+@if ($section_two)
+    <section class="bg-cover bg-primary-green object-cover" style="background-image: url('@asset('images/pattern1.png')')">
+        <div class="container mx-auto py-20">
+            <div class="shadow-xl lg:flex lg:flex-row lg:justify-center">
+                {{-- image left --}}
+                <div class="lg:w-1/4">
+                    <div class="w-full h-full section_two_img  left-img relative">
+                        @php
+                        // Get image ID
+                        $image_id = $section_two['image_left'];
+                        
+                        // Get the alt text of the image
+                        $image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', true);
+                        @endphp
+                        {!! wp_get_attachment_image($image_id, 'full', false, ['alt' => $image_alt]) !!}
+                    </div>
+                </div>
+                {{-- Content --}}
+                <div class="bg-simms-gold py-10 lg:py-5 md:py-16 px-5 lg:px-8 text-center lg:w-1/2">
+                    <div class="flex flex-col justify-center items-center content-center h-full">
+                        <span class="block font-semibold text-primary-green uppercase tracking-[0.15em] mb-3 text-sm">{{ $section_two['sub_title'] }}</span>
+                        <h2 class="font-normal text-white text-2xl lg:text-3xl xl:text-4xl mb-3 font-arno_pro_subhead lg:px-14 text-center">{{ $section_two['title_section'] }}</h2>
+                        <div>
+                            {!! $section_two['content'] !!}
+                        </div>
+
+                        @if ($section_one['section_cta_link'])
+                            <div class="mt-5">
+                                <x-cta-link href="{{ $section_two['link_sec_two']['url'] }}" class="text-secondary-green border-b-secondary-green mt-3 md:mt-5 hover:text-white transition-all ease-in-out">{{ $section_two['link_sec_two']['title'] }}</x-cta-link>
+                            </div>
+                        @endif
+                    </div>
+                </div>
+
+                {{-- image left --}}
+                <div class="lg:w-1/4">
+                    <div class="w-full h-full section_two_img right-img relative">
+                        @php
+                        // Get image ID
+                        $image_id = $section_two['image_right'];
+                        
+                        // Get the alt text of the image
+                        $image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', true);
+                        @endphp
+                        {!! wp_get_attachment_image($image_id, 'full', false, ['alt' => $image_alt]) !!}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+@endif
+
