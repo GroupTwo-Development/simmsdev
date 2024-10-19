@@ -76,5 +76,7 @@
 
 
 <section>
-    <div></div>
+    <div class="container mx-auto">
+        <h1></h1>
+    </div>
 </section>
