@@ -8,7 +8,7 @@ const config = {
         // sm: '1rem',
         // md: '1rem',
         // xl: '5rem',
-        // '2xl': '6rem',
+        '2xl': '6rem',
       },
     },
     extend: {
@@ -19,7 +19,12 @@ const config = {
         'simms-rust': '#534E50',
         'simms-border-color': '#534e50',
       }, // Extend Tailwind's default colors
+      backgroundColor: {
+        overlay: 'rgba(0, 40, 41, 0.75)', // Add custom overlay color
+      },
       fontFamily: {
+        agenda: ['agenda', 'sans-serif'],
+        arno_pro_subhead: ['arno-pro-subhead', 'serif'],
         Playfair_Display: ['Playfair Display', 'serif'],
         Lato: ['Lato', 'sans-serif'],
       }, // Extend Tailwind's default font families

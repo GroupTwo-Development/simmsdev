@@ -144,7 +144,7 @@
                     "acfe_field_group_condition": 0,
                     "uploader": "",
                     "acfe_thumbnail": 0,
-                    "return_format": "id",
+                    "return_format": "url",
                     "min_width": "",
                     "min_height": "",
                     "min_size": "",
@@ -357,5 +357,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1729254147
+    "modified": 1729258147
 }

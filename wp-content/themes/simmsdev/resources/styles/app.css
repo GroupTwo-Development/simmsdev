@@ -4,7 +4,11 @@
 @tailwind utilities;
 
 html {
-  font-family: 'Lato', sans-serif;
+  @apply font-agenda font-[300];
+}
+
+p {
+  @apply font-agenda font-[300] leading-7;
 }
 
 .nav-desktop li a {
@@ -86,4 +90,25 @@ html {
 
 .main {
   @apply mt-[90px] lg:mt-[105px];
+}
+
+.swiper-button-next:after {
+  @apply text-lg text-simms-gold;
+}
+
+.swiper-button-prev:after {
+  @apply text-lg text-simms-gold;
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+  @apply bg-white opacity-100;
+}
+.swiper-pagination .swiper-pagination-bullet-active {
+  @apply bg-simms-gold;
+}
+
+/* Home page */
+
+.right-img img {
+  @apply bg-cover bg-center w-full object-cover sm:h-[290px] lg:h-[500px];
 }
