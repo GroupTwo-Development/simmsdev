@@ -10,7 +10,7 @@
         </div>
         <div class="w-2/5 bg-primary-green">
             <div class="flex flex-row justify-start  items-center">
-                <img src="@asset('images/cta.png')" class="max-w-20  object-cover object-top" alt="cta">
+                <img src="<?= \Roots\asset('images/cta.png'); ?>" class="max-w-20  object-cover object-top" alt="cta">
                 <div class="pl-4">
                     <span class="block text-simms-gold text-xl text-left">Contact us:</span>
                     <a href="tel:1-800-123-4567" class="text-white font-semibold text-xl hover:text-simms-gold transition-all ease-in-out">1-800-123-4567</a>
@@ -20,7 +20,8 @@
     </header>
     <div class="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
 
-       {!! do_shortcode('[contact-form-7 id="576b2c7" title="Contact form 1"]') !!}
+       <?php echo do_shortcode('[contact-form-7 id="576b2c7" title="Contact form 1"]'); ?>
+
        
     </div>
     <div class="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
@@ -29,40 +30,9 @@
     </div>
 </div>
 
-{{-- <section class="flex flex-col modal-form">
-<div class="flex flex-row">
-    <div>
-        <label> First Name
-            [text* fName autocomplete:name] </label>
-    </div>
-    <div>
-        <label> Last Name
-            [text* lName autocomplete:name] </label>
-    </div>
-</div>
-<div>
-    <div>
-        <label> Email
-            [email* email autocomplete:email] </label>
-    </div>
-    <div>
-        <label> Phone Number
-            [number* number autocomplete:email] </label>
-    </div>
-</div>
-<div>
-    <label for="communities">Community
-        [select COMMUNITIES "Community" "Community" "community" "community"]
-    </label>
-</div>
-<div>
-    <label> Message (optional)
-        [textarea your-message] </label>
-</div>
-[submit "Submit"]
-
-</section> --}}
 
 
 
 
+
+<?php /**PATH /Users/grouptwodev/Herd/simmsdev-app/wp-content/themes/simmsdev/resources/views/components/cta-modal.blade.php ENDPATH**/ ?>

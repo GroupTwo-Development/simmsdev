@@ -7,7 +7,7 @@ const config = {
         DEFAULT: '1rem',
         // sm: '1rem',
         // md: '1rem',
-        // xl: '5rem',
+        xl: '5rem',
         '2xl': '6rem',
       },
     },
@@ -21,6 +21,8 @@ const config = {
       }, // Extend Tailwind's default colors
       backgroundColor: {
         overlay: 'rgba(0, 40, 41, 0.75)', // Add custom overlay color
+        // pattern: "url('../../images/pattern.svg')",
+        pattern_img: "url('images/pattern1.png')",
       },
       fontFamily: {
         agenda: ['agenda', 'sans-serif'],

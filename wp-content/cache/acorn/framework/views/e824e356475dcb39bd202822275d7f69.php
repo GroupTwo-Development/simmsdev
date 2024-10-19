@@ -12,7 +12,7 @@
 <?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
 <?php endif; ?>
 <?php $component->withAttributes(['type' => 'warning']); ?>
-      <?php echo __('Sorry, no results were found.', 'sage'); ?>
+      <?php echo __('Sorry, but the page you are trying to view does not exist.', 'sage'); ?>
 
      <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
@@ -28,17 +28,6 @@
     <?php echo get_search_form(false); ?>
 
   <?php endif; ?>
-
-  <?php while(have_posts()): ?> <?php (the_post()); ?>
-    <?php echo $__env->first(['partials.content-' . get_post_type(), 'partials.content'], \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
-  <?php endwhile; ?>
-
-  <?php echo get_the_posts_navigation(); ?>
-
 <?php $__env->stopSection(); ?>
 
-<?php $__env->startSection('sidebar'); ?>
-  <?php echo $__env->make('sections.sidebar', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
-<?php $__env->stopSection(); ?>
-
-<?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /Users/grouptwodev/Herd/simmsdev-app/wp-content/themes/simmsdev/resources/views/index.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /Users/grouptwodev/Herd/simmsdev-app/wp-content/themes/simmsdev/resources/views/404.blade.php ENDPATH**/ ?>
