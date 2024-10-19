@@ -10,6 +10,7 @@ export const bannerSlider = async (err) => {
     console.error(err);
     return;
   }
+
   const BannerSlider = new Swiper('.bannerSlider', {
     modules: [Navigation, Pagination, Scrollbar],
     loop: true,
