@@ -26,7 +26,9 @@ class FrontPage extends Composer
         return [
             'sliders' => $this->BannerSlider(),
             'section_one' => $this->sectionOne(),
-            'section_two' => $this->sectionTwo()
+            'section_two' => $this->sectionTwo(),
+            'section_three' => $this->sectionThree(),
+            'feature_testimonials' => $this->getFeatureTestimonials(),
         ];
     }
 
@@ -83,4 +85,63 @@ class FrontPage extends Composer
             'image_right' => $image_right
         ];
      }
+
+     public function sectionThree()
+     {
+        $bg_image = get_field('background_image_sec_three') ?? null;
+        $feature_image = get_field('section_feature_image_sec_three') ?? null;
+
+        return [
+            'bg_image' => $bg_image,
+            'feature_image' => $feature_image,
+        ];
+     }
+
+         /**
+     * Get the 2 most recent events ordered by ACF field 'date_of_event'.
+     *
+     * @return array
+     */
+    public function getFeatureTestimonials()
+    {
+        $args = [
+            'post_type' => 'testimonials', // Custom post type for events
+            'posts_per_page' => -1, // Limit to 2 posts
+            'orderby' => 'date', // Order by date
+            'order' => 'ASC', // Order ascending (earliest first)
+            'tax_query' => [
+                [
+                    'taxonomy' => 'testimonials_type', // Custom taxonomy for testimonials
+                    'field'    => 'slug',
+                    'terms'    => 'feature', // Only include testimonials with the 'feature' term
+                ],
+            ],
+        ];
+    
+        $query = new \WP_Query($args);
+        $testimonials = [];
+    
+        if ($query->have_posts()) {
+            while ($query->have_posts()) {
+                $query->the_post();
+                
+                // Fetch the venue group ACF field
+                $name = get_field('name');
+                $testimonial = get_field('testimonial');
+                
+               
+    
+                $testimonials[] = [
+                    'title' => get_the_title(),
+                    'name' => $name,
+                    'testimonial' => $testimonial,
+                ];
+            }
+        }
+    
+        // Restore original post data
+        wp_reset_postdata();
+    
+        return $testimonials;
+    }
 }
