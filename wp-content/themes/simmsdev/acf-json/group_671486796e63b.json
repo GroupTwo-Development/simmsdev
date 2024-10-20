@@ -253,7 +253,7 @@
         {
             "key": "field_6715526785e8b",
             "label": "Multi-Logo",
-            "name": "multi-logo",
+            "name": "multi_logo",
             "aria-label": "",
             "type": "image",
             "instructions": "",
@@ -305,7 +305,7 @@
             "sub_fields": [
                 {
                     "key": "field_6715534b85e8d",
-                    "label": "Community\/Available Home",
+                    "label": "Community Name",
                     "name": "community_available_home",
                     "aria-label": "",
                     "type": "text",
@@ -327,11 +327,11 @@
                     "parent_repeater": "field_6715531b85e8c"
                 },
                 {
-                    "key": "field_671553da85e8e",
-                    "label": "Contact Person",
-                    "name": "contact_person",
+                    "key": "field_67156bf8a44ab",
+                    "label": "Contact Name",
+                    "name": "contact_name",
                     "aria-label": "",
-                    "type": "post_object",
+                    "type": "text",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -341,28 +341,45 @@
                         "id": ""
                     },
                     "acfe_field_group_condition": 0,
-                    "post_type": [
-                        "agents"
-                    ],
-                    "post_status": [
-                        "publish"
-                    ],
-                    "taxonomy": "",
-                    "return_format": "object",
-                    "multiple": 0,
-                    "max": "",
-                    "acfe_add_post": 0,
-                    "acfe_edit_post": 0,
-                    "save_custom": 0,
-                    "save_post_status": "publish",
-                    "acfe_bidirectional": {
-                        "acfe_bidirectional_enabled": "0"
-                    },
-                    "allow_null": 0,
+                    "default_value": "",
+                    "maxlength": "",
                     "allow_in_bindings": 0,
-                    "bidirectional": 0,
-                    "ui": 1,
-                    "bidirectional_target": [],
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_6715531b85e8c"
+                },
+                {
+                    "key": "field_67156c00a44ac",
+                    "label": "Contact Phone",
+                    "name": "contact_phone",
+                    "aria-label": "",
+                    "type": "acfe_phone_number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "acfe_field_group_condition": 0,
+                    "countries": [
+                        "us"
+                    ],
+                    "preferred_countries": [
+                        "us"
+                    ],
+                    "default_country": "us",
+                    "geolocation": 0,
+                    "native": 0,
+                    "national": 0,
+                    "dropdown": 0,
+                    "dial_code": 0,
+                    "default_value": "",
+                    "placeholder": "",
+                    "return_format": "array",
+                    "allow_in_bindings": 0,
                     "parent_repeater": "field_6715531b85e8c"
                 }
             ]
@@ -393,5 +410,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1729451130
+    "modified": 1729457290
 }

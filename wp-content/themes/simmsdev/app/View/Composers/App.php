@@ -25,6 +25,7 @@ class App extends Composer
         return [
             'siteName' => $this->siteName(),
             'findYourHome' => $this->FindYourHome(),
+            'footerContent' => $this->getFooterContent(),
         ];
     }
 
@@ -48,6 +49,23 @@ class App extends Composer
             'title' => $title,
             'sub_title' => $sub_title,
             'find_your_home' => $find_your_home,
+        ];
+    }
+
+    public function getFooterContent()
+    {
+        $logo_footer = get_field('logo_footer', 'option');
+        $content_footer = get_field('content_footer', 'option');
+        $newsletter_form = get_field('newsletter_form', 'option');
+        $multi_logo = get_field('multi_logo', 'option');
+        $feature_communities = get_field('feature_communities', 'option');
+
+        return [
+            'logo_footer' => $logo_footer,
+            'content_footer' => $content_footer,
+            'newsletter_form' => $newsletter_form,
+            'multi_logo' => $multi_logo,
+            'feature_communities' => $feature_communities,
         ];
     }
 }
