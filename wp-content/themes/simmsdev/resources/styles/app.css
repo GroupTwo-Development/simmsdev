@@ -116,3 +116,7 @@ p {
 .section_two_img img {
   @apply bg-cover bg-center w-full object-cover object-center h-[450px] md:h-[500px] lg:h-[500px];
 }
+
+.section_three_img img {
+  @apply bg-cover bg-center w-full object-cover object-center lg:h-[500px];
+}
