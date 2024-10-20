@@ -208,7 +208,7 @@
                     </div>
                 </div>
                 
-                <div class="bg-[rgba(0,40,41,0.9)] lg:w-1/2 py-12 px-4 lg:py-2 flex flex-col justify-center h-[420px] lg:-ml-16 xl:-ml-20 2xl:-ml-28 z-10">
+                <div class="bg-[rgba(0,40,41,0.9)] lg:w-1/2 py-12 px-4 lg:py-2 flex flex-col justify-center h-[450px] lg:-ml-16 xl:-ml-20 2xl:-ml-28 z-10">
                     <?php if($feature_testimonials): ?>
                         <div class="">
                             <span class="text-simms-gold font-semibold tracking-[0.15em] text-center block mb-4">The marketing headline is (42) characters.</span>
@@ -265,6 +265,27 @@
             </div>
         </div>
    </section> 
+<?php endif; ?>
+
+<?php if (isset($component)) { $__componentOriginalf20ba2696599e222bf515abd9ef1cf04 = $component; } ?>
+<?php if (isset($attributes)) { $__attributesOriginalf20ba2696599e222bf515abd9ef1cf04 = $attributes; } ?>
+<?php $component = App\View\Components\FindYourHome::resolve([] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>
+<?php $component->withName('find-your-home'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag && $constructor = (new ReflectionClass(App\View\Components\FindYourHome::class))->getConstructor()): ?>
+<?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
+<?php endif; ?>
+<?php $component->withAttributes(['findYourHome' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($findYourHome)]); ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__attributesOriginalf20ba2696599e222bf515abd9ef1cf04)): ?>
+<?php $attributes = $__attributesOriginalf20ba2696599e222bf515abd9ef1cf04; ?>
+<?php unset($__attributesOriginalf20ba2696599e222bf515abd9ef1cf04); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginalf20ba2696599e222bf515abd9ef1cf04)): ?>
+<?php $component = $__componentOriginalf20ba2696599e222bf515abd9ef1cf04; ?>
+<?php unset($__componentOriginalf20ba2696599e222bf515abd9ef1cf04); ?>
 <?php endif; ?>
 
 <?php /**PATH /Users/grouptwodev/Herd/simmsdev-app/wp-content/themes/simmsdev/resources/views/partials/content-front-page.blade.php ENDPATH**/ ?>

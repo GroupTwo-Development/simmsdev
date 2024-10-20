@@ -149,7 +149,7 @@
                     </div>
                 </div>
                 {{-- testimonials --}}
-                <div class="bg-[rgba(0,40,41,0.9)] lg:w-1/2 py-12 px-4 lg:py-2 flex flex-col justify-center h-[420px] lg:-ml-16 xl:-ml-20 2xl:-ml-28 z-10">
+                <div class="bg-[rgba(0,40,41,0.9)] lg:w-1/2 py-12 px-4 lg:py-2 flex flex-col justify-center h-[450px] lg:-ml-16 xl:-ml-20 2xl:-ml-28 z-10">
                     @if($feature_testimonials)
                         <div class="">
                             <span class="text-simms-gold font-semibold tracking-[0.15em] text-center block mb-4">The marketing headline is (42) characters.</span>
@@ -188,4 +188,6 @@
         </div>
    </section> 
 @endif
+
+<x-find-your-home :findYourHome="$findYourHome" />
 
