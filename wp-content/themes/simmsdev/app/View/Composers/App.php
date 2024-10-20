@@ -24,6 +24,7 @@ class App extends Composer
     {
         return [
             'siteName' => $this->siteName(),
+            'findYourHome' => $this->FindYourHome(),
         ];
     }
 
@@ -35,5 +36,18 @@ class App extends Composer
     public function siteName()
     {
         return get_bloginfo('name', 'display');
+    }
+
+    public function FindYourHome()
+    {
+        $title = get_field('title', 'option');
+        $sub_title = get_field('sub_title', 'option');
+        $find_your_home = get_field('find_your_home', 'option');
+
+        return [
+            'title' => $title,
+            'sub_title' => $sub_title,
+            'find_your_home' => $find_your_home,
+        ];
     }
 }

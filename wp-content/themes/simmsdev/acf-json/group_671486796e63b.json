@@ -142,26 +142,6 @@
             ]
         },
         {
-            "key": "field_671487c3e03dc",
-            "label": "Footer",
-            "name": "",
-            "aria-label": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "acfe_field_group_condition": 0,
-            "placement": "left",
-            "endpoint": 0,
-            "no_preference": 0,
-            "selected": 0
-        },
-        {
             "key": "field_6714882be03dd",
             "label": "Newsletter Section",
             "name": "",
@@ -249,6 +229,143 @@
             },
             "acfe_field_group_condition": 0,
             "allow_in_bindings": 1
+        },
+        {
+            "key": "field_671487c3e03dc",
+            "label": "Footer",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_field_group_condition": 0,
+            "placement": "left",
+            "endpoint": 0,
+            "no_preference": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_6715526785e8b",
+            "label": "Multi-Logo",
+            "name": "multi-logo",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_field_group_condition": 0,
+            "uploader": "",
+            "acfe_thumbnail": 0,
+            "return_format": "id",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "allow_in_bindings": 0,
+            "preview_size": "medium",
+            "library": "all"
+        },
+        {
+            "key": "field_6715531b85e8c",
+            "label": "Feature Communities",
+            "name": "feature_communities",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_field_group_condition": 0,
+            "acfe_repeater_stylised_button": 1,
+            "layout": "block",
+            "pagination": 0,
+            "min": 0,
+            "max": 3,
+            "collapsed": "",
+            "button_label": "Add Row",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_6715534b85e8d",
+                    "label": "Community\/Available Home",
+                    "name": "community_available_home",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "acfe_field_group_condition": 0,
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_6715531b85e8c"
+                },
+                {
+                    "key": "field_671553da85e8e",
+                    "label": "Contact Person",
+                    "name": "contact_person",
+                    "aria-label": "",
+                    "type": "post_object",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "acfe_field_group_condition": 0,
+                    "post_type": [
+                        "agents"
+                    ],
+                    "post_status": [
+                        "publish"
+                    ],
+                    "taxonomy": "",
+                    "return_format": "object",
+                    "multiple": 0,
+                    "max": "",
+                    "acfe_add_post": 0,
+                    "acfe_edit_post": 0,
+                    "save_custom": 0,
+                    "save_post_status": "publish",
+                    "acfe_bidirectional": {
+                        "acfe_bidirectional_enabled": "0"
+                    },
+                    "allow_null": 0,
+                    "allow_in_bindings": 0,
+                    "bidirectional": 0,
+                    "ui": 1,
+                    "bidirectional_target": [],
+                    "parent_repeater": "field_6715531b85e8c"
+                }
+            ]
         }
     ],
     "location": [
@@ -276,5 +393,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1729399616
+    "modified": 1729451130
 }
