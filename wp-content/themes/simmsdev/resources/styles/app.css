@@ -120,3 +120,8 @@ p {
 .section_three_img img {
   @apply bg-cover bg-center w-full object-cover object-center lg:h-[500px];
 }
+
+/* Social media icon */
+.footer-social-media {
+  @apply block bg-white rounded-full h-[42px] w-[42px] leading-[42px] text-center text-xl;
+}

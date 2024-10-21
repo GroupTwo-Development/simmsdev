@@ -25,6 +25,9 @@ class App extends Composer
         return [
             'siteName' => $this->siteName(),
             'findYourHome' => $this->FindYourHome(),
+            'footerContent' => $this->getFooterContent(),
+            'main_phone_Number' => $this->gloablPhone(),
+            'quickLinkHeader' => $this->getQuickLinkHeader(),
         ];
     }
 
@@ -49,5 +52,59 @@ class App extends Composer
             'sub_title' => $sub_title,
             'find_your_home' => $find_your_home,
         ];
+    }
+
+    public function getFooterContent()
+    {
+        $logo_footer = get_field('logo_footer', 'option');
+        $content_footer = get_field('content_footer', 'option');
+        $newsletter_form = get_field('newsletter_form', 'option');
+        $multi_logo = get_field('multi_logo', 'option');
+        $feature_communities = get_field('feature_communities', 'option');
+
+        return [
+            'logo_footer' => $logo_footer,
+            'content_footer' => $content_footer,
+            'newsletter_form' => $newsletter_form,
+            'multi_logo' => $multi_logo,
+            'feature_communities' => $feature_communities,
+        ];
+    }
+
+    public function gloablPhone()
+    {
+        $phone = get_option('builders_hub_phone');
+        return [
+            'phone' => $phone,
+        ];
+      
+    }
+
+    public function getQuickLinkHeader()
+    {
+        $section_data = [];
+//        $sub_title = get_field('find_your_home_sub-title', 13);
+        $title = get_field('find_your_home_title', 13);
+        $builders_hub_api_key = get_option('builders_hub_api_key');
+        $builders_hub_google_tag_header = get_option('builders_hub_google_tag_header');
+        $builders_hub_google_tag_body = get_option('builders_hub_google_tag_body');
+
+        $section_data = array(
+//            'subtitle' => $sub_title,
+            'title' => $title,
+            'api_key' => $builders_hub_api_key,
+            'gtm_header' => $builders_hub_google_tag_header,
+            'gtm_footer' => $builders_hub_google_tag_body,
+            'fb' => get_option('builders_hub_fb'),
+            'instagram' => get_option('builders_hub_instagram'),
+            'twitter' => get_option('builders_hub_twitter'),
+            'youtube' => get_option('builders_hub_youtube'),
+            'address1' => get_option('builders_hub_address1'),
+            'address2' => get_option('builders_hub_address2'),
+            'city' => get_option('builders_hub_city'),
+            'state' => get_option('builders_hub_state'),
+            'zip' => get_option('builders_hub_zip'),
+        );
+        return $section_data;
     }
 }

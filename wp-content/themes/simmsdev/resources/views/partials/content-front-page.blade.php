@@ -40,7 +40,7 @@
             
             <div class="container mx-auto">
                 <div class="relative">
-                    <div class="bg-white shadow-2xl rounded-md  lg:flex lg:flex-row lg:w-full lg:justify-between absolute -top-16 lg:-mt-18">
+                    <div class="bg-white shadow-2xl rounded-md  lg:flex lg:flex-row lg:w-full lg:justify-between absolute -top-16 lg:-top-32 lg:-mt-18">
                         <div class="py-10 px-5 xl:px-10 lg:w-1/2 flex flex-col content-center justify-center">
                             <span class="block font-semibold text-primary-green uppercase tracking-[0.15em] mb-3 text-sm">{{ $section_one['section_subtitle'] }}</span>
                             <h2 class="font-normal text-2xl lg:text-3xl xl:text-4xl mb-3 font-arno_pro_subhead xl:pr-16">{{ $section_one['section_title'] }}</h2>

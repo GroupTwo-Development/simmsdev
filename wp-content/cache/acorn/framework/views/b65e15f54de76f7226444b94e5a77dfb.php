@@ -9,7 +9,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             <?php if($findYourHome['find_your_home']): ?>
                 <?php $__currentLoopData = $findYourHome['find_your_home']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $home): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                    <div class="group relative bg-cover bg-center h-96" style="background-image: url('<?php echo e(wp_get_attachment_image_url($home['image'], 'full')); ?>');">
+                    <div class="group relative bg-cover bg-center h-96 cursor-pointer" style="background-image: url('<?php echo e(wp_get_attachment_image_url($home['image'], 'full')); ?>');">
                         <!-- Black overlay stays in place -->
                         <div class="absolute inset-0 bg-black opacity-50"></div>
 
@@ -25,7 +25,7 @@
 <?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag && $constructor = (new ReflectionClass(App\View\Components\CtaLink::class))->getConstructor()): ?>
 <?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
 <?php endif; ?>
-<?php $component->withAttributes(['href' => ''.e($home['cta_link']['url']).'','class' => 'text-white border-b-2 border-white hover:text-white transition-all ease-in-out']); ?><?php echo e(__('Learn More')); ?> <?php echo $__env->renderComponent(); ?>
+<?php $component->withAttributes(['href' => ''.e($home['cta_link']['url']).'','class' => 'text-white border-b-2 border-white hover:text-simms-gold transition-all ease-in-out']); ?><?php echo e(__('Learn More')); ?> <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
 <?php if (isset($__attributesOriginalf45da169b4dc4f6c9e263e97c3b1ce59)): ?>
 <?php $attributes = $__attributesOriginalf45da169b4dc4f6c9e263e97c3b1ce59; ?>
