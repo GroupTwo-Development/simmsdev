@@ -47,6 +47,7 @@ add_action('after_setup_theme', function () {
     register_nav_menus([
         'primary_navigation' => __('Primary Navigation', 'sage'),
         'primary_navigation_mobile' => __('Primary Navigation Mobile', 'sage'),
+        'primarp_page_nav' => __('Communities Plans Homes', 'sage'),
     ]);
 
     /**

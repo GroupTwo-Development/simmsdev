@@ -1261,6 +1261,11 @@
           "slug": "secondary-green"
         },
         {
+          "color": "#1c8484",
+          "name": "Simms-lime",
+          "slug": "simms-lime"
+        },
+        {
           "color": "#cec778",
           "name": "Simms-gold",
           "slug": "simms-gold"

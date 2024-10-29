@@ -5,16 +5,18 @@ const config = {
     container: {
       padding: {
         DEFAULT: '1rem',
+        lg: '[.5rem]',
         // sm: '1rem',
-        // md: '1rem',
-        xl: '5rem',
-        '2xl': '6rem',
+        md: '1rem',
+        xl: '2rem',
+        '2xl': '3rem',
       },
     },
     extend: {
       colors: {
         'primary-green': '#00676D',
         'secondary-green': '#002829',
+        'simms-lime': '#1C8484',
         'simms-gold': '#CEC778',
         'simms-rust': '#534E50',
         'simms-border-color': '#534e50',

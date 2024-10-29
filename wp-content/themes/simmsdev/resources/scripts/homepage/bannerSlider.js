@@ -11,6 +11,7 @@ export const bannerSlider = async (err) => {
     return;
   }
 
+  // eslint-disable-next-line no-unused-vars
   const BannerSlider = new Swiper('.bannerSlider', {
     modules: [Navigation, Pagination, Scrollbar],
     loop: true,
@@ -29,6 +30,7 @@ export const bannerSlider = async (err) => {
     },
   });
 
+  // eslint-disable-next-line no-unused-vars
   const testimonial = new Swiper('.featureTestimonials', {
     modules: [Navigation, Pagination, Scrollbar],
     loop: true,
