@@ -1,7 +1,6 @@
 import domReady from '@roots/sage/client/dom-ready';
 import { mobileToggle } from './common/mobileToggle';
 import { bannerSlider } from './homepage/bannerSlider';
-import { communityMap } from './community/map.js';
 import '@fortawesome/fontawesome-free/js/all.js';
 
 import Alpine from 'alpinejs';
