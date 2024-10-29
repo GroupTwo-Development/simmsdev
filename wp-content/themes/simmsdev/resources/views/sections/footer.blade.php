@@ -105,9 +105,9 @@
     <div class="container mx-auto">
       <div class=" text-white pb-5 flex flex-col justify-center items-center lg:flex lg:flex-row lg:justify-between w-full lg:content-center">
           <div>
-            <p class="text-sm">©{{ Date('Y') }} Charles Simms Development. All Rights Reserved | <a href="/privacy-policy">Privacy Policy</a> | <a href="/grouptwo.com" target="_blank">Site by GroupTwo</a></p>
+            <p class="text-[13px]">©{{ Date('Y') }} Charles Simms Development. All Rights Reserved | <a href="/privacy-policy">Privacy Policy</a> | <a href="/grouptwo.com" target="_blank">Site by GroupTwo</a></p>
           </div>
-          <div class="text-sm lg:flex lg:flex-row lg:justify-between lg:items-center gap-3">
+          <div class="text-[13px] lg:flex lg:flex-row lg:justify-between lg:items-center gap-3">
             <p class="text-sm">Prices and terms of Simms Development are subject to change. Contact our sales team for more information.</p>
             <div class="text-center flex justify-center mt-5">
               <svg id="Component_46_1" data-name="Component 46 – 1" xmlns="http://www.w3.org/2000/svg" width="29.075" height="30" viewBox="0 0 29.075 30">

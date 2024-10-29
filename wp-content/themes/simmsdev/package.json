@@ -23,13 +23,13 @@
     "test": "yarn lint"
   },
   "devDependencies": {
-    "@roots/bud": "6.20.0",
-    "@roots/bud-eslint": "^6.23.3",
-    "@roots/bud-prettier": "^6.23.3",
-    "@roots/bud-stylelint": "^6.23.3",
-    "@roots/bud-tailwindcss": "6.20.0",
+    "@roots/bud": "6.23.3",
+    "@roots/bud-eslint": "6.23.3",
+    "@roots/bud-prettier": "6.23.3",
+    "@roots/bud-stylelint": "6.23.3",
+    "@roots/bud-tailwindcss": "6.23.3",
     "@roots/eslint-config": "^6.23.3",
-    "@roots/sage": "6.20.0"
+    "@roots/sage": "6.23.3"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.6.0",

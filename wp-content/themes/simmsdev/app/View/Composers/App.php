@@ -28,6 +28,7 @@ class App extends Composer
             'footerContent' => $this->getFooterContent(),
             'main_phone_Number' => $this->gloablPhone(),
             'quickLinkHeader' => $this->getQuickLinkHeader(),
+            'primaryPageHeader' => $this->primaryPageHeader(),
         ];
     }
 
@@ -106,5 +107,18 @@ class App extends Composer
             'zip' => get_option('builders_hub_zip'),
         );
         return $section_data;
+    }
+
+    public function primaryPageHeader()
+    {
+        $community_title = get_field('title_comm', 'option');
+        $community_sub_title = get_field('subtitle_comm', 'option');
+        $community_header_img = get_field('header_image_comm', 'option');
+
+        return [
+            'community_title' => $community_title,
+            'community_sub_title' => $community_sub_title,
+            'community_header_img' => $community_header_img,
+        ];
     }
 }
