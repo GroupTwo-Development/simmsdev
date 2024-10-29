@@ -1,6 +1,6 @@
 @php
 $communities = new WP_Query([
-    'post_type' => 'community',
+    'post_type' => 'communities',
     'posts_per_page' => -1, // Adjust as needed
 ]);
 @endphp
@@ -41,7 +41,7 @@ $communities = new WP_Query([
                 {{-- Query loop --}}
                 <div class="pt-10 pb-28 sm:flex sm:flex-row lg:flex-row 2xl:flex-row sm:gap-3 lg:gap-2 xl:gap-2 2xl:gap-4 justify-center content-center ">
                     @while(have_posts()) @php(the_post())
-                        @includeFirst(['partials.content-communities'])
+                        @include('partials.content-communities')
                     @endwhile
                 </div>
             </div>
