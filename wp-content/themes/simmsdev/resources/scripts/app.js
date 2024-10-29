@@ -15,7 +15,6 @@ Alpine.start();
 domReady(async () => {
   mobileToggle();
   bannerSlider();
-  communityMap();
 });
 
 /**
