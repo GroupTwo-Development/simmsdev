@@ -6,8 +6,8 @@ const config = {
       padding: {
         DEFAULT: '1rem',
         lg: '[.5rem]',
-        // sm: '1rem',
-        md: '1rem',
+        sm: '[.5rem]',
+        md: '0.5rem',
         xl: '2rem',
         '2xl': '3rem',
       },

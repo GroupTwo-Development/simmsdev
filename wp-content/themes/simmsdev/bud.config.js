@@ -16,14 +16,19 @@ export default async (app) => {
   app
     .entry('app', ['@scripts/app', '@styles/app'])
     .entry('editor', ['@scripts/editor', '@styles/editor'])
-    .assets(['images', 'fonts']);
-
-  /**
-   * Set public path
-   *
-   * @see {@link https://bud.js.org/reference/bud.setPublicPath}
-   */
-  app.setPublicPath('/app/themes/sage/public/');
+    .assets([
+      {
+        from: app.path('@src/images'),
+        to: app.path('@dist/assets'),
+      },
+    ])
+    .assets(['images', 'fonts']),
+    /**
+     * Set public path
+     *
+     * @see {@link https://bud.js.org/reference/bud.setPublicPath}
+     */
+    app.setPublicPath('/public/');
 
   /**
    * Development server settings

@@ -1,9 +1,5 @@
-@php
-$communities = new WP_Query([
-    'post_type' => 'communities',
-    'posts_per_page' => -1, // Adjust as needed
-]);
-@endphp
+
+
 @extends('layouts.primary-app')
 
 @section('content')
@@ -26,34 +22,79 @@ $communities = new WP_Query([
     <x-primary-page-nav />
 </div>
 
-<section x-data="{showMap: false}">
+<section x-data="{ showMap: false }" class="relative">
     {{-- Mobile View - Toggle Button and Filter --}}
     @include('partials.community.mobile')
     {{-- Find your home  - Desktop--}}
-    
-    
 
+    {{-- Desktopfilter --}}
+    @include('partials.community.desktop-filter')
+
+
+{{-- User selections --}}
+<x-user-selection />
    
-    <div  class="relative object-cover mt-1 h-full" style="background-image: url('@asset('images/pattern2.png')')">
+    <div  class="relative object-cover mt-1 w-full " style="background-image: url('@asset('images/pattern2.png')')">
          {{-- Main Content - Conditionally Render Map or Cards --}}
-        <div x-show="!showMap">
+
+         
+        <div>
             <div class="container mx-auto">
                 {{-- Query loop --}}
-                <div class="pt-10 pb-28 sm:flex sm:flex-row lg:flex-row 2xl:flex-row sm:gap-3 lg:gap-2 xl:gap-2 2xl:gap-4 justify-center content-center ">
+                <div class="community-wrapper relative facetwp-template grid grid-cols-1 sm:g sm:grid-cols-2 sm:gap-3 lg:grid-cols-3 content  justify-center items-start content-center lg:pt-12">
+                    
                     @while(have_posts()) @php(the_post())
                         @include('partials.content-communities')
                     @endwhile
                 </div>
             </div>
+
+          
         </div>
 
-         {{-- Map Section - only visible when showMap is true --}}
-         <div x-data="leafletMap()" x-init="showMap" id="communitymap" class="h-96 w-full">
-            <div id="communitymap" class="w-full h-full rounded-lg shadow-md bg-white"></div>
-         </div>
+
+        {{-- Map Section - only visible when showMap is true --}}
+        <div class="container mx-auto">
+          <div class="">
+            <div x-show="showMap" 
+                x-transition:enter="transition ease-out duration-300 transform"
+                x-transition:enter-start="opacity-0 -translate-x-full"
+                x-transition:enter-end="opacity-100 translate-x-0"
+                x-transition:leave="transition ease-in duration-300 transform"
+                x-transition:leave-start="opacity-100 translate-x-0"
+                x-transition:leave-end="opacity-0 -translate-x-full"
+            >
+                <h1>Google map</h1>
+            </div>
+          </div>
+        </div>
     </div>
 
-   
+      {{-- page content --}}
+        <div id="dynamic-footer-content" class="w-full">
+            <div class="flex flex-col lg:flex-row lg:justify-between  w-full">
+                {{-- content --}}
+                <div class="bg-primary-green bg-no-repeat flex flex-col justify-center lg:w-1/2" style="background-image: url('@asset('images/pattern2.png')')">
+                    <div class="container mx-auto">
+                        <div id="footer-text" class="flex flex-col justify-center items-center m-4 sm:m-8">
+                            <div class="bg-white py-6 px-4 xl:px-6 xl:py-8 text-center">
+                                <span class="block text-simms-gold text-sm mb-2 tracking-[0.015rem] uppercase font-semibold">New Home Communities</span>
+                                <h1 class="font-arno_pro_subhead text-2xl mb-1"></h1>
+                                <div id="footer-description"></div>
+                            </div>
+                        </div>
+                    </div>
+                
+                </div>
+                {{-- image --}}
+                <div class="lg:w-1/2">
+                    {{-- image --}}
+                    <div class="w-full sm:h-96 lg:h-[460px]">
+                        <img id="footer-image" src="/wp-content/uploads/2024/10/Component-27-–-14.jpg" alt="" class="w-full object-cover bg-cover h-full">
+                    </div>
+                </div>
+            </div>
+        </div>
 </section>
 
 @endsection
