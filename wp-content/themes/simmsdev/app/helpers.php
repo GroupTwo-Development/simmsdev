@@ -56,3 +56,71 @@ if (!function_exists('format_currency')) {
         return '$' . number_format($amount, 0, '.', ',');
     }
 }
+
+
+// Replace 'my_sort_facet' with the name of your sort facet
+add_filter( 'facetwp_facet_html', function( $output, $params ) {
+ 
+    if ( 'my_sort_facet' == $params['facet']['name'] ) {
+      $output .= '<div class="facetwp-sort-radio">';
+      $output .= '<div class="facetwp-radio sort-radio" data-value="" data-type="sort">' . facetwp_i18n('Any') . '</div>'; // Optional "Any" option
+      foreach ( $params['facet']['sort_options'] as $key => $atts ) {
+        $output .= '<div class="facetwp-radio sort-radio" data-value="' . $atts['name'] . '" data-type="sort">' . facetwp_i18n($atts['label']) . '</div>';
+      }
+      $output .= '</div>';
+    }
+   
+    return $output;
+  }, 10, 2 );
+
+
+  add_action( 'wp_footer', function() {
+    ?>
+<link href="/wp-content/plugins/facetwp/assets/vendor/fSelect/fSelect.css" rel="stylesheet" type="text/css">
+<script src="/wp-content/plugins/facetwp/assets/vendor/fSelect/fSelect.js"></script>
+<script>
+document.addEventListener('facetwp-loaded', function() {
+    fUtil('.facetwp-type-sort select').fSelect({
+        showSearch: false
+    });
+});
+</script>
+<?php
+  }, 100 );
+
+
+
+  // Replace 'my_sort_facet' with the name of your sort facet
+ 
+add_action( 'wp_footer', function() {
+    ?>
+<script>
+(function($) {
+
+    var sortfacet = 'my_sort_facet';
+
+    $(document).on('click', '.sort-radio', function() {
+        var val = $(this).attr('data-value');
+        FWP.facets[sortfacet] = [val];
+        FWP.toggleOverlay('on');
+        FWP.fetchData();
+        FWP.setHash();
+    });
+
+    $(document).on('facetwp-loaded', function() {
+        if ('undefined' !== typeof FWP.facets[sortfacet]) {
+            $('.sort-radio').filter('[data-value="' + FWP.facets[sortfacet][0] + '"]').addClass('checked');
+        }
+    });
+
+})(jQuery);
+</script>
+
+<style>
+/* Replace 'my_sort_facet' with the name of your sort facet */
+.facetwp-facet-my_sort_facet select {
+    display: none;
+}
+</style>
+<?php
+  }, 100 );

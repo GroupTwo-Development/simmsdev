@@ -47,6 +47,9 @@ class Communities extends Composer
         $comm_max_SqFt = $community_sqft_group['comm_max_sqft'] ?? '';
         $comm_price_group = get_field('comm_price') ?? null;
         $comm_min_price = $comm_price_group['comm_min_price'] ?? '';
+        $location_group = get_field('latitude_longitude');
+        $latitude = $location_group['latitude'];
+        $longitude = $location_group['longitude'];
 
         return [
             'plan_add_marketing_toggle' => $plan_add_marketing_toggle,
@@ -58,6 +61,9 @@ class Communities extends Composer
             'min_sqft' => $comm_min_SqFt,
             'max_sqft' => $comm_max_SqFt,
             'min_price' => $comm_min_price,
+            'latitude' => $latitude,
+            'longitude' => $longitude
+            
 
         ];
 

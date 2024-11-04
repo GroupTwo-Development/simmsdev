@@ -46,7 +46,7 @@
         role="button"
         x-on:click="open = true"
         type="button"
-        <?php echo e($attributes->merge(['class' => 'relative h-[40px]  flex items-center cursor-pointer px-[8px] py-[5px] border-[1px] border-gray-300 rounded-[3px] font-semibold text-sm'])); ?>
+        <?php echo e($attributes->merge(['class' => 'relative h-[55px]  flex items-center cursor-pointer px-[8px] py-[5px] font-[300] text-sm'])); ?>
 
         >
         <span>Filters</span>
@@ -129,9 +129,8 @@
       <!-- Content -->
       <div class="flex grow flex-col overflow-y-auto p-5 md:p-7">
         <!-- Placeholder -->
-        <div
-          class="flex h-full flex-col items-center justify-center gap-5"
-        ></div>
+      <?php echo e($content); ?>
+
       </div>
       <!-- END Content -->
     </div>

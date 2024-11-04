@@ -39,6 +39,8 @@
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
     "alpinejs": "^3.14.3",
     "eslint-plugin-tailwindcss": "^3.17.5",
+    "jquery": "^3.7.1",
+    "leaflet": "^1.9.4",
     "swiper": "^11.1.14"
   }
 }

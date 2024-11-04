@@ -147,3 +147,48 @@ p {
 #menu-primary-page-nav li.current-menu-item a {
   @apply text-primary-green;
 }
+
+.facetwp-facet {
+  margin-bottom: 0 !important;
+}
+
+.facetwp-facet-community_sort .fs-label-wrap {
+  @apply h-[50px] flex flex-row items-center justify-between font-[300] text-black;
+}
+
+/* User Selections */
+.facetwp-selections ul {
+  @apply inline-block;
+}
+
+.facetwp-selections ul::before {
+  content: 'Applied Filters:';
+
+  @apply font-semibold text-[12px] block mb-0.5;
+}
+
+.facetwp-selections ul li {
+  @apply inline-block;
+
+  margin: 0 10px 5px 0;
+}
+
+.facetwp-selections ul li .facetwp-selection-label {
+  display: none;
+}
+
+.facetwp-selections ul li .facetwp-selection-value {
+  background-color: rgb(238 238 238 / 100%);
+  padding: 5px 17px 5px 5px;
+  font-size: 12px;
+  background-position: 14px right;
+  border-radius: 3px;
+  display: block;
+  font-weight: 400;
+}
+
+.fs-label-wrap {
+  @apply h-[50px] flex flex-row items-center justify-between font-[300] text-black;
+
+  border-color: transparent !important;
+}
