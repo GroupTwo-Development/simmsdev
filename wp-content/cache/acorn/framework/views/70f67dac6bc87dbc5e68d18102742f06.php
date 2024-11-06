@@ -18,4 +18,5 @@
        <?php echo e($bg_image); ?>
 
     </div>
-</section><?php /**PATH /Users/grouptwodev/Herd/simmsdev-app/wp-content/themes/simmsdev/resources/views/components/primary-header.blade.php ENDPATH**/ ?>
+</section>
+<?php /**PATH /Users/grouptwodev/Herd/simmsdev-app/wp-content/themes/simmsdev/resources/views/components/primary-header.blade.php ENDPATH**/ ?>

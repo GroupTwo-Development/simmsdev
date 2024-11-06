@@ -5,7 +5,7 @@ const config = {
     container: {
       padding: {
         DEFAULT: '1rem',
-        lg: '[.5rem]',
+        lg: '[1rem]',
         sm: '[.5rem]',
         md: '0.5rem',
         xl: '2rem',

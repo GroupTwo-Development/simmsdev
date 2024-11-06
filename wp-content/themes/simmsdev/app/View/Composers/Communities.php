@@ -10,7 +10,8 @@ class Communities extends Composer
     use AcfFields;
     
     protected static $views = [
-        'partials.content-communities'
+        'partials.content-communities',
+        'partials.content-community'
     ];
 
     public function with()
@@ -19,7 +20,8 @@ class Communities extends Composer
             'communities_items' => $this->communityCardItems(),
             'floorplan_item' => $this->floorplansItems(),
             'homes_count' => $this->homesCount(),
-            'gallery' => $this->gallery_data()
+            'gallery' => $this->gallery_data(),
+            'amenities' => $this->community_amenity()
         ];
     }
 
@@ -50,6 +52,7 @@ class Communities extends Composer
         $location_group = get_field('latitude_longitude');
         $latitude = $location_group['latitude'];
         $longitude = $location_group['longitude'];
+        $hours = get_field('community_weekly_business_hours') ?? '';
 
         return [
             'plan_add_marketing_toggle' => $plan_add_marketing_toggle,
@@ -62,61 +65,101 @@ class Communities extends Composer
             'max_sqft' => $comm_max_SqFt,
             'min_price' => $comm_min_price,
             'latitude' => $latitude,
-            'longitude' => $longitude
-            
-
+            'longitude' => $longitude,
+            'hours' => $hours
         ];
 
        
     }
 
+    public function community_amenity()
+    {
+        // Retrieve the subdivision amenities group
+        $subdivision_amenities_group = get_field('subdivision_amenities_group');
+
+        // Check if the field exists and is not empty
+        if ($subdivision_amenities_group) {
+            $amenity_array = [];
+
+            // Loop through each amenity and add it to the array
+            foreach ($subdivision_amenities_group as $amenity) {
+                $amenity_field = $amenity['subdivision_Amenity'] ?? null;
+
+                // Only add if amenity field is not null
+                if ($amenity_field) {
+                    $amenity_array[] = $amenity_field;
+                }
+            }
+
+            // Return the array if it's not empty, otherwise return null
+            return !empty($amenity_array) ? $amenity_array : null;
+        }
+
+        // Return null if the field doesn't exist or is empty
+        return null;
+    }
+
     public function floorplansItems()
     {
-        $spec_data__array = [];
-        $floorplans = collect(get_field('plans_community_group')['subdivision_plans'] ?? []);
 
-        if($floorplans->isEmpty()) {
+        global $post;
+        $spec_data__array = [];
+
+        $garages = [];
+        $stories = [];
+        $beds = [];
+        $baths = [];
+        $halfBaths = [];
+        
+        $plans_community_group = collect($this->fields()['plans_community_group']);
+        $floorplans = collect($plans_community_group['subdivision_plans'] ?? []);
+
+
+        // Filter homes by checking if each item is a WP_Post object and has 'publish' status
+        $publishedPlans = $floorplans->filter(function ($plan) {
+            // Check if $home is a WP_Post object and has a 'publish' status
+            return $plan instanceof \WP_Post && $plan->post_status === 'publish';
+        });
+
+        if($publishedPlans->isEmpty()) {
             return;
-        }else{
-           foreach ($floorplans as $floorplan) {
+        }
+
+
+           foreach ($publishedPlans as $floorplan) {
                 // Check if $floorplan is an object and has an ID property
                 if (is_object($floorplan) && !empty($floorplan->ID)) {
-                    // Retrieve bed and bath values for each floorplan
-                    $beds = get_field('plan_beds_group', $floorplan->ID) ?? null;
-                    $baths = get_field('plan_baths_group', $floorplan->ID) ?? null;
-                    $half_bath_group = get_field('plan_half_baths_group', $floorplan->ID) ?? null;
-
-                    // Retrieve bed and bath values for each floorplan
-                    $beds = get_field('plan_beds_group', $floorplan->ID);
-                    $baths = get_field('plan_baths_group', $floorplan->ID);
-                    $half_bath_group = get_field('plan_half_baths_group', $floorplan->ID) ?? null;
-                }
+                    $plan_beds_group = get_field('plan_beds_group', $floorplan->ID) ?? [];
+                    $plan_baths_group = get_field('plan_baths_group', $floorplan->ID) ?? [];
+                    $half_bath_group = get_field('plan_half_baths_group', $floorplan->ID) ?? [];
+                    $plan_garages = get_field('plan_garages', $floorplan->ID);
+                    $plan_stories = get_field('plan_stories', $floorplan->ID);
+        
+                    // Collect bed, bath, garage, and story values if they exist
+                    if (!empty($plan_beds_group['Plan_beds'])) $beds[] = $plan_beds_group['Plan_beds'];
+                    if (!empty($plan_baths_group['plan_full_baths'])) $baths[] = $plan_baths_group['plan_full_baths'];
+                    if (!empty($half_bath_group['plan_half_baths'])) $halfBaths[] = $half_bath_group['plan_half_baths'];
+                    if ($plan_garages !== null) $garages[] = $plan_garages;
+                    if ($plan_stories !== null) $stories[] = $plan_stories;
+                    
+                }  
             
-                // Structure each floorplan's data as an associative array
-                $spec_data__array[] = $beds ?? null;
-                $spec_data__array[] = $baths ?? null;
-                $spec_data__array[] = $half_bath_group ?? null;            
-            
-            }
         }
 
-        
-
-        sort($spec_data__array);
-       // Check if data exists before calculating
-        if (!empty(floatval($spec_data__array))) 
-        {
-            // Calculate min, max, and average values
-            $array_item = [
-                'min_beds' => collect($spec_data__array)->min('Plan_beds'),
-                'max_beds' => collect($spec_data__array)->max('Plan_beds'),
-                'min_bath' =>  collect($spec_data__array)->min('plan_full_baths'),
-                'max_bath' => collect($spec_data__array)->max('plan_full_baths'),
-                'min_half_bath' =>  collect($spec_data__array)->max('plan_half_baths'),
+         // Calculate min and max values for each attribute using array_filter to exclude null values
+            return [
+                'min_beds' => !empty($beds) ? min($beds) : null,
+                'max_beds' => !empty($beds) ? max($beds) : null,
+                'min_bath' => !empty($baths) ? min($baths) : null,
+                'max_bath' => !empty($baths) ? max($baths) : null,
+                'min_half_baths' => !empty($halfBaths) ? min($halfBaths) : null,
+                'max_half_baths' => !empty($halfBaths) ? max($halfBaths) : null,
+                'min_garages' => !empty($garages) ? min($garages) : null,
+                'max_garages' => !empty($garages) ? max($garages) : null,
+                'min_stories' => !empty($stories) ? min($stories) : null,
+                'max_stories' => !empty($stories) ? max($stories) : null,
             ];
 
-            return $array_item;
-        }
     }
 
     public function homesCount()
@@ -124,8 +167,14 @@ class Communities extends Composer
         
         // Retrieve available homes associated with the community
         $homes = collect(get_field('comm_qmi_group')['subdivision_qmi'] ?? []);
-         // Return the count of available homes
-        return $homes->count();
-       
+
+        // Filter homes by checking if each item is a WP_Post object and has 'publish' status
+        $publishedHomesCount = $homes->filter(function ($home) {
+            // Check if $home is a WP_Post object and has a 'publish' status
+            return $home instanceof \WP_Post && $home->post_status === 'publish';
+        })->count();
+
+        return $publishedHomesCount;
+
     }
 }

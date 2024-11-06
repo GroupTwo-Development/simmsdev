@@ -58,7 +58,7 @@
 <?php endif; ?>
 </div>
 
-<section x-data="{ showMap: false }" class="relative">
+<section x-data="{ showMap: false }" class="relative" x-cloak>
     
     <?php echo $__env->make('partials.community.mobile', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
     
@@ -93,11 +93,10 @@
          
 
          
-        <div>
+        <div  x-show="!showMap" >
             <div class="container mx-auto">
                 
                 <div class="community-wrapper relative facetwp-template grid grid-cols-1 sm:g sm:grid-cols-2 sm:gap-3 lg:grid-cols-3 content  justify-center items-start content-center lg:pt-12">
-                    
                     <?php while(have_posts()): ?> <?php (the_post()); ?>
                         <?php echo $__env->make('partials.content-communities', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
                     <?php endwhile; ?>

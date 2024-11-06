@@ -19,7 +19,7 @@
 
       @include('sections.header')
 
-      <main id="main" class="main min-h-screen>
+      <main id="main" class="main">
         @yield('content')
       </main>
 

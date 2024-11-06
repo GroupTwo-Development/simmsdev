@@ -1,5 +1,4 @@
 
-
 @extends('layouts.primary-app')
 
 @section('content')
@@ -22,7 +21,7 @@
     <x-primary-page-nav />
 </div>
 
-<section x-data="{ showMap: false }" class="relative">
+<section x-data="{ showMap: false }" class="relative" x-cloak>
     {{-- Mobile View - Toggle Button and Filter --}}
     @include('partials.community.mobile')
     {{-- Find your home  - Desktop--}}
@@ -38,11 +37,10 @@
          {{-- Main Content - Conditionally Render Map or Cards --}}
 
          
-        <div>
+        <div  x-show="!showMap" >
             <div class="container mx-auto">
                 {{-- Query loop --}}
                 <div class="community-wrapper relative facetwp-template grid grid-cols-1 sm:g sm:grid-cols-2 sm:gap-3 lg:grid-cols-3 content  justify-center items-start content-center lg:pt-12">
-                    
                     @while(have_posts()) @php(the_post())
                         @include('partials.content-communities')
                     @endwhile
