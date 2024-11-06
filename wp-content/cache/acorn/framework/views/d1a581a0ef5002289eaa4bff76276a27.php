@@ -20,7 +20,7 @@
 
       <?php echo $__env->make('sections.header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
-      <main id="main" class="main">
+      <main id="main" class="main min-h-screen">
         <?php echo $__env->yieldContent('content'); ?>
       </main>
 
