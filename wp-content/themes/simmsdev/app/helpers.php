@@ -33,6 +33,13 @@
  * @param array $attributes Additional attributes for the image tag (optional).
  * @return string The HTML for the image.
  */
+
+// Setup google map API key
+add_action('acf/init', function() {
+    $builders_hub_api_key = get_option('builders_hub_api_key');
+    acf_update_setting('google_api_key', $builders_hub_api_key);
+});
+
 function get_image_with_alt($image_id, $size = 'full', $attributes = [])
 {
     if (! $image_id) {

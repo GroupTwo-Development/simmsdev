@@ -15,6 +15,19 @@ use function Roots\bundle;
  */
 add_action('wp_enqueue_scripts', function () {
     wp_enqueue_script('jquery');
+    wp_enqueue_script(
+        'google-maps',
+        'https://maps.googleapis.com/maps/api/js?key=' . get_option('builders_hub_api_key') . '&callback=initLocationMap',
+        [],
+        null,
+        true
+    );
+    add_filter('script_loader_tag', function($tag, $handle) {
+        if ('google-maps' !== $handle) {
+            return $tag;
+        }
+        return str_replace(' src', ' async="async" src', $tag);
+    }, 10, 2);
     bundle('app')->enqueue();
 }, 100);
 

@@ -1,6 +1,6 @@
 <div class="desktop hidden xl:block h-full">
     <div class="container mx-auto">
-        <div class="flex flex-row justify-between items-center w-full py-5">
+        <div class="flex flex-row justify-between items-center w-full py-5 xl:py-8">
             
             <div class="max-w-40">
                 <?php if(function_exists('the_custom_logo')): ?>
