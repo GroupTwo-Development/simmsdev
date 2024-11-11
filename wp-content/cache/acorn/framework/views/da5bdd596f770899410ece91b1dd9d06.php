@@ -11,7 +11,7 @@
                 alt="<?php echo e($image['alt']); ?>"
                 width="1600"
                 height="1067"
-                class="bg-cover object-cover w-full h-[250px] sm:h-[300px] md:h-[400px] lg:h-[500px] xl:h-[525px] 2xl:h-[600px] inset-0"
+                class="bg-cover object-cover w-full h-[250px] sm:h-[300px] md:h-[400px] lg:h-[600px] xl:h-[525px] 2xl:h-[600px] inset-0"
                 data-lazy-src="<?php echo e($image['sizes']['large']); ?>"
             />
             </div>

@@ -5,10 +5,10 @@ const config = {
     container: {
       padding: {
         DEFAULT: '1rem',
-        lg: '[1rem]',
+        lg: '[0.5rem]',
         sm: '[.5rem]',
         md: '0.5rem',
-        xl: '2rem',
+        xl: '1rem',
         '2xl': '3rem',
       },
     },
@@ -32,6 +32,15 @@ const config = {
         Playfair_Display: ['Playfair Display', 'serif'],
         Lato: ['Lato', 'sans-serif'],
       }, // Extend Tailwind's default font families
+
+      animation: {
+        shine: 'shine 1s',
+      },
+      keyframes: {
+        shine: {
+          '100%': { left: '125%' },
+        },
+      },
     },
   },
   plugins: [],

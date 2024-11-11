@@ -7,6 +7,10 @@ html {
   @apply font-agenda font-[300];
 }
 
+body.logged-in {
+  margin-top: 20px;
+}
+
 p {
   @apply font-agenda font-[300] leading-7;
 }
@@ -90,6 +94,10 @@ p {
 
 .main {
   @apply mt-[90px] lg:mt-[105px];
+}
+
+.logged-in .main {
+  @apply lg:mt-[73px];
 }
 
 .swiper-button-next::after {
@@ -191,4 +199,29 @@ p {
   @apply h-[50px] flex flex-row items-center justify-between font-[300] text-black;
 
   border-color: transparent !important;
+}
+
+/* Main Gallery slider */
+.f-carousel__thumbs.is-classic {
+  margin-bottom: -10px;
+}
+
+.scroll-link.active {
+  @apply text-simms-gold;
+}
+
+.menu-scroll {
+  @apply hidden lg:block;
+}
+
+.acf-map {
+  @apply lg:h-[518px];
+
+  width: 100%;
+  height: 517px;
+  border: #ccc solid 1px;
+}
+
+.acf-map img {
+  max-width: inherit !important;
 }

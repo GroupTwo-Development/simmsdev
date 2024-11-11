@@ -1,5 +1,4 @@
 <div class="w-full">
-
     <article class="group flex flex-col overflow-hidden bg-white shadow-md mb-8 w-full">
         <div class="h-56 md:h-56 xl:h-64 overflow-hidden relative"> 
             @if($gallery['card_image'])
@@ -18,10 +17,12 @@
                     <span class="text-sm font-[300]">{{ $communities_items['city'] . ', ' . $communities_items['state'] }}</span>
                 </div>
             </div>
-            @if ($floorplan_item['min_beds'] || $floorplan_item['min_bath'] || $communities_items['min_sqft'] || $floorplan_item['baths'])
+
+            
+            @if (isset($floorplan_item['min_beds']) || isset($floorplan_item['min_bath'] )|| $communities_items['min_sqft'] || $floorplan_item['baths'])
                 <div class="border-b-[1px] border-simms-gold">
                     <div class="px-3 pb-3 flex flex-row justify-between items-center content-center gap-1">
-                        @if ($floorplan_item['min_beds'])
+                        @if (isset($floorplan_item['min_beds']))
                             <div class="flex flex-row sm:flex-col md:flex-row lg:flex-col xl:flex-row  gap-2 items-center content-center">
                                 <img class="bg-cover object-cover" src="@asset('images/bbeds-icon.png') " /> 
                                 <div>
@@ -30,11 +31,11 @@
                                 </div>
                             </div>
                         @endif
-                        @if ($floorplan_item['min_bath'] && $floorplan_item['max_bath'])
+                        @if (isset($floorplan_item['min_bath']) && $floorplan_item['max_bath'])
                             <div class="flex flex-row sm:flex-col md:flex-row lg:flex-col xl:flex-row  gap-2 items-center content-center">
                                 <img class="bg-cover object-cover" src="@asset('images/bathroom-icon.png') " /> 
                                 <div>
-                                    <span class="text-sm font-semibold">{!! ($floorplan_item['max_beds'] > $floorplan_item['min_beds'] ) ? ($floorplan_item['min_bath'] . '<i class="text-[12px]">+</i>') : $floorplan_item['min_bath']  !!}</span>
+                                    <span class="text-sm font-semibold">{!! ($floorplan_item['max_bath'] > $floorplan_item['min_bath'] ) ? ($floorplan_item['min_bath'] . '<i class="text-[12px]">+</i>') : $floorplan_item['min_bath']  !!}</span>
                                     <span class="text-sm font-semibold uppercase tracking-[0.06em]">Baths</span>
                                 </div>
                             </div>
@@ -54,11 +55,13 @@
                 </div>
             @endif
     
-            @if ($homes_count)
+
+      
+            @if ($associated_homes['totalhomes'])
             <div class="border-b-[1px] border-simms-gold">
                 <div class="px-3 pb-3 flex flex-row items-center gap-1.5">
                     <div class="bg-primary-green text-white h-[28px] w-[28px] flex flex-col justify-center items-center">
-                        <span class="block font-semibold p-1">{!! $homes_count !!}</span>
+                        <span class="block font-semibold p-1">{!! $associated_homes['totalhomes'] !!}</span>
                     </div>
                     <span class="text-sm font-semibold uppercase tracking-[0.06em]">Move-In Ready Homes</span>
                 </div>
