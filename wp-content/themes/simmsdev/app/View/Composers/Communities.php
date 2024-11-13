@@ -344,8 +344,6 @@ class Communities extends Composer
     }
 
 
-   
-
     public function video_converter()
     {
         $home_video_url = get_field('subdivision_video') ?? null;
