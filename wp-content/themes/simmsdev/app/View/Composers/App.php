@@ -111,14 +111,22 @@ class App extends Composer
 
     public function primaryPageHeader()
     {
-        $community_title = get_field('title_comm', 'option');
-        $community_sub_title = get_field('subtitle_comm', 'option');
-        $community_header_img = get_field('header_image_comm', 'option');
+        $community_title = get_field('title_comm', 'option') ?? null;
+        $community_sub_title = get_field('subtitle_comm', 'option') ?? null;
+        $community_header_img = get_field('header_image_comm', 'option') ?? null;
+
+        $homes_title = get_field('title_comm_qmi', 'option') ?? null;
+        $homes_sub_title = get_field('subtitle_comm_qmi', 'option') ?? null;
+        $homes_header_img = get_field('header_image_comm_qmi', 'option') ?? null;
+
 
         return [
             'community_title' => $community_title,
             'community_sub_title' => $community_sub_title,
             'community_header_img' => $community_header_img,
+            'homes_title' => $homes_title,
+            'homes_sub_title' => $homes_sub_title,
+            'homes_header_img' => $homes_header_img,
         ];
     }
 }
