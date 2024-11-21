@@ -225,3 +225,11 @@ p {
 .acf-map img {
   max-width: inherit !important;
 }
+
+.section-img img {
+  @apply bg-cover bg-center w-full object-cover object-center h-full xl:h-[450px];
+}
+
+.team-photo img {
+  @apply bg-cover bg-center w-full object-cover object-center sm:h-[300px];
+}

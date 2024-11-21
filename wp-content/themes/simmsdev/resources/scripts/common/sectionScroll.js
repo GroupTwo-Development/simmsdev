@@ -11,6 +11,8 @@ export const initScrollToSection = () => {
         'availablehomes',
         'floorplans',
         'location',
+        'virutal-tour',
+        'elevations',
       ];
       const offset = 105; // Adjust for the navbar height
 
