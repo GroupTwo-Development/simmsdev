@@ -93,13 +93,13 @@
                         <div class="lg:w-1/2 relative">
                             <div class="w-full h-full right-img relative">
                                 <?php
-                                // Get image ID
-                                $image_id = $section_one['section_image'];
-                                
-                                // Get the alt text of the image
-                                $image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', true);
-                            ?>
-                            <?php echo wp_get_attachment_image($image_id, 'full', false, ['alt' => $image_alt]); ?>
+                                    // Get image ID
+                                    $image_id = $section_one['section_image'];
+                                    
+                                    // Get the alt text of the image
+                                    $image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', true);
+                                ?>
+                                <?php echo wp_get_attachment_image($image_id, 'full', false, ['alt' => $image_alt]); ?>
 
                             </div>
                         </div>

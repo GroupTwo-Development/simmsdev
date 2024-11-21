@@ -9,7 +9,7 @@ class Homes extends Composer
 {
 
     use AcfFields;
-    
+
     protected static $views = [
         'partials.content-homes',
         'partials.content-home',
@@ -24,9 +24,9 @@ class Homes extends Composer
             'associated_community' => $this->associatedCommunity(),
             // 'associated_homes' => $this->associatedHomes(),
             // 'amenities' => $this->community_amenity(),
-            // 'video' => $this->video_converter(),
+             'video' => $this->video_converter(),
             'associated_floorplans' => $this->associatedFloorplans(),
-            // 'sales_agent' => $this->saleAgent(),
+            'sales_agent' => $this->saleAgent(),
         ];
     }
 
@@ -56,7 +56,7 @@ class Homes extends Composer
 
         $home_announcements_text_group = get_field('home_announcements_text_group') ?? null;
         $marketing_headline_text = $home_announcements_text_group['home_custom_announcements'] ?? null;
-        
+
         $price = get_field('home_price');
         $beds = get_field('home_beds');
         $home_baths = get_field('home_baths');
@@ -80,8 +80,17 @@ class Homes extends Composer
 
         $home_status_group = get_field('home_status_group');
         $home_status = $home_status_group['home_status'] ?? null;
+        $home_stories = get_field('home_stories') ?? null;
+        $home_garages = get_field('home_garages') ?? null;
+        $downloadable_brochure = get_field('downloadable_brochure') ?? null;
+        $home_description_group = get_field('home_description');
+        $home_headline = $home_description_group['home_headline'] ?? null;
+        $home_description = $home_description_group['home_description'] ?? null;
+        $home_floorplans = get_field('home_floorplans') ?? null;
+        $interactive_plan = get_field('interactive_plan') ?? null;
+        $home_virtual__tour = get_field('home_virtual__tour') ?? null;
+        $elevation_photos = get_field('elevation_photos') ?? null;
 
-    
 
         return [
             'title_home' => $home_name,
@@ -106,25 +115,30 @@ class Homes extends Composer
             'slider_gallery' => collect(get_field('photos'))->toArray(),
             'home_headline' => $home_headline,
             'home_description' => $home_description,
-            'floorplans' => $home_floorplans,
+            'sitemap' => $home_floorplans,
             'interactive_plan' => $interactive_plan,
             'virtual_tour' => $home_virtual__tour,
             'brochure' => $brochure,
             'phone' => $global_phone,
             'status' => $home_status,
+            'stories' => $home_stories,
+            'garages' => $home_garages,
+            'downloadable_brochure' => $downloadable_brochure,
+            'description' => $home_description,
+            'headline' => $home_headline,
+            'elevation_photos' => $elevation_photos,
         ];
 
-       
     }
 
     // Retrieve the community sales agent
     public function saleAgent()
     {
-        $comm_sales_agent_group = get_field('comm_sales_agent_group');
-        $subdivision_sales_agent = $comm_sales_agent_group['subdivision_sales_agent'] ?? '';
 
-        if($subdivision_sales_agent){
-            foreach ($subdivision_sales_agent as $agent) {
+        $qmi_sales_agent = get_field('qmi_sales_agent') ?? '';
+
+        if($qmi_sales_agent){
+            foreach ($qmi_sales_agent as $agent) {
                 return array (
                     'agent_title' => get_field('title', $agent->ID),
                     'name'  => get_the_title($agent->ID),
@@ -162,15 +176,11 @@ class Homes extends Composer
         // Return null if the field doesn't exist or is empty
         return null;
     }
-    
+
     public function associatedFloorplans()
     {
         $asociated_plans = [];
-
         $associatedPlan = collect($this->fields()['home_floorplan']) ?? [];
-
-       
-       
         $publishedFloorplans = $associatedPlan->filter(function ($floorplan) {
             return $floorplan instanceof \WP_Post && $floorplan->post_status === 'publish';
         });
@@ -179,16 +189,16 @@ class Homes extends Composer
             $plan_beds_group = get_field('plan_beds_group', $floorplan->ID) ?? [];
             $plan_baths_group = get_field('plan_baths_group', $floorplan->ID) ?? [];
             $half_bath_group = get_field('plan_half_baths_group', $floorplan->ID) ?? [];
-            
+
             $card_image = collect(get_field('plan_photos', $floorplan->ID))->first() ?? null;
             $slider_gallery = collect(get_field('plan_photos', $floorplan->ID))->toArray() ?? [];
 
             // Filter for only published "available homes"
             $plan_available_homes = get_field('plan_available_homes', $floorplan->ID) ?? [];
-            $published_homes = is_array($plan_available_homes) 
+            $published_homes = is_array($plan_available_homes)
             ? array_filter($plan_available_homes, function($home) {
                 return get_post_status($home->ID) === 'publish';
-            }) 
+            })
             : [];
 
 
@@ -209,7 +219,7 @@ class Homes extends Composer
                 'available_homes' => $published_homes,
             ];
         }
-   
+
 
         return $asociated_plans;
     }
@@ -217,11 +227,11 @@ class Homes extends Composer
     public function associatedCommunity()
     {
         $associated_community = [];
-        
-  
+
+
         $associatedCommunity = collect($this->fields()['home_community']) ?? [];
 
-      
+
         // Filter homes by checking if each item is a WP_Post object and has 'publish' status
         $publishedCommunity = $associatedCommunity->filter(function ($community) {
             return $community instanceof \WP_Post && $community->post_status === 'publish';
@@ -236,29 +246,29 @@ class Homes extends Composer
         }
 
         foreach ($publishedCommunity as $community) {
-            
 
-            // $published_plan = is_array($assigned_plan_in_home) 
+
+            // $published_plan = is_array($assigned_plan_in_home)
             // ? array_filter($assigned_plan_in_home, function($plan) {
             //     return get_post_status($plan->ID) === 'publish';
-            // }) 
+            // })
             // : [];
 
             // $first_published_plan = $published_plan[0] ?? null;
 
-            
+
 
             $associated_homes[] = [
                 'title_home' => get_the_title($community),
                 'permalink' => get_the_permalink($community),
-                
+
                 // 'assigned_plan' => $first_published_plan,
                 // 'assigned_plan_permalink' => $first_published_plan ? get_permalink($first_published_plan->ID) : null,
             ];
         }
 
         return [
-           
+
             'community' => $associated_homes
         ];
     }
@@ -266,7 +276,7 @@ class Homes extends Composer
 
     public function video_converter()
     {
-        $home_video_url = get_field('subdivision_video') ?? null;
+        $home_video_url = get_field('home_video') ?? null;
 
         if (!$home_video_url) {
             return null;

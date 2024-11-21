@@ -16,4 +16,22 @@ export const initVideoPlayer = () => {
       autoplay: true,
     },
   });
+
+  Fancybox.bind('[data-fancybox="gallery-qmi-sitemap"]', {
+    // Custom options
+    // Example options: customize transition, overlay color, etc.
+    Toolbar: true,
+    Thumbs: {
+      autoStart: true,
+    },
+    Video: {
+      autoplay: true,
+    },
+  });
+
+  Fancybox.bind('[data-fancybox="elevations"]', {
+    Thumbs: {
+      type: 'modern',
+    },
+  });
 };

@@ -127,6 +127,7 @@ class App extends Composer
             'homes_title' => $homes_title,
             'homes_sub_title' => $homes_sub_title,
             'homes_header_img' => $homes_header_img,
+            
         ];
     }
 }
