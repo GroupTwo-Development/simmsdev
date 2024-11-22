@@ -1279,6 +1279,11 @@
           "color": "#534e50",
           "name": "Simms-border-color",
           "slug": "simms-border-color"
+        },
+        {
+          "color": "rgba(0, 103, 109, 0.1)",
+          "name": "Light-green",
+          "slug": "light-green"
         }
       ]
     },

@@ -145,11 +145,11 @@ p {
 }
 
 #menu-primary-page-nav li {
-  @apply bg-simms-gold px-1;
+  @apply bg-simms-gold px-1 lg:bg-transparent;
 }
 
 #menu-primary-page-nav li a {
-  @apply tracking-[0.01em] uppercase font-[500] text-sm text-white hover:text-primary-green transition-all ease-in-out;
+  @apply tracking-[0.01em] uppercase font-[500] text-sm lg:text-lg text-white lg:text-primary-green  lg:hover:text-simms-gold transition-all ease-in-out;
 }
 
 #menu-primary-page-nav li.current-menu-item a {
@@ -232,4 +232,21 @@ p {
 
 .team-photo img {
   @apply bg-cover bg-center w-full object-cover object-center sm:h-[300px];
+}
+
+.imag-full-h img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.section-image-h img {
+  object-fit: cover;
+  height: 100%;
+}
+
+.sectionfive-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }

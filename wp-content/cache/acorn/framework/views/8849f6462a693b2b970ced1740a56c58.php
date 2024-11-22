@@ -21,7 +21,7 @@
 <?php endif; ?>
 <?php $component->withAttributes(['title' => 'Price']); ?>
                         <?php $__env->slot('dropdown', null, []); ?> 
-                           <?php echo facetwp_display('facet', 'price_qmi_desktop'); ?>
+                           <?php echo facetwp_display('facet', 'price_'); ?>
 
                         <?php $__env->endSlot(); ?>
                     <?php echo $__env->renderComponent(); ?>
@@ -38,13 +38,13 @@
 
                 
                 <div class="border-r-[1px] border-[#0d0515]">
-                    <?php echo facetwp_display('facet', 'beds_qmi_desktop'); ?>
+                    <?php echo facetwp_display('facet', 'beds_'); ?>
 
                 </div>
 
                 
                 <div class="border-r-[1px] border-[#0d0515]">
-                    <?php echo facetwp_display('facet', 'baths_qmi_desktop'); ?>
+                    <?php echo facetwp_display('facet', 'baths'); ?>
 
                 </div>
        

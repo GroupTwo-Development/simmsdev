@@ -1,7 +1,7 @@
 @if($aboutUsContent)
     <section id="description">
         {{-- description content --}}
-        <div class="bg-primary-green relative pt-14 xl:pt-20 pb-28 lg:pb-40 overflow-hidden">
+        <div class="bg-primary-green relative pt-14 xl:pt-20 pb-16 lg:pb-24  overflow-hidden">
             <div class="container mx-auto">
                 <div class="text-white text-center xl:max-w-screen-lg mx-auto">
                     @if ($aboutUsContent['title'])
