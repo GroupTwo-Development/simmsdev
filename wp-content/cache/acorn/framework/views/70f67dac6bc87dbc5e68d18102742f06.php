@@ -14,9 +14,11 @@
             </div>
         </div>
     </div>
-    <div class="h-24 sm:h-28 md:h-36 xl:h-52 lg:h-56 bg-cover object-left-top hidden lg:block">
-       <?php echo e($bg_image); ?>
+    <div class="h-24 sm:h-28 md:h-36 lg:h-[155px] xl:h-[155px]  bg-cover object-left-top hidden lg:block">
+      <div class="h-full w-full">
+        <?php echo e($bg_image); ?>
 
+      </div>
     </div>
 </section>
 <?php /**PATH /Users/grouptwodev/Herd/simmsdev-app/wp-content/themes/simmsdev/resources/views/components/primary-header.blade.php ENDPATH**/ ?>
