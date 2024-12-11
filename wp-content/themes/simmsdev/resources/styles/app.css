@@ -250,3 +250,41 @@ p {
   width: 100%;
   object-fit: cover;
 }
+
+.award_section_two_img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.award-section-two .swiper-button-prev::after {
+  @apply text-primary-green;
+}
+
+.award-section-two .swiper-button-next::after {
+  @apply text-primary-green;
+}
+
+.award-section-three .swiper-button-prev::after {
+  @apply text-simms-gold;
+}
+
+.award-section-three .swiper-button-next::after {
+  @apply text-simms-gold;
+}
+
+.award-section-three .swiper-pagination-bullet-active {
+  @apply bg-secondary-green;
+}
+
+.award-section-one .swiper-pagination-bullet {
+  @apply bg-secondary-green;
+}
+
+.award-section-one .swiper-pagination-bullet-active {
+  @apply bg-simms-gold;
+}
+
+.fancybox__content {
+  padding: 0 !important;
+}

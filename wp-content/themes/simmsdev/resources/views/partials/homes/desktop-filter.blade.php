@@ -11,11 +11,12 @@
                <div class="border-r-[1px] border-[#0d0515]">
                    <x-dropdown-select title="Price">
                        <x-slot name="dropdown">
-                           {!! facetwp_display('facet', 'price_') !!}
+                           {!! facetwp_display('facet', 'home_price_main') !!}
                        </x-slot>
                    </x-dropdown-select> 
                </div>
 
+             
                 {{-- Beds --}}
                 <div class="border-r-[1px] border-[#0d0515]">
                     {!! facetwp_display('facet', 'beds_') !!}

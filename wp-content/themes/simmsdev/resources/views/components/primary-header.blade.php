@@ -13,7 +13,7 @@
             </div>
         </div>
     </div>
-    <div class="h-24 sm:h-28 md:h-36 lg:h-[155px] xl:h-[155px]  bg-cover object-left-top hidden lg:block">
+    <div class="h-24 sm:h-28 md:h-36 lg:h-[190px] xl:h-[220px]  bg-cover object-left-top hidden lg:block">
       <div class="h-full w-full">
         {{ $bg_image }}
       </div>
