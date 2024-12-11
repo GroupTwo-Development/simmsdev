@@ -15,6 +15,7 @@ class Post extends Composer
         'partials.page-header',
         'partials.content',
         'partials.content-*',
+        'home'
     ];
 
     /**
@@ -27,6 +28,8 @@ class Post extends Composer
         return [
             'title' => $this->title(),
             'pagination' => $this->pagination(),
+            'link' => $this->link(),
+            'date' => $this->theDate(),
         ];
     }
 
@@ -80,5 +83,15 @@ class Post extends Composer
             'before' => '<p>'.__('Pages:', 'sage'),
             'after' => '</p>',
         ]);
+    }
+
+    public function link()
+    {
+        return get_the_permalink();
+    }
+
+    public function theDate()
+    {
+        return get_the_date();
     }
 }
