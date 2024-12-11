@@ -22,10 +22,12 @@
 
                                 </div>
 
-                                <div>
-                                    <?php echo facetwp_display('facet', 'price'); ?>
+                                <div class="mt-5">
+                                    <?php echo facetwp_display('facet', '_price'); ?>
 
                                 </div>
+
+                          
                             </div>
                          <?php $__env->endSlot(); ?>
                      <?php echo $__env->renderComponent(); ?>

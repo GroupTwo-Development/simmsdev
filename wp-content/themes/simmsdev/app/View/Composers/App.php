@@ -118,6 +118,7 @@ class App extends Composer
         $homes_title = get_field('title_comm_qmi', 'option') ?? null;
         $homes_sub_title = get_field('subtitle_comm_qmi', 'option') ?? null;
         $homes_header_img = get_field('header_image_comm_qmi', 'option') ?? null;
+       
 
 
         return [
@@ -127,6 +128,7 @@ class App extends Composer
             'homes_title' => $homes_title,
             'homes_sub_title' => $homes_sub_title,
             'homes_header_img' => $homes_header_img,
+        
             
         ];
     }

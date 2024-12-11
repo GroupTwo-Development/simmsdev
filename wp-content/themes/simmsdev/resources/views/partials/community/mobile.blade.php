@@ -12,9 +12,11 @@
                                     {!! do_shortcode('[facetwp facet="areas"]') !!}
                                 </div>
 
-                                <div>
-                                    {!! facetwp_display('facet', 'price') !!}
+                                <div class="mt-5">
+                                    {!! facetwp_display('facet', '_price') !!}
                                 </div>
+
+                          
                             </div>
                         </x-slot>
                     </x-mobile-filter>

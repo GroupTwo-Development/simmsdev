@@ -21,7 +21,7 @@
 <?php endif; ?>
 <?php $component->withAttributes(['title' => 'Price']); ?>
                         <?php $__env->slot('dropdown', null, []); ?> 
-                           <?php echo facetwp_display('facet', 'price_'); ?>
+                           <?php echo facetwp_display('facet', 'home_price_main'); ?>
 
                         <?php $__env->endSlot(); ?>
                     <?php echo $__env->renderComponent(); ?>
@@ -36,6 +36,7 @@
 <?php endif; ?> 
                </div>
 
+             
                 
                 <div class="border-r-[1px] border-[#0d0515]">
                     <?php echo facetwp_display('facet', 'beds_'); ?>
