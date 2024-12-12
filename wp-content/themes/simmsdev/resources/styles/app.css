@@ -288,3 +288,7 @@ p {
 .fancybox__content {
   padding: 0 !important;
 }
+
+.pagination .posts-navigation .nav-links {
+  @apply flex flex-row items-center justify-center gap-2;
+}
