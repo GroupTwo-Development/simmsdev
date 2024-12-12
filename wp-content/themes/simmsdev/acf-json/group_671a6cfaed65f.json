@@ -385,18 +385,23 @@
     "location": [
         [
             {
-                "param": "post_type",
+                "param": "page_template",
                 "operator": "==",
-                "value": "post"
+                "value": "page.resources.blade.php"
             }
         ]
     ],
     "menu_order": 0,
-    "position": "normal",
+    "position": "acf_after_title",
     "style": "default",
     "label_placement": "left",
     "instruction_placement": "label",
-    "hide_on_screen": "",
+    "hide_on_screen": [
+        "author",
+        "block_editor",
+        "categories",
+        "comments"
+    ],
     "active": true,
     "description": "",
     "show_in_rest": 0,
@@ -407,5 +412,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1734016560
+    "modified": 1734016966
 }
