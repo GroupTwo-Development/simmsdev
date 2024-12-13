@@ -50,6 +50,7 @@ p {
 .group:hover .dropdown-submenu {
   @apply block;
 }
+
 .desktop .current-menu-item a {
   @apply text-simms-gold;
 }
