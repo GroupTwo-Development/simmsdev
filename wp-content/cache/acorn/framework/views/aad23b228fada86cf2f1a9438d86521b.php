@@ -26,7 +26,8 @@
 
 <div class="relative object-cover w-full pt-10 pb-16" style="background-image: url('<?= \Roots\asset('images/pattern2.png'); ?>')">
     
-    <?php if($resourcesSectionOne): ?>
+    <?php if(!empty($resourcesSectionOne['resource_slider'])): ?>
+        
         <div class="container mx-auto">
             <div class="bg-white py-10 px-4">
                 <?php if($resourcesSectionOne['resource_slider']): ?>
@@ -68,7 +69,7 @@
     <?php endif; ?>
 
     
-    <?php if($resourcesSectionTwo): ?>
+    <?php if(!empty($resourcesSectionTwo['resource_slider'])): ?>
         <div class="container mx-auto">
             <div class="bg-white py-10 px-4">
                 <header class="text-center pb-10 lg:pb-5">
@@ -111,7 +112,7 @@
     <?php endif; ?>
 
     
-    <?php if($resourcesSectionThree): ?>
+    <?php if(!empty($resourcesSectionThree['resource_slider'])): ?>
         <div class="mt-10">
             <div class="container mx-auto">
                 <header class="text-center pb-10 lg:pb-5">

@@ -25,7 +25,8 @@
 
 <div class="relative object-cover w-full pt-10 pb-16" style="background-image: url('@asset('images/pattern2.png')')">
     {{-- Section One --}}
-    @if ($resourcesSectionOne)
+    @if (!empty($resourcesSectionOne['resource_slider']))
+        
         <div class="container mx-auto">
             <div class="bg-white py-10 px-4">
                 @if ($resourcesSectionOne['resource_slider'])
@@ -65,7 +66,7 @@
     @endif
 
     {{-- Section Two --}}
-    @if ($resourcesSectionTwo)
+    @if (!empty($resourcesSectionTwo['resource_slider']))
         <div class="container mx-auto">
             <div class="bg-white py-10 px-4">
                 <header class="text-center pb-10 lg:pb-5">
@@ -106,7 +107,7 @@
     @endif
 
     {{-- Section Three --}}
-    @if ($resourcesSectionThree)
+    @if (!empty($resourcesSectionThree['resource_slider']))
         <div class="mt-10">
             <div class="container mx-auto">
                 <header class="text-center pb-10 lg:pb-5">

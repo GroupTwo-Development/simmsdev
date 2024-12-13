@@ -130,8 +130,8 @@
 
 @if ($energySectionThree)
     <section id="section_one" class="bg-cover object-cover relative" style="background-image: url('{{ $energySectionThree['background_image'] }}')">
-        <div class="container mx-auto py-10 ">
-            <div class="shadow-lg flex flex-col lg:flex-row lg:justify-center xl:items-center w-full lg:-mt-28 xl:-mt-36 lg:mb-10 xl:max-w-screen-xl xl:mx-auto">
+        <div class="container mx-auto py-10 lg:py-32">
+            <div class="shadow-lg flex flex-col lg:flex-row lg:justify-center xl:items-center w-full  xl:max-w-screen-xl xl:mx-auto z-10 overflow-hidden relative">
                 {{-- image content --}}
                 @if ($energySectionThree['image'])
                     <div class="flex justify-center items-center lg:w-1/2 relative">
@@ -150,7 +150,7 @@
 
                 {{-- Content Right --}}
                 @if ($energySectionThree['description'])
-                    <div class="text-center lg:text-left lg:flex lg:flex-col lg:justify-center bg-white text-black py-10 md:py-12  px-8 md:px-16 xl:h-[450px]  lg:w-1/2">
+                    <div class="text-center lg:text-left lg:flex lg:flex-col lg:justify-center bg-white text-black  relative shadow-lg py-10 md:py-12 xl:h-[450px]  px-8 xl:py-10 md:px-16 xl:-ml-28 z-20 lg:w-1/2">
                         <div>
                             <div>
                                 @if ($energySectionThree['title'])
@@ -184,11 +184,11 @@
     <section id="elevations" class="relative object-cover pt-14 xl:pt-10 w-full" style="background-image: url('@asset('assets/pattern2.png')')">
         <div class="container mx-auto py-10 lg:py-14 xl:pb-16">
             {{-- content --}}
-            <div class=" flex flex-col lg:flex-row lg:justify-center items-center w-full xl:max-w-screen-xl xl:mx-auto">
+            <div class="flex flex-col lg:flex-row lg:justify-center xl:items-center w-full  xl:max-w-screen-xl xl:mx-auto z-10 overflow-hidden relative">
               
                 {{-- content --}}
                 @if ($energySectionFour['description'])
-                    <div class="text-center lg:text-left bg-[#E5EFF0] py-10 md:py-12  px-8 md:px-12 xl:py-10 lg:w-1/2 relative shadow-lg  lg:mx-0 lg:-ml-14 z-10">
+                    <div class="bg-[#E5EFF0] text-left relative shadow-lg  lg:text-leftpy-10 md:py-12 xl:h-[450px]  px-8 xl:py-10 md:px-16 xl:-mr-28 z-20 lg:w-1/2">
                         <div>
                             <div class="">
                                 @if ($energySectionFour['sub_title'])
