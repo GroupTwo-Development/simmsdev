@@ -38,7 +38,7 @@ class desktop_Nav_Walker extends Walker_Nav_Menu
         $output .= '<li class="' . $class_names . '">';
 
         // Add menu link with custom and default Tailwind classes
-        $output .= '<a href="' . esc_attr($item->url) . '" class="nav-link text-sm px-2 xl:px-3 py-2 text-black uppercase font-semibold hover:bg-gray-200 flex items-center justify-between">';
+        $output .= '<a href="' . esc_attr($item->url) . '" class="nav-link text-sm px-2 xl:px-3 py-2 text-black content-center text-center uppercase font-[500] hover:border-b-2 border-simms-gold ">';
 
         $output .= esc_html($item->title);
 

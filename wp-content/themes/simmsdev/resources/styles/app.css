@@ -16,7 +16,7 @@ p {
 }
 
 .nav-desktop li a {
-  @apply font-semibold text-white;
+  @apply font-[400] text-white hover:text-simms-gold transition-all ease-in-out duration-[0.3s];
 }
 
 .nav-desktop .dropdown-menu {
@@ -32,11 +32,15 @@ p {
 }
 
 .dropdown-menu li a {
-  @apply font-semibold text-secondary-green;
+  @apply font-[400] text-secondary-green;
 }
 
 .group .nav-link {
   @apply px-4 py-3  2xl:text-[17px] hover:bg-secondary-green hover:text-white transition-all flex items-center justify-between;
+}
+
+.desktop .nav-desktop .dropdown-menu .group .nav-link {
+  @apply px-4 py-3  2xl:text-[16px] hover:bg-secondary-green hover:text-white transition-all flex items-center justify-center;
 }
 
 .nav .dropdown-submenu {
@@ -45,6 +49,9 @@ p {
 
 .group:hover .dropdown-submenu {
   @apply block;
+}
+.desktop .current-menu-item a {
+  @apply text-simms-gold;
 }
 
 .dropdown-menu {
@@ -292,3 +299,7 @@ p {
 .pagination .posts-navigation .nav-links {
   @apply flex flex-row items-center justify-center gap-2;
 }
+
+/* .self-guided a {
+  @apply text-simms-gold border-b-2 border-simms-gold !important;
+} */
