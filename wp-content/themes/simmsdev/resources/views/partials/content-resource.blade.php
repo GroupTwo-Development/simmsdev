@@ -73,7 +73,7 @@
 
 
     {{-- Section Two --}}
-    @if ($resourcesSectionTwo)
+    {{-- @if ($resourcesSectionTwo)
         <div class="">
             <div class="container mx-auto">
                 <div class="bg-white py-10 px-4">
@@ -117,46 +117,10 @@
                 </div>
             </div>
         </div>
-    @endif
+    @endif --}}
 
 
         {{-- Section Three --}}
-    @if ($resourcesSectionThree)
-        <div class="mt-10">
-            <div class="container mx-auto">
-                <div class="">
-                    <header class="text-center pb-10 lg:pb-5">
-                        <h2 class="text-3xl sm:text-4xl font-arno_pro_subhead font-normal text-[#002829] mb-5">{{ __('Special Offers') }}</h2>
-                    </header>
-                    <div>
-                        @if ($resourcesSectionThree['resource_slider'])
-                            <div class="sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-5">
-                                @foreach ($resourcesSectionThree['resource_slider'] as $index => $resource)
-                                    <article class="bg-[#E5EFF0] shadow-lg mb-10 px-6 py-14 text-center {{ $index >= 3 ? ' hidden' : '' }}">
-                                    <h3 class="text-[#534E50] font-arno_pro_subhead font-normal mb-5 text-2xl">{{ $resource['offer_title'] }}</h3>
-                                    <div class="text-base font-normal">
-                                            {!! $resource['offer_description'] !!}
-                                    </div>
-                                    <div class="mt-4">
-                                            <span class="text-simms-lime uppercase">{{ $resource['learn_more_text'] }}</span>
-                                    </div>
-                                    </article>
-                                @endforeach
-                            </div>
-                        @endif
-                    </div>
-                    {{-- Load More Button --}}
-                    @if (count($resourcesSectionThree['resource_slider']) > 3)
-                        <div class="text-center mt-6">
-                            <button id="load-more" class="bg-simms-gold text-white py-2 px-4 rounded hover:bg-opacity-90 transition duration-300">
-                                Load More
-                            </button>
-                        </div>
-                    @endif
 
-                </div>
-            </div>
-        </div>
-    @endif
 </div>
 <x-find-your-home :findYourHome="$findYourHome" />
