@@ -120,9 +120,8 @@
     @endif
 
 
-
         {{-- Section Three --}}
-        @if ($resourcesSectionThree)
+    @if ($resourcesSectionThree)
         <div class="mt-10">
             <div class="container mx-auto">
                 <div class="">
@@ -134,13 +133,13 @@
                             <div class="sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-5">
                                 @foreach ($resourcesSectionThree['resource_slider'] as $index => $resource)
                                     <article class="bg-[#E5EFF0] shadow-lg mb-10 px-6 py-14 text-center {{ $index >= 3 ? ' hidden' : '' }}">
-                                       <h3 class="text-[#534E50] font-arno_pro_subhead font-normal mb-5 text-2xl">{{ $resource['offer_title'] }}</h3>
-                                       <div class="text-base font-normal">
-                                             {!! $resource['offer_description'] !!}
-                                       </div>
-                                       <div class="mt-4">
+                                    <h3 class="text-[#534E50] font-arno_pro_subhead font-normal mb-5 text-2xl">{{ $resource['offer_title'] }}</h3>
+                                    <div class="text-base font-normal">
+                                            {!! $resource['offer_description'] !!}
+                                    </div>
+                                    <div class="mt-4">
                                             <span class="text-simms-lime uppercase">{{ $resource['learn_more_text'] }}</span>
-                                       </div>
+                                    </div>
                                     </article>
                                 @endforeach
                             </div>
@@ -159,7 +158,5 @@
             </div>
         </div>
     @endif
-
-            
 </div>
 <x-find-your-home :findYourHome="$findYourHome" />
