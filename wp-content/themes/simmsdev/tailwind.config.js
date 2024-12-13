@@ -21,6 +21,7 @@ const config = {
         'simms-rust': '#534E50',
         'simms-border-color': '#534e50',
         'light-green': 'rgba(0, 103, 109, 0.1)',
+        'light-green-two': 'rgba(0, 103, 109, 0.75)',
       }, // Extend Tailwind's default colors
       backgroundColor: {
         overlay: 'rgba(0, 40, 41, 0.75)', // Add custom overlay color

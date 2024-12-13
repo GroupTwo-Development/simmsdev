@@ -170,9 +170,10 @@
                     "default_value": "",
                     "acfe_textarea_code": 0,
                     "maxlength": 1000,
-                    "rows": "",
+                    "allow_in_bindings": 1,
+                    "rows": 4,
                     "placeholder": "",
-                    "new_lines": "",
+                    "new_lines": "wpautop",
                     "parent_repeater": "field_671a6cfb08db0"
                 }
             ]
@@ -212,7 +213,7 @@
                 "id": ""
             },
             "acfe_field_group_condition": 0,
-            "acfe_repeater_stylised_button": 0,
+            "acfe_repeater_stylised_button": 1,
             "layout": "block",
             "pagination": 0,
             "min": 0,
@@ -352,9 +353,10 @@
                     "default_value": "",
                     "acfe_textarea_code": 0,
                     "maxlength": 500,
+                    "allow_in_bindings": 1,
                     "rows": "",
                     "placeholder": "",
-                    "new_lines": "",
+                    "new_lines": "wpautop",
                     "parent_repeater": "field_671a6cfb08ee4"
                 },
                 {
@@ -400,7 +402,9 @@
         "author",
         "block_editor",
         "categories",
-        "comments"
+        "comments",
+        "the_content",
+        "discussion"
     ],
     "active": true,
     "description": "",
@@ -412,5 +416,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1734016966
+    "modified": 1734096011
 }

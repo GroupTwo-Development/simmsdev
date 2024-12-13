@@ -90,7 +90,7 @@
                     "label": "Title",
                     "name": "slider_title",
                     "aria-label": "",
-                    "type": "text",
+                    "type": "textarea",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -101,11 +101,12 @@
                     },
                     "acfe_field_group_condition": 0,
                     "default_value": "",
+                    "acfe_textarea_code": 0,
                     "maxlength": "",
-                    "allow_in_bindings": 0,
+                    "allow_in_bindings": 1,
+                    "rows": 2,
                     "placeholder": "",
-                    "prepend": "",
-                    "append": "",
+                    "new_lines": "br",
                     "parent_repeater": "field_6712509a05a91"
                 },
                 {
@@ -598,5 +599,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1734016818
+    "modified": 1734041510
 }
