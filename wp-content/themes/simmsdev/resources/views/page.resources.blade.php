@@ -1,6 +1,5 @@
 {{--
   Template Name: Resources
-
 --}}
 
 @extends('layouts.primary-app')
@@ -24,7 +23,7 @@
 
     <div>
         @while(have_posts()) @php(the_post())
-            @include('partials.content-resource')
+            {{-- @include('partials.content-resource') --}}
         @endwhile
     </div>
 

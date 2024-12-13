@@ -125,9 +125,8 @@
     <?php endif; ?>
 
 
-
         
-        <?php if($resourcesSectionThree): ?>
+    <?php if($resourcesSectionThree): ?>
         <div class="mt-10">
             <div class="container mx-auto">
                 <div class="">
@@ -139,14 +138,14 @@
                             <div class="sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-5">
                                 <?php $__currentLoopData = $resourcesSectionThree['resource_slider']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $index => $resource): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                     <article class="bg-[#E5EFF0] shadow-lg mb-10 px-6 py-14 text-center <?php echo e($index >= 3 ? ' hidden' : ''); ?>">
-                                       <h3 class="text-[#534E50] font-arno_pro_subhead font-normal mb-5 text-2xl"><?php echo e($resource['offer_title']); ?></h3>
-                                       <div class="text-base font-normal">
-                                             <?php echo $resource['offer_description']; ?>
+                                    <h3 class="text-[#534E50] font-arno_pro_subhead font-normal mb-5 text-2xl"><?php echo e($resource['offer_title']); ?></h3>
+                                    <div class="text-base font-normal">
+                                            <?php echo $resource['offer_description']; ?>
 
-                                       </div>
-                                       <div class="mt-4">
+                                    </div>
+                                    <div class="mt-4">
                                             <span class="text-simms-lime uppercase"><?php echo e($resource['learn_more_text']); ?></span>
-                                       </div>
+                                    </div>
                                     </article>
                                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                             </div>
@@ -165,8 +164,6 @@
             </div>
         </div>
     <?php endif; ?>
-
-            
 </div>
 <?php if (isset($component)) { $__componentOriginalf20ba2696599e222bf515abd9ef1cf04 = $component; } ?>
 <?php if (isset($attributes)) { $__attributesOriginalf20ba2696599e222bf515abd9ef1cf04 = $attributes; } ?>
