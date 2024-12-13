@@ -1,3 +1,5 @@
+{{-- Reources page information --}}
+
 @if ($introContent)
     <section id="description">
         {{-- Description Content --}}
