@@ -112,7 +112,7 @@
                 <header class="text-center pb-10 lg:pb-5">
                     <h2 class="text-3xl sm:text-4xl font-arno_pro_subhead font-normal text-[#002829] mb-5">{{ __('Special Offers') }}</h2>
                 </header>
-                @if ($resourcesSectionThree['resource_slider'])
+                @if (!empty($resourcesSectionThree['resource_slider']) && is_array($resourcesSectionThree['resource_slider']))
                     <div class="sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-5">
                         @foreach ($resourcesSectionThree['resource_slider'] as $index => $resource)
                             <article class="bg-[#E5EFF0] shadow-lg mb-10 px-6 py-14 text-center {{ $index >= 3 ? 'hidden' : '' }}">
@@ -126,17 +126,18 @@
                             </article>
                         @endforeach
                     </div>
-                @endif
-                @if (count($resourcesSectionThree['resource_slider']) > 3)
-                    <div class="text-center mt-6">
-                        <button id="load-more" class="bg-simms-gold text-white py-2 px-4 rounded hover:bg-opacity-90 transition duration-300">
-                            Load More
-                        </button>
-                    </div>
+                    @if (count($resourcesSectionThree['resource_slider']) > 3)
+                        <div class="text-center mt-6">
+                            <button id="load-more" class="bg-simms-gold text-white py-2 px-4 rounded hover:bg-opacity-90 transition duration-300">
+                                Load More
+                            </button>
+                        </div>
+                    @endif
                 @endif
             </div>
         </div>
     @endif
+
 </div>
 
 <x-find-your-home :findYourHome="$findYourHome" />
