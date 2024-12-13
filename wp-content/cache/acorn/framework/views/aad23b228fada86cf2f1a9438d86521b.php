@@ -117,7 +117,7 @@
                 <header class="text-center pb-10 lg:pb-5">
                     <h2 class="text-3xl sm:text-4xl font-arno_pro_subhead font-normal text-[#002829] mb-5"><?php echo e(__('Special Offers')); ?></h2>
                 </header>
-                <?php if($resourcesSectionThree['resource_slider']): ?>
+                <?php if(!empty($resourcesSectionThree['resource_slider']) && is_array($resourcesSectionThree['resource_slider'])): ?>
                     <div class="sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-5">
                         <?php $__currentLoopData = $resourcesSectionThree['resource_slider']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $index => $resource): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                             <article class="bg-[#E5EFF0] shadow-lg mb-10 px-6 py-14 text-center <?php echo e($index >= 3 ? 'hidden' : ''); ?>">
@@ -132,17 +132,18 @@
                             </article>
                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                     </div>
-                <?php endif; ?>
-                <?php if(count($resourcesSectionThree['resource_slider']) > 3): ?>
-                    <div class="text-center mt-6">
-                        <button id="load-more" class="bg-simms-gold text-white py-2 px-4 rounded hover:bg-opacity-90 transition duration-300">
-                            Load More
-                        </button>
-                    </div>
+                    <?php if(count($resourcesSectionThree['resource_slider']) > 3): ?>
+                        <div class="text-center mt-6">
+                            <button id="load-more" class="bg-simms-gold text-white py-2 px-4 rounded hover:bg-opacity-90 transition duration-300">
+                                Load More
+                            </button>
+                        </div>
+                    <?php endif; ?>
                 <?php endif; ?>
             </div>
         </div>
     <?php endif; ?>
+
 </div>
 
 <?php if (isset($component)) { $__componentOriginalf20ba2696599e222bf515abd9ef1cf04 = $component; } ?>
