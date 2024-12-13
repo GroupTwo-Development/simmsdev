@@ -3,8 +3,6 @@
 
 --}}
 
-
-
 @extends('layouts.primary-app')
 
 @section('content')
@@ -19,7 +17,7 @@
             @php
                 $image_id = $primaryPageHeader['homes_header_img'];
             @endphp
-            <img src="@asset('assets/hero-ee.jpg')" alt="">        
+            <img src="@asset('assets/resources.jpg')" alt="">        
         </x-slot>
     </x-primary-header>
 

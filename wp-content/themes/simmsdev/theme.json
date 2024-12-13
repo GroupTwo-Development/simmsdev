@@ -1284,6 +1284,11 @@
           "color": "rgba(0, 103, 109, 0.1)",
           "name": "Light-green",
           "slug": "light-green"
+        },
+        {
+          "color": "rgba(0, 103, 109, 0.75)",
+          "name": "Light-green-two",
+          "slug": "light-green-two"
         }
       ]
     },
