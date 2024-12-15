@@ -301,6 +301,45 @@ p {
   @apply flex flex-row items-center justify-center gap-2;
 }
 
+.contact-page-form form {
+  @apply w-full;
+}
+
+.contact-page-form form section .item label {
+  @apply w-full block mb-5;
+}
+
+.contact-page-form form section .item label span {
+  @apply w-full block;
+}
+
+.contact-page-form form section .item label span input {
+  @apply w-full border-[1px] border-[#534e50];
+}
+
+.contact-page-form form section .item label span select {
+  @apply w-full border-[1px] border-[#534e50] py-2;
+}
+
+.contact-page-form form section .item label span textarea {
+  @apply w-full border-[1px] border-[#534e50] h-[150px];
+}
+
+.contact-page-form form section .item p {
+  @apply w-full block;
+}
+
+.contact-page-form form section .wpcf7-submit {
+  @apply uppercase font-[500] border-b-2 border-primary-green;
+}
+
+.contact-page-form form section .item-1 {
+  @apply flex flex-row items-center w-full gap-3 mb-1;
+}
+
+.contact-page-form form section .item-2 {
+  @apply flex flex-row items-center w-full gap-3 mb-1;
+}
 /* .self-guided a {
   @apply text-simms-gold border-b-2 border-simms-gold !important;
 } */
