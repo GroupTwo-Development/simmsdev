@@ -1,4 +1,4 @@
-<section class="relative">
+<section class="relative overflow-hidden">
     <div class="bg-secondary-green">
         <div class="container mx-auto">
             <div class="mb-1 p-2">
