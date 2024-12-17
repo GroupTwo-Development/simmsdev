@@ -36,13 +36,13 @@
                             </div>
                         <?php endif; ?>
 
-                        <?php if($associated_floorplans[0]): ?>
-                        <div class="px-3 flex flex-col items-start text-left">
-                            <span class="block font-normal text-sm">Floorplan:</span>
-                            <span class="text-sm font-medium capitalize block">
-                                <a href="<?php echo e($associated_floorplans[0]['permalink']); ?>" class="hover:text-simms-gold"><?php echo $associated_floorplans[0]['name']; ?></a>
-                            </span>
-                        </div>
+                        <?php if(!empty($associated_floorplans[0])): ?>
+                            <div class="px-3 flex flex-col items-start text-left">
+                                <span class="block font-normal text-sm">Floorplan:</span>
+                                <span class="text-sm font-medium capitalize block">
+                                    <a href="<?php echo e($associated_floorplans[0]['permalink']); ?>" class="hover:text-simms-gold"><?php echo $associated_floorplans[0]['name']; ?></a>
+                                </span>
+                            </div>
                         <?php endif; ?>
                     </div>
                 </div>

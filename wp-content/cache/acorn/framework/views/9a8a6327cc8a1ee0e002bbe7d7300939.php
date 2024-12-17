@@ -24,7 +24,7 @@
 <?php endif; ?>
 
 
-            <?php if($communities_items['comm_description']): ?>
+            <?php if($plans_items['description']): ?>
                 <?php if (isset($component)) { $__componentOriginal537518723fbaeaee5e8909e13a3249f9 = $component; } ?>
 <?php if (isset($attributes)) { $__attributesOriginal537518723fbaeaee5e8909e13a3249f9 = $attributes; } ?>
 <?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.scroll-to-menu-link','data' => ['href' => '#description']] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>
@@ -49,7 +49,7 @@
             <?php endif; ?>
             
 
-            <?php if($communities_items['sitemap']): ?>
+            <?php if($plans_items['sitemap']): ?>
                 <?php if (isset($component)) { $__componentOriginal537518723fbaeaee5e8909e13a3249f9 = $component; } ?>
 <?php if (isset($attributes)) { $__attributesOriginal537518723fbaeaee5e8909e13a3249f9 = $attributes; } ?>
 <?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.scroll-to-menu-link','data' => ['href' => '#sitemap']] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>
@@ -73,18 +73,18 @@
 <?php endif; ?>
             <?php endif; ?>
            
-            <?php if($communities_items['point_of_interest']): ?>
+            <?php if($plans_items['virtual_tour']): ?>
                 <?php if (isset($component)) { $__componentOriginal537518723fbaeaee5e8909e13a3249f9 = $component; } ?>
 <?php if (isset($attributes)) { $__attributesOriginal537518723fbaeaee5e8909e13a3249f9 = $attributes; } ?>
-<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.scroll-to-menu-link','data' => ['href' => '#pointsofinterest']] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.scroll-to-menu-link','data' => ['href' => '#virtual-tour']] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>
 <?php $component->withName('scroll-to-menu-link'); ?>
 <?php if ($component->shouldRender()): ?>
 <?php $__env->startComponent($component->resolveView(), $component->data()); ?>
 <?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag && $constructor = (new ReflectionClass(Illuminate\View\AnonymousComponent::class))->getConstructor()): ?>
 <?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
 <?php endif; ?>
-<?php $component->withAttributes(['href' => '#pointsofinterest']); ?>
-                     <?php $__env->slot('title', null, []); ?> Points of Interest <?php $__env->endSlot(); ?>
+<?php $component->withAttributes(['href' => '#virtual-tour']); ?>
+                     <?php $__env->slot('title', null, []); ?> Virtual Tour <?php $__env->endSlot(); ?>
                  <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
 <?php if (isset($__attributesOriginal537518723fbaeaee5e8909e13a3249f9)): ?>
@@ -97,29 +97,7 @@
 <?php endif; ?>
             <?php endif; ?>
 
-            <?php if(!empty($associated_floorplans)): ?>
-                <?php if (isset($component)) { $__componentOriginal537518723fbaeaee5e8909e13a3249f9 = $component; } ?>
-<?php if (isset($attributes)) { $__attributesOriginal537518723fbaeaee5e8909e13a3249f9 = $attributes; } ?>
-<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.scroll-to-menu-link','data' => ['href' => '#floorplans']] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>
-<?php $component->withName('scroll-to-menu-link'); ?>
-<?php if ($component->shouldRender()): ?>
-<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
-<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag && $constructor = (new ReflectionClass(Illuminate\View\AnonymousComponent::class))->getConstructor()): ?>
-<?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
-<?php endif; ?>
-<?php $component->withAttributes(['href' => '#floorplans']); ?>
-                     <?php $__env->slot('title', null, []); ?> Floorplans <?php $__env->endSlot(); ?>
-                 <?php echo $__env->renderComponent(); ?>
-<?php endif; ?>
-<?php if (isset($__attributesOriginal537518723fbaeaee5e8909e13a3249f9)): ?>
-<?php $attributes = $__attributesOriginal537518723fbaeaee5e8909e13a3249f9; ?>
-<?php unset($__attributesOriginal537518723fbaeaee5e8909e13a3249f9); ?>
-<?php endif; ?>
-<?php if (isset($__componentOriginal537518723fbaeaee5e8909e13a3249f9)): ?>
-<?php $component = $__componentOriginal537518723fbaeaee5e8909e13a3249f9; ?>
-<?php unset($__componentOriginal537518723fbaeaee5e8909e13a3249f9); ?>
-<?php endif; ?>
-            <?php endif; ?>
+            
 
             <?php if(!empty($associated_homes['homes'])): ?>
                 <?php if (isset($component)) { $__componentOriginal537518723fbaeaee5e8909e13a3249f9 = $component; } ?>
@@ -145,18 +123,18 @@
 <?php endif; ?>
             <?php endif; ?>
 
-            <?php if($communities_items['location']): ?>
+            <?php if($plans_items['elevation_photos']): ?>
                 <?php if (isset($component)) { $__componentOriginal537518723fbaeaee5e8909e13a3249f9 = $component; } ?>
 <?php if (isset($attributes)) { $__attributesOriginal537518723fbaeaee5e8909e13a3249f9 = $attributes; } ?>
-<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.scroll-to-menu-link','data' => ['href' => '#location']] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.scroll-to-menu-link','data' => ['href' => '#elevations']] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>
 <?php $component->withName('scroll-to-menu-link'); ?>
 <?php if ($component->shouldRender()): ?>
 <?php $__env->startComponent($component->resolveView(), $component->data()); ?>
 <?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag && $constructor = (new ReflectionClass(Illuminate\View\AnonymousComponent::class))->getConstructor()): ?>
 <?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
 <?php endif; ?>
-<?php $component->withAttributes(['href' => '#location']); ?>
-                     <?php $__env->slot('title', null, []); ?> Map & Directions <?php $__env->endSlot(); ?>
+<?php $component->withAttributes(['href' => '#elevations']); ?>
+                     <?php $__env->slot('title', null, []); ?> Elevations <?php $__env->endSlot(); ?>
                  <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
 <?php if (isset($__attributesOriginal537518723fbaeaee5e8909e13a3249f9)): ?>
@@ -168,7 +146,9 @@
 <?php unset($__componentOriginal537518723fbaeaee5e8909e13a3249f9); ?>
 <?php endif; ?>
             <?php endif; ?>
+
+            
             
         </div>
     </div>
-</section><?php /**PATH /Users/grouptwodev/Herd/simmsdev-app/wp-content/themes/simmsdev/resources/views/partials/community/scroll-to-menu.blade.php ENDPATH**/ ?>
+</section><?php /**PATH /Users/grouptwodev/Herd/simmsdev-app/wp-content/themes/simmsdev/resources/views/partials/plans/scroll-to-menu.blade.php ENDPATH**/ ?>

@@ -103,6 +103,26 @@
                         <?php echo $__env->make('partials.content-homes', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
                     <?php endwhile; ?>
                 </div>
+                <?php if (isset($component)) { $__componentOriginal44d6f84b10a19020b7858e09eb0b603d = $component; } ?>
+<?php if (isset($attributes)) { $__attributesOriginal44d6f84b10a19020b7858e09eb0b603d = $attributes; } ?>
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.load-more','data' => []] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>
+<?php $component->withName('load-more'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag && $constructor = (new ReflectionClass(Illuminate\View\AnonymousComponent::class))->getConstructor()): ?>
+<?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
+<?php endif; ?>
+<?php $component->withAttributes([]); ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__attributesOriginal44d6f84b10a19020b7858e09eb0b603d)): ?>
+<?php $attributes = $__attributesOriginal44d6f84b10a19020b7858e09eb0b603d; ?>
+<?php unset($__attributesOriginal44d6f84b10a19020b7858e09eb0b603d); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginal44d6f84b10a19020b7858e09eb0b603d)): ?>
+<?php $component = $__componentOriginal44d6f84b10a19020b7858e09eb0b603d; ?>
+<?php unset($__componentOriginal44d6f84b10a19020b7858e09eb0b603d); ?>
+<?php endif; ?>
             </div>
 
           

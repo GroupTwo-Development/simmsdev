@@ -13,20 +13,20 @@
                     </div>
     
                     {{-- Community spec --}}
-                    <div class="md:mr-80 lg:mr-1 2xl:mr-40">
-                        @if ($floorplan_item['min_beds'] || $floorplan_item['min_bath'] || $communities_items['min_sqft'] || $floorplan_item['baths'])
+                    <div class="md:mr-80 lg:mr-1 2xl:mr-16">
+                        @if (isset($floorplan_item['min_beds'] ) || isset($floorplan_item['min_bath']) || isset($communities_items['min_sqft']) || isset($floorplan_item['baths']))
                             <div class="border-t-[1px] border-simms-gold">
                                 <div class="py-3 flex flex-row justify-between sm:justify-start items-center content-center gap-1 sm:gap-14 ">
-                                    @if ($floorplan_item['min_beds'])
+                                    @if (isset($floorplan_item['min_beds']))
                                         <div class="flex flex-row  md:flex-row lg:flex-row xl:flex-row  gap-2 items-center content-center">
                                             <img class="bg-cover object-cover" src="@asset('images/bbeds-icon.png') " /> 
                                             <div>
-                                                <span class="text-sm font-[500]">{{ ($floorplan_item['min_beds']) }}</span>
+                                                <span class="text-sm font-[500]">{{ isset($floorplan_item['min_beds']) }}</span>
                                                 <span class="text-sm font-[500] uppercase tracking-[0.06em]">Beds</span>
                                             </div>
                                         </div>
                                     @endif
-                                    @if ($floorplan_item['min_bath'] && $floorplan_item['max_bath'])
+                                    @if (isset($floorplan_item['min_bath']) && isset($floorplan_item['max_bath']))
                                         <div class="flex flex-row  gap-2 items-center content-center">
                                             <img class="bg-cover object-cover" src="@asset('images/bathroom-icon.png') " /> 
                                             <div>
@@ -51,7 +51,7 @@
                         @endif
     
                         {{-- stories and garages --}}
-                        @if ($floorplan_item['min_garages']  || $floorplan_item['min_stories'] )
+                        @if (isset($floorplan_item['min_garages'] ) || isset($floorplan_item['min_stories']))
                             <div class="border-t-[1px] border-b-[1px] border-simms-gold py-3">
                                 <div class="flex flex-row w-full justify-start items-center content-center gap-10 sm:gap-14">
                                     {{-- Garages --}}

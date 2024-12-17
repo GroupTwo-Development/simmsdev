@@ -1,1 +1,0 @@
-<div>Map</div><?php /**PATH /Users/grouptwodev/Herd/simmsdev-app/wp-content/themes/simmsdev/resources/views/partials/content-communities-map.blade.php ENDPATH**/ ?>

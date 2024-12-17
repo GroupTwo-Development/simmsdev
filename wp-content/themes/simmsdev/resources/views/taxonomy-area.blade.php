@@ -4,14 +4,14 @@
 @section('content')
   <x-primary-header>
     <x-slot name="subtitle">
-        {{ $primaryPageHeader['homes_sub_title'] }}
+        {{ $primaryPageHeader['community_sub_title'] }}
     </x-slot>
     <x-slot name="title">
-        {{ $primaryPageHeader['homes_title'] }}
+        {{ the_archive_title() }}
     </x-slot>
     <x-slot name="bg_image">
         @php
-            $image_id = $primaryPageHeader['homes_header_img'];
+            $image_id = $primaryPageHeader['community_header_img'];
         @endphp
         {!! App\get_image_with_alt($image_id, 'full', ['class' => 'bg-cover object-cover h-24 sm:h-28 md:h-36 lg:h-56 xl:h-52 object-center-top']) !!}
     </x-slot>
@@ -23,13 +23,11 @@
 
 <section x-data="{ showMap: false }" class="relative" x-cloak>
     {{-- Mobile View - Toggle Button and Filter --}}
-    @include('partials.homes.mobile')
+    @include('partials.community.mobile')
     {{-- Find your home  - Desktop--}}
 
-  
-
     {{-- Desktopfilter --}}
-    @include('partials.homes.desktop-filter')
+    @include('partials.community.desktop-filter')
 
 
 {{-- User selections --}}
@@ -44,13 +42,13 @@
                 {{-- Query loop --}}
                 <div class="community-wrapper relative facetwp-template grid grid-cols-1 sm:g sm:grid-cols-2 sm:gap-3 lg:grid-cols-3 content  justify-center items-start content-center lg:pt-12">
                     @while(have_posts()) @php(the_post())
-                        @include('partials.content-homes')
+                        @include('partials.content-communities')
                     @endwhile
                 </div>
+
                 <x-load-more />
             </div>
 
-          
         </div>
 
 
@@ -65,7 +63,11 @@
                 x-transition:leave-start="opacity-100 translate-x-0"
                 x-transition:leave-end="opacity-0 -translate-x-full"
             >
-                <h1>Google map</h1>
+
+            @shortcode('[facetwp facet="community_map"]')
+
+            {{-- {!! facetwp_display('facet', 'community_map') !!} --}}
+           
             </div>
           </div>
         </div>
