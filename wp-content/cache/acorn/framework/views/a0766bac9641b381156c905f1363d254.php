@@ -14,7 +14,7 @@
 
      <?php $__env->endSlot(); ?>
      <?php $__env->slot('title', null, []); ?> 
-        <?php echo e($primaryPageHeader['community_title']); ?>
+        <?php echo e(the_archive_title()); ?>
 
      <?php $__env->endSlot(); ?>
      <?php $__env->slot('bg_image', null, []); ?> 
@@ -180,4 +180,4 @@
 
 
 
-<?php echo $__env->make('layouts.primary-app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /Users/grouptwodev/Herd/simmsdev-app/wp-content/themes/simmsdev/resources/views/archive-communities.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('layouts.primary-app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /Users/grouptwodev/Herd/simmsdev-app/wp-content/themes/simmsdev/resources/views/taxonomy-area.blade.php ENDPATH**/ ?>

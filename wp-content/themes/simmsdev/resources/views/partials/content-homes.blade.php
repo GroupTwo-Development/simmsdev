@@ -36,13 +36,13 @@
                             </div>
                         @endif
 
-                        @if ($associated_floorplans[0])
-                        <div class="px-3 flex flex-col items-start text-left">
-                            <span class="block font-normal text-sm">Floorplan:</span>
-                            <span class="text-sm font-medium capitalize block">
-                                <a href="{{ $associated_floorplans[0]['permalink'] }}" class="hover:text-simms-gold">{!! $associated_floorplans[0]['name'] !!}</a>
-                            </span>
-                        </div>
+                        @if (!empty($associated_floorplans[0]))
+                            <div class="px-3 flex flex-col items-start text-left">
+                                <span class="block font-normal text-sm">Floorplan:</span>
+                                <span class="text-sm font-medium capitalize block">
+                                    <a href="{{ $associated_floorplans[0]['permalink'] }}" class="hover:text-simms-gold">{!! $associated_floorplans[0]['name'] !!}</a>
+                                </span>
+                            </div>
                         @endif
                     </div>
                 </div>

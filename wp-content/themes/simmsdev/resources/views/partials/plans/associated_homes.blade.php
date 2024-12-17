@@ -1,7 +1,7 @@
 @if ($associated_homes['homes'])
     <section id="availablehomes" class="relative object-cover mt-1 w-full" style="background-image: url('@asset('assets/pattern2.png')')">
         <div class="container mx-auto">
-            <div class="pb-6 lg:pb-16 xl:pb-28  w-full">
+            <div class="pb-1 lg:pb-5 xl:pb-5  w-full">
                 <h2 class="font-arno_pro_subhead font-normal text-3xl md:text-4xl lg:text-5xl  text-center mb-10 lg:mb-16">Available Homes</h2>
                 {{-- content --}}
                 <div class="md:flex md:flex-row md:justify-center md:items-start content-center md:flex-wrap  md:gap-2 xl:gap-5 w-full">
@@ -63,13 +63,12 @@
                                     </div>
                                 @endif
 
-                                @if ($home['assigned_plan'])
+                                @if ($home['assigned_community'])
                                     <div class="border-b-[1px] border-simms-gold">
-                                        <div class="px-3 pb-3 flex flex-col items-start text-left">
-                                        
-                                            <span class="block font-normal">Floorplan:</span>
+                                        <div class="px-3 pb-3 flex flex-row items-center gap-1 text-left">
+                                            <span class="block font-normal">Community:</span>
                                             <span class="text-sm font-semibold capitalize block">
-                                                <a href="{{ $home['assigned_plan_permalink'] }}" class="hover:text-simms-gold">{{ $home['assigned_plan']->post_title }}</a>
+                                                <a href="{{ $home['assigned_plan_permalink'] }}" class="hover:text-simms-gold">{{ $home['assigned_community']->post_title }}</a>
                                             </span>
                                         </div>
                                     </div>

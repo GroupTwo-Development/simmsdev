@@ -45,9 +45,10 @@
                         @include('partials.content-communities')
                     @endwhile
                 </div>
+
+                <x-load-more />
             </div>
 
-          
         </div>
 
 
