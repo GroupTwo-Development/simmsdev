@@ -1,7 +1,7 @@
 @if ($findYourHome)
-    <section class="pt-14">
+    <section class="pt-14 lg:pt-20">
         <div class="container mx-auto">
-            <div class="text-center mb-8">
+            <div class="text-center mb-8 lg:mb-12">
                 <span class="block font-semibold text-primary-green uppercase tracking-[0.15em] mb-3 text-sm">{{ $findYourHome['sub_title'] }}</span>
                 <h2 class="font-normal text-secondary-green text-2xl lg:text-3xl xl:text-4xl mb-3 font-arno_pro_subhead lg:px-14 text-center">{{ $findYourHome['title'] }}</h2>
             </div>

@@ -76,7 +76,6 @@ class Awards extends Composer
         $image = get_field('aas3_image') ?? '';
         $award_slider = get_field('aas3_slider') ?? '';
 
-
         return [
             'image' => $image,
             'award_slider' => $award_slider,

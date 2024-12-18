@@ -63,10 +63,10 @@
                     {{-- @dd($contact) --}}
                         <div class="mb-3">
                           <span class="text-white lg:text-left font-semibold block text-sm">{{ $contact['community_available_home'] }}</span>
-                          <div class="text-white mb-1 text-sm lg:flex">
-                            <span class="lg:text-left block ">{{ $contact['contact_name'] }}</span>
+                          <div class="text-white mb-1 text-sm lg:flex gap-1">
+                            <span class="lg:text-left block ">{{ $contact['contact_name']  }}</span>
                         
-                            <a href="tel:{{ $contact['contact_phone']}}" class="text-simms-gold">Contact: {{ $contact['contact_phone'] }}</a>
+                            <a href="tel:{{ $contact['contact_phone']}}" class="text-simms-gold"> Contact: {{ $contact['contact_phone'] }}</a>
                           </div>
                         </div>
                     @endforeach
@@ -75,11 +75,14 @@
               <div class="lg:flex lg:justify-start">
                  {{-- Phone number --}}
                
-                 @if($main_phone_Number['phone'] )
-                  <a href="tel:{{ App\clean_phone_number($main_phone_Number['phone'])}}" class="text-simms-gold lg:text-left transition mt-3 block"><span class="text-white lg:text-left">Corporate Office:</span>
-                      {{ App\format_phone_number($main_phone_Number['phone'] ) }}
-                  </a>
-                @endif
+                 <a href="https://www.google.com/maps/dir/?api=1&destination={{ urlencode($quickLinkHeader['address1'] . ' ' . $quick_links_header['address2'] . ', ' . $quickLinkHeader['city'] . ', ' . $quickLinkHeader['state'] . ' ' . $quickLinkHeader['zip']) }}"
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  class="text-simms-gold lg:text-left transition mt-3 block">
+                    <span class="text-white lg:text-left">Corporate Office:</span>
+                    {{ $quickLinkHeader['address1'] }} {{ $quickLinkHeader['address2'] }}, 
+                    {{ $quickLinkHeader['city'] }}, {{ $quickLinkHeader['state'] }} {{ $quickLinkHeader['zip'] }}
+                </a>
                 
               </div>
             </div>

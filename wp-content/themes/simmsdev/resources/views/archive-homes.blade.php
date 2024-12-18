@@ -71,14 +71,14 @@
         </div>
     </div>
 
-      {{-- page content --}}
-        <div id="dynamic-footer-content" class="w-full">
+           {{-- page content --}}
+           <div id="dynamic-footer-content" class="w-full">
             <div class="flex flex-col lg:flex-row lg:justify-between  w-full">
                 {{-- content --}}
-                <div class="bg-primary-green bg-no-repeat flex flex-col justify-center lg:w-1/2" style="background-image: url('@asset('images/pattern2.png')')">
+                <div class="bg-[#00676D] bg-repeat bg-cover opacity-[1]  flex flex-col justify-center lg:w-1/2" style="background-image: url('@asset('images/pattern3.png')')">
                     <div class="container mx-auto">
                         <div id="footer-text" class="flex flex-col justify-center items-center m-4 sm:m-8">
-                            <div class="bg-white py-6 px-4 xl:px-6 xl:py-8 text-center">
+                            <div class="text-white py-6 px-4 xl:px-6 xl:py-8 text-left">
                                 <span class="block text-simms-gold text-sm mb-2 tracking-[0.015rem] uppercase font-semibold">New Home Communities</span>
                                 <h1 class="font-arno_pro_subhead text-2xl mb-1"></h1>
                                 <div id="footer-description"></div>

@@ -66,10 +66,10 @@
                     
                         <div class="mb-3">
                           <span class="text-white lg:text-left font-semibold block text-sm"><?php echo e($contact['community_available_home']); ?></span>
-                          <div class="text-white mb-1 text-sm lg:flex">
+                          <div class="text-white mb-1 text-sm lg:flex gap-1">
                             <span class="lg:text-left block "><?php echo e($contact['contact_name']); ?></span>
                         
-                            <a href="tel:<?php echo e($contact['contact_phone']); ?>" class="text-simms-gold">Contact: <?php echo e($contact['contact_phone']); ?></a>
+                            <a href="tel:<?php echo e($contact['contact_phone']); ?>" class="text-simms-gold"> Contact: <?php echo e($contact['contact_phone']); ?></a>
                           </div>
                         </div>
                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
@@ -78,12 +78,15 @@
               <div class="lg:flex lg:justify-start">
                  
                
-                 <?php if($main_phone_Number['phone'] ): ?>
-                  <a href="tel:<?php echo e(App\clean_phone_number($main_phone_Number['phone'])); ?>" class="text-simms-gold lg:text-left transition mt-3 block"><span class="text-white lg:text-left">Corporate Office:</span>
-                      <?php echo e(App\format_phone_number($main_phone_Number['phone'] )); ?>
+                 <a href="https://www.google.com/maps/dir/?api=1&destination=<?php echo e(urlencode($quickLinkHeader['address1'] . ' ' . $quick_links_header['address2'] . ', ' . $quickLinkHeader['city'] . ', ' . $quickLinkHeader['state'] . ' ' . $quickLinkHeader['zip'])); ?>"
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  class="text-simms-gold lg:text-left transition mt-3 block">
+                    <span class="text-white lg:text-left">Corporate Office:</span>
+                    <?php echo e($quickLinkHeader['address1']); ?> <?php echo e($quickLinkHeader['address2']); ?>, 
+                    <?php echo e($quickLinkHeader['city']); ?>, <?php echo e($quickLinkHeader['state']); ?> <?php echo e($quickLinkHeader['zip']); ?>
 
-                  </a>
-                <?php endif; ?>
+                </a>
                 
               </div>
             </div>

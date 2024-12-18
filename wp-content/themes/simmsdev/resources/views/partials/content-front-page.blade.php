@@ -34,14 +34,14 @@
 @endif
 
 @if ($section_one)
-    <div class="mt-32  lg:mt-48 relative"></div>
+    <div class="mt-32  lg:mt-48 xl:mt-56 relative"></div>
     <section id="section_one" class="bg-cover object-cover min-h-[750px] lg:min-h-[500px] z-0 relative" style="background-image:linear-gradient(rgba(236, 236, 236, 0.251), rgba(234, 234, 234, 0.247)), url('{{ $section_one['background_image'] }}')">
-        <div class="relative ">
+        <div class="relative mb-16">
             
             <div class="container mx-auto">
                 <div class="relative">
                     <div class="bg-white shadow-2xl rounded-md  lg:flex lg:flex-row lg:w-full lg:justify-between absolute -top-16 lg:-top-32 lg:-mt-18">
-                        <div class="py-10 px-5 xl:px-10 lg:w-1/2 flex flex-col content-center justify-center">
+                        <div class="py-12 xl:py-12 px-6 lg:px-10 xl:px-14 lg:w-1/2 flex flex-col content-center justify-center">
                             <span class="block font-semibold text-primary-green uppercase tracking-[0.15em] mb-3 text-sm">{{ $section_one['section_subtitle'] }}</span>
                             <h2 class="font-normal text-2xl lg:text-3xl xl:text-4xl mb-3 font-arno_pro_subhead xl:pr-16">{{ $section_one['section_title'] }}</h2>
                             <div class="mb-5 xl:pr-14">
@@ -78,7 +78,7 @@
 
 @if ($section_two)
     <section class="bg-cover bg-primary-green object-cover" style="background-image: url('@asset('images/pattern1.png')')">
-        <div class="container mx-auto py-20">
+        <div class="container mx-auto py-20 xl:py-32">
             <div class="shadow-xl lg:flex lg:flex-row lg:justify-center">
                 {{-- image left --}}
                 <div class="lg:w-1/4">
@@ -94,7 +94,7 @@
                     </div>
                 </div>
                 {{-- Content --}}
-                <div class="bg-simms-gold py-10 lg:py-5 md:py-16 px-5 lg:px-8 text-center lg:w-1/2">
+                <div class="bg-simms-gold py-10 lg:py-5 md:py-16 px-5 lg:px-8 xl:px-16 text-center lg:w-1/2">
                     <div class="flex flex-col justify-center items-center content-center h-full">
                         <span class="block font-semibold text-primary-green uppercase tracking-[0.15em] mb-3 text-sm">{{ $section_two['sub_title'] }}</span>
                         <h2 class="font-normal text-white text-2xl lg:text-3xl xl:text-4xl mb-3 font-arno_pro_subhead lg:px-14 text-center">{{ $section_two['title_section'] }}</h2>
@@ -129,7 +129,7 @@
 @endif
 
 @if ($section_three)
-   <section class="relative bg-cover object-cover py-16 inset-0 " style="background-image:url('{{ $section_three['bg_image'] }}')">
+   <section class="relative bg-cover object-cover py-16 lg:py-20 xl:py-36 inset-0 " style="background-image:url('{{ $section_three['bg_image'] }}')">
      <!-- Overlay -->
      <div class="absolute inset-0 bg-[rgba(255,255,255,0.75)]"></div>
         <div class="container mx-auto relative">
@@ -149,18 +149,18 @@
                     </div>
                 </div>
                 {{-- testimonials --}}
-                <div class="bg-[rgba(0,40,41,0.9)] lg:w-1/2 py-12 px-4 lg:py-2 flex flex-col justify-center h-[450px] lg:-ml-16 xl:-ml-20 2xl:-ml-28 z-10">
+                <div class="bg-[rgba(0,40,41,0.9)] lg:w-1/2 py-12 px-4 lg:px-12 lg:py-2 flex flex-col justify-center h-[450px] lg:-ml-16 xl:-ml-20 2xl:-ml-28 z-10">
                     @if($feature_testimonials)
                         <div class="">
-                            <span class="text-simms-gold font-semibold tracking-[0.15em] text-center block mb-4">The marketing headline is (42) characters.</span>
-                            <h4 class="font-normal text-white text-2xl lg:text-3xl xl:text-4xl mb-3 font-arno_pro_subhead lg:px-14 text-center">This headline can be forty 40 characters</h4>
+                            <span class="text-simms-gold font-semibold tracking-[0.15em] text-center block mb-2">The marketing headline is (42) characters.</span>
+                            <h4 class="font-normal text-white text-2xl lg:text-3xl xl:text-3xl mb-3 font-arno_pro_subhead lg:px-8 text-center">This headline can be forty 40 characters</h4>
                             <div>
                                 <div class="swiper featureTestimonials">
-                                    <div class="swiper-wrapper">
+                                    <div class="swiper-wrapper xl:pb-8">
                                         @foreach($feature_testimonials as $testimonial)
                                             <div class="swiper-slide">
                                                 <div class="sm:px-10 md:px-16">
-                                                   <blockquote class="text-white text-center">
+                                                   <blockquote class="text-white text-center lg:px-4">
                                                         {!! $testimonial['testimonial'] !!}
                                                          <cite>{{ $testimonial['name'] }}</cite>  
                                                    </blockquote>
@@ -170,8 +170,8 @@
                                         @endforeach
                                     </div>
                                     <div class="swiper-pagination"></div>
-                                    <div class="swiper-button-next bg-white rounded-full h-7 w-7"></div>
-                                    <div class="swiper-button-prev bg-white rounded-full h-7 w-7"></div>
+                                    <div class="swiper-button-next bg-simms-gold text-primary-green rounded-full h-7 w-7"></div>
+                                    <div class="swiper-button-prev bg-simms-gold rounded-full h-7 w-7"></div>
                                 </div>
                             </div>
 

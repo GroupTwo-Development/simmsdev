@@ -226,6 +226,36 @@
                     "placeholder": "",
                     "new_lines": "wpautop",
                     "parent_repeater": "field_671a6a6c775ef"
+                },
+                {
+                    "key": "field_676233f37078d",
+                    "label": "Featured Image",
+                    "name": "aas1_image",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "acfe_field_group_condition": 0,
+                    "uploader": "",
+                    "acfe_thumbnail": 0,
+                    "return_format": "id",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "allow_in_bindings": 0,
+                    "preview_size": "medium",
+                    "library": "all",
+                    "parent_repeater": "field_671a6a6c775ef"
                 }
             ]
         },
@@ -397,6 +427,36 @@
                     "placeholder": "",
                     "new_lines": "",
                     "parent_repeater": "field_671a6f49b0a88"
+                },
+                {
+                    "key": "field_676242c3fad6d",
+                    "label": "Feature Image",
+                    "name": "aas2_image",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "acfe_field_group_condition": 0,
+                    "uploader": "",
+                    "acfe_thumbnail": 0,
+                    "return_format": "id",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "allow_in_bindings": 0,
+                    "preview_size": "medium",
+                    "library": "all",
+                    "parent_repeater": "field_671a6f49b0a88"
                 }
             ]
         },
@@ -539,6 +599,36 @@
                     "placeholder": "",
                     "new_lines": "",
                     "parent_repeater": "field_671a6c3d3466f"
+                },
+                {
+                    "key": "field_67623156b2616",
+                    "label": "Award Image",
+                    "name": "award_image",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "acfe_field_group_condition": 0,
+                    "uploader": "",
+                    "acfe_thumbnail": 0,
+                    "return_format": "id",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "allow_in_bindings": 0,
+                    "preview_size": "medium",
+                    "library": "all",
+                    "parent_repeater": "field_671a6c3d3466f"
                 }
             ]
         }
@@ -572,5 +662,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1734016787
+    "modified": 1734492894
 }
