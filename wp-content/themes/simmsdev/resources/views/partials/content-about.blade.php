@@ -154,7 +154,7 @@
 @endif
 
 @if ($aboutUsSectionFour)
-    <section id="section_one" class="bg-cover object-cover relative  xl:h-[400px]" style="background-image: url('{{ $aboutUsSectionFour['background_image'] }}')">
+    <section id="section_one" class="bg-cover object-cover relative object-center  xl:h-[400px]" style="background-image: url('{{ $aboutUsSectionFour['background_image'] }}')">
         <div class="container mx-auto pt-10 xl:pt-28">
             <div class="bg-white shadow-lg flex flex-col lg:flex-row lg:justify-center w-full  xl:max-w-screen-lg xl:mx-auto z-10 overflow-hidden relative">
 
@@ -213,7 +213,7 @@
                         // Get the alt text of the image
                         $image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', true);
                         @endphp
-                        <div class="h-full w-full section-img">
+                        <div class="h-full w-full section-img ">
                             {!! wp_get_attachment_image($image_id, 'large', false, ['alt' => $image_alt], ['class' => 'w-full h-full']) !!}
                         </div>
                     </div>

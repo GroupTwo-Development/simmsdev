@@ -19,6 +19,26 @@ p {
   @apply font-[400] text-white hover:text-simms-gold transition-all ease-in-out duration-[0.3s];
 }
 
+.nav-desktop .dropdown-menu li {
+  @apply border-b-[1px] border-simms-gold mx-4;
+}
+
+.nav-desktop .dropdown-menu li:last-child {
+  @apply border-b-0  mx-4;
+}
+
+.nav-desktop .dropdown-menu li a:hover {
+  color: #00676d !important;
+}
+
+.nav-desktop .dropdown-menu li:hover {
+  border-bottom: none !important;
+}
+
+.nav-desktop .dropdown-menu li a {
+  @apply text-black;
+}
+
 .nav-desktop .dropdown-menu {
   display: none;
 }
@@ -35,12 +55,20 @@ p {
   @apply font-[400] text-secondary-green;
 }
 
+.nav-primary #menu-main-menu li a {
+  @apply font-[400] hover:border-b-[1px] hover:text-simms-gold  border-simms-gold transition-all ease-in-out duration-[0.3s];
+}
+
+.fs-arrow {
+  border-top: 5px solid #cec778 !important;
+}
+
 .group .nav-link {
-  @apply px-4 py-3  2xl:text-[17px] hover:bg-secondary-green hover:text-white transition-all flex items-center justify-between;
+  @apply px-4 py-3  2xl:text-[17px]  hover:text-white transition-all flex items-center justify-between;
 }
 
 .desktop .nav-desktop .dropdown-menu .group .nav-link {
-  @apply px-4 py-3  2xl:text-[16px] hover:bg-secondary-green hover:text-white transition-all flex items-center justify-center;
+  @apply px-4 py-3  2xl:text-[16px] hover:text-primary-green transition-all flex items-center justify-center;
 }
 
 .nav .dropdown-submenu {
@@ -56,7 +84,7 @@ p {
 }
 
 .dropdown-menu {
-  @apply absolute hidden bg-white  border-secondary-green min-w-[230px];
+  @apply absolute hidden bg-white  min-w-[230px];
 }
 
 /* MODAL CONTACT FORM AREA */
@@ -109,11 +137,19 @@ p {
 }
 
 .swiper-button-next::after {
-  @apply text-lg text-simms-gold;
+  @apply text-lg text-secondary-green;
+}
+
+.award-section-one .swiper-button-next::after {
+  @apply text-lg text-white;
 }
 
 .swiper-button-prev::after {
-  @apply text-lg text-simms-gold;
+  @apply text-lg text-secondary-green;
+}
+
+.award-section-one .swiper-button-prev::after {
+  @apply text-lg text-white;
 }
 
 .swiper-pagination .swiper-pagination-bullet {
@@ -235,7 +271,7 @@ p {
 }
 
 .section-img img {
-  @apply bg-cover bg-center w-full object-cover object-center h-full xl:h-[450px];
+  @apply bg-cover bg-center w-full object-cover object-top h-full xl:h-[450px];
 }
 
 .team-photo img {
@@ -343,4 +379,20 @@ p {
 
 .facetwp-load-more {
   @apply py-2 px-3 font-[500] text-sm border-b-2 border-primary-green border-2 text-primary-green uppercase;
+}
+
+.map-area #facetwp-map {
+  width: 100% !important;
+  min-height: 670px !important;
+}
+
+.map-area .gm-style-iw-c {
+  padding: 0;
+  border-radius: 0;
+  border: 0;
+}
+
+.map-area .gm-style-iw-d {
+  overflow: hidden !important;
+  max-height: 352px !important;
 }
