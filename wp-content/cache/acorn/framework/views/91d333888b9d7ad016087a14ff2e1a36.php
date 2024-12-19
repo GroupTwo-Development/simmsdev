@@ -69,7 +69,7 @@
                           <div class="text-white mb-1 text-sm lg:flex gap-1">
                             <span class="lg:text-left block "><?php echo e($contact['contact_name']); ?></span>
                         
-                            <a href="tel:<?php echo e($contact['contact_phone']); ?>" class="text-simms-gold"> Contact: <?php echo e($contact['contact_phone']); ?></a>
+                            <a href="tel:<?php echo e($contact['contact_phone']); ?>" class="text-simms-gold"> Contact: <?php echo e(App\format_phone_number($contact['contact_phone'])); ?> </a>
                           </div>
                         </div>
                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
@@ -83,7 +83,7 @@
                   rel="noopener noreferrer" 
                   class="text-simms-gold lg:text-left transition mt-3 block">
                     <span class="text-white lg:text-left">Corporate Office:</span>
-                    <?php echo e($quickLinkHeader['address1']); ?> <?php echo e($quickLinkHeader['address2']); ?>, 
+                    <?php echo e($quickLinkHeader['address1']); ?><?php echo e($quickLinkHeader['address2'] .','); ?> 
                     <?php echo e($quickLinkHeader['city']); ?>, <?php echo e($quickLinkHeader['state']); ?> <?php echo e($quickLinkHeader['zip']); ?>
 
                 </a>

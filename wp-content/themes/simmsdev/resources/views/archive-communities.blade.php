@@ -46,119 +46,6 @@
                     @endwhile
                 </div>
 
-                <?php
-                $gallery = get_field('gallery');
-                $featured_img = $gallery[0];
-                $community_city = get_field('comm_city');
-                $community_state = get_field('comm_state');
-       
-       
-                $beds_array = [];
-                $baths_array = [];
-       
-                $plans_community_group = get_field('plans_community_group');
-                $plans = $plans_community_group['subdivision_plans'];
-       
-                $community_sqft_group = get_field('sqft');
-                $comm_min_SqFt = (int)$community_sqft_group['comm_min_SqFt'];
-                $comm_max_SqFt = (int)$community_sqft_group['comm_max_sqft'];
-       
-                $price_group = get_field('comm_price');
-                $comm_min_price = $price_group['comm_min_price'];
-                $comm_max_price = $price_group['comm_max_price'];
-       
-       
-       
-                if($plans) :
-                  foreach ($plans as $plan) :
-                    $plan_beds_group = get_field('plan_beds_group', $plan->ID);
-                    $min_bedrooms     = $plan_beds_group['Plan_beds'];
-                    $beds_array[] = $min_bedrooms;
-       
-                    $plan_baths_group = get_field('plan_baths_group', $plan->ID);
-                    $baths     = $plan_baths_group['plan_full_baths'];
-                    $baths_array[] = $baths;
-       
-                  endforeach;
-                endif;
-       
-                $beds_array = array_unique($beds_array);
-                sort($beds_array);
-                if(!empty($beds_array)){
-                  $min_bed = min($beds_array);
-                  $max_beds = max($beds_array);
-                }
-       
-                $baths_array = array_unique($baths_array);
-                sort($baths_array);
-                if(!empty($baths_array)){
-                  $min_baths = min($baths_array);
-                  $max_baths = max($baths_array);
-                }
-       
-                ?>
-                <article class="ccard bg-white shadow-md rounded-lg  w-60">
-       
-                  <div class="card_img">
-                    <?php if ($featured_img) : ?>
-                    <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" class="block h-28">
-                      <img src="<?php echo esc_url($featured_img['sizes']['medium']); ?>" alt="<?php echo esc_attr($featured_img['alt']); ?>" class="h-28 w-full" />
-                    </a>
-                    <?php endif ?>
-                  </div>
-       
-                  <div class="card-body">
-                    <div class="card-body__title border-b-[1px] border-simms-gold py-1">
-                      <h5 class="text-sm mb-0.5 px-2">
-                        <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-                          <?php the_title(); ?>
-                        </a>
-                      </h5>
-       
-                      <?php if($community_city && $community_state) : ?>
-                      <span class="address text-sm px-2"><?php echo $community_city . ', ' . $community_state; ?></span>
-                      <?php endif; ?>
-                    </div>
-                    <div class="card-body__spec flex flex-row justify-between items-center border-b-[1px] border-simms-gold py-1 px-2">
-                      <?php if(isset($min_bedrooms) && isset($max_beds)) : ?>
-                      <div class="bed_spec spec flex flex-row items-center">
-                        <span class="spec-icon text-sm text-primary-green"> <i class="fa-solid fa-bed"></i></span>
-                        <span class="spec-data text-sm text-primary-green"><?php echo (isset($min_bed) == isset($max_beds)) ? $min_bed : $min_bed .'<i class="fa-solid fa-plus"></i>' ?></span>
-                        <span class="spec-data-label text-sm">Beds</span>
-                      </div>
-                      <?php endif; ?>
-       
-                      <div class="bath_spec spec flex flex-row items-center">
-                        <span class="spec-icon text-sm text-primary-green"> <i class="fa-solid fa-bath"></i></span>
-                        <span class="spec-data text-sm text-primary-green"><?php echo (isset($min_baths) == isset($max_baths)) ? $min_baths : $min_baths .'<i class="fa-solid fa-plus"></i>' ?></span>
-                        <span class="spec-data-label text-sm text-primary-green">Baths</span>
-                      </div>
-       
-                      <?php  if($comm_min_SqFt ) : ?>
-                      <div class="sqft_spec spec flex flex-row items-center">
-                        <span class="spec-icon text-sm text-primary-green"><i class="fa-solid fa-ruler-combined"></i></span>
-                        <span class="spec-data text-sm text-primary-green"><?php echo ($comm_min_SqFt === $comm_max_SqFt) ? number_format($comm_min_SqFt) : number_format($comm_min_SqFt) . '<i class="fa-solid fa-plus"></i>'  ?></span>
-                        <span class="spec-data-label text-sm text-primary-green">Sqft</span>
-                      </div>
-                      <?php endif; ?>
-       
-                    </div>
-       
-                    <?php if($comm_min_price) : ?>
-                      <div class="card-body__price pb-4">
-                        <span class="price text-primary-green font-semibold">
-                          <?php echo 'Starting at' .' '.'$'. number_format($comm_min_price); ?></span>
-                      </div>
-                    <?php endif; ?>
-                  </div>
-                </article>
-
-
-
-
-
-                
-
                 <x-load-more />
             </div>
 
@@ -195,8 +82,8 @@
                     <div class="container mx-auto">
                         <div id="footer-text" class="flex flex-col justify-center items-center m-4 sm:m-8">
                             <div class="text-white py-6 px-4 xl:px-6 xl:py-8 text-left">
-                                <span class="block text-simms-gold text-sm mb-2 tracking-[0.015rem] uppercase font-semibold">New Home Communities</span>
-                                <h1 class="font-arno_pro_subhead text-2xl mb-1"></h1>
+                                <span class="block text-simms-gold text-sm mb-2 tracking-[0.015rem] lg:mb-5 uppercase font-semibold">New Home Communities</span>
+                                <h1 class="font-arno_pro_subhead text-2xl lg:text-3xl xl:text-4xl mb-1 lg:mb-4"></h1>
                                 <div id="footer-description"></div>
                             </div>
                         </div>

@@ -136,20 +136,42 @@ p {
   @apply lg:mt-[73px];
 }
 
-.swiper-button-next::after {
+/* .swiper-button-next::after {
   @apply text-lg text-secondary-green;
-}
+} */
 
 .award-section-one .swiper-button-next::after {
-  @apply text-lg text-white;
+  @apply hidden;
 }
 
-.swiper-button-prev::after {
-  @apply text-lg text-secondary-green;
+.featureTestimonials .swiper-button-next::after {
+  @apply hidden;
+}
+
+.featureTestimonials .swiper-button-prev::after {
+  @apply hidden;
 }
 
 .award-section-one .swiper-button-prev::after {
-  @apply text-lg text-white;
+  @apply hidden;
+}
+
+.award-section-two .swiper-button-next::after {
+  @apply hidden;
+}
+
+.award-section-two .swiper-button-prev::after {
+  @apply hidden;
+}
+
+.award-section-two .swiper-button-prev::after,
+.award-section-three .swiper-button-prev::after {
+  @apply hidden;
+}
+
+.award-section-two .swiper-button-next::after,
+.award-section-three .swiper-button-next::after {
+  @apply hidden;
 }
 
 .swiper-pagination .swiper-pagination-bullet {
@@ -193,7 +215,7 @@ p {
 }
 
 #menu-primary-page-nav li a {
-  @apply tracking-[0.01em] uppercase font-[500] text-sm lg:text-lg text-white lg:text-primary-green  lg:hover:text-simms-gold transition-all ease-in-out;
+  @apply tracking-[0.01em] uppercase font-[500] text-sm lg:text-lg   lg:hover:text-simms-gold transition-all ease-in-out;
 }
 
 #menu-primary-page-nav li.current-menu-item a {
@@ -301,22 +323,6 @@ p {
   object-fit: cover;
 }
 
-.award-section-two .swiper-button-prev::after {
-  @apply text-primary-green;
-}
-
-.award-section-two .swiper-button-next::after {
-  @apply text-primary-green;
-}
-
-.award-section-three .swiper-button-prev::after {
-  @apply text-simms-gold;
-}
-
-.award-section-three .swiper-button-next::after {
-  @apply text-simms-gold;
-}
-
 .award-section-three .swiper-pagination-bullet-active {
   @apply bg-secondary-green;
 }
@@ -395,4 +401,57 @@ p {
 .map-area .gm-style-iw-d {
   overflow: hidden !important;
   max-height: 352px !important;
+}
+
+.ee-section-one img {
+  @apply bg-cover h-full;
+}
+
+.ee-section-two {
+  background-position: center;
+}
+
+/* 
+.award-section-one .swiper-pagination .swiper-pagination-bullet {
+  @apply text-lg  bg-primary-green;
+}
+
+.award-section-one .swiper-pagination .swiper-pagination-bullet-active {
+  @apply text-lg bg-simms-gold;
+} */
+
+/* .testimonial-swiper-two .swiper-button-next::after {
+  @apply text-secondary-green;
+} */
+
+.testimonial-swiper-two .swiper-button-next {
+  @apply top-[90%] lg:top-[50%];
+}
+
+.testimonial-swiper-two .swiper-button-prev {
+  @apply top-[90%] lg:top-[50%];
+}
+
+/* .testimonial-swiper-two .swiper-button-prev::after {
+  @apply text-secondary-green;
+} */
+
+.testimonial-swiper-two .swiper-pagination-bullets {
+  @apply lg:bottom-[0];
+}
+
+.testimonial-swiper-three .swiper-button-next {
+  @apply top-[90%] lg:top-[50%];
+}
+
+.testimonial-swiper-three .swiper-button-prev {
+  @apply top-[90%] lg:top-[50%];
+}
+
+.menu-interior-search-page-menu-container .current-menu-item a {
+  @apply text-secondary-green;
+}
+
+.home-testimonial_img img {
+  @apply lg:w-full lg:h-full xl:h-full xl:w-full;
 }

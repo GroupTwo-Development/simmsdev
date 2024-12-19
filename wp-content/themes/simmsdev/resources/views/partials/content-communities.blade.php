@@ -2,7 +2,9 @@
     <article class="group flex flex-col overflow-hidden bg-white shadow-md mb-8 w-full">
         <div class="h-56 md:h-56 xl:h-64 overflow-hidden relative"> 
             @if($gallery['card_image'])
-                <img src="{{$gallery['card_image']['sizes']['large']}}" class="object-cover transition duration-700 ease-out group-hover:scale-105" alt="{{$gallery['card_image']['alt']}}" />
+                <a href="{{ $communities_items['link'] }}">
+                    <img src="{{$gallery['card_image']['sizes']['large']}}" class="object-cover transition duration-700 ease-out group-hover:scale-105" alt="{{$gallery['card_image']['alt']}}" />
+                </a>
             @endif
             @if ($communities_items['plan_add_marketing_toggle'] == 'yes')
                 <div class="bg-simms-gold absolute bottom-0 z-[1] w-full px-6 py-1.5">

@@ -53,7 +53,7 @@
 
                 <div>
                     <h2 class="text-simms-lime font-semibold mb-3">Sign up for our newsletter</h2>
-                    <button type="button" class="bg-primary-green uppercase text-[14px] tracking-[0.1em] text-center lg:text-right text-white inline-block px-5 py-3 whitespace-nowrap hover:bg-white transition-all ease-in-out">
+                    <button type="button" class="bg-primary-green uppercase text-[14px] tracking-[0.1em] text-center lg:text-right text-white inline-block px-5 py-3 whitespace-nowrap hover:bg-simms-gold hover:text-black transition-all ease-in-out">
                         SUBSCRIBE
                       </button>
                 </div>
