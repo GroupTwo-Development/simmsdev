@@ -26,6 +26,18 @@ add_filter( 'pre_get_posts', function($query){
     return $query;
 } );
 
+
+
+add_filter( 'pre_get_posts', function($query){
+    if( $query->is_main_query() && !is_admin()  && is_post_type_archive( 'testimonials' ) ) {
+        $query->set( 'posts_per_page', 3 );
+        $query->set('post_status', 'publish');
+        $query->set( 'orderby', 'title' );
+        $query->set( 'order', 'ASC' );
+    }
+    return $query;
+} );
+
 add_filter('get_the_archive_title', function ($title) {
     // Remove prefixes like "Category: ", "Tag: ", "Author: ", etc.
     return preg_replace('/^[^:]+: /', '', $title);

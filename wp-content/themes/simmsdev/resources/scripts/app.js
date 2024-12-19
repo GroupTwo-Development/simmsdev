@@ -8,6 +8,7 @@ import { initVideoPlayer } from './common/videoPlayer.js';
 import { loadMore } from './common/loadMore.js';
 import { initLocationMap } from './community/location.js';
 import { featureTestimonal } from './common/featureTestimonal.js';
+import { logoHover } from './common/logoHover.js';
 import '@fortawesome/fontawesome-free/js/all.js';
 
 import $ from 'jquery';
@@ -31,6 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
  */
 domReady(async () => {
   mobileToggle();
+  logoHover();
   bannerSlider();
   initFooterContent();
   initCommunityGallery();

@@ -22,7 +22,7 @@
                 $image_id = $testimonialPage_header['background_image_testimonials'];
                
             ?>
-              <?php echo App\get_image_with_alt($image_id, 'full', ['class' => 'bg-cover object-cover h-24 sm:h-28 md:h-36 lg:h-56 xl:h-52 object-center-top']); ?>     
+             <img src="<?php echo e($testimonialPage_header['background_image_testimonials']); ?>" alt="testimonials">     
          <?php $__env->endSlot(); ?>
      <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
@@ -36,17 +36,36 @@
 <?php endif; ?>
 
 
-    <div class="mt-0 lg:mt-12">
+    <div class="mt-0">
         <?php echo $__env->make('partials.testimonials.introContent', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
         <?php echo $__env->make('partials.testimonials.featured-testimonials', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
         <section class="mt-10 lg:mt-24">
             <div class="container mx-auto">
-                <div class="sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-5 lg:gap-10 sm:justify-center sm:items-center">
+                <div class="facetwp-template grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-10 auto-rows-fr">
                     <?php while(have_posts()): ?> <?php (the_post()); ?>
-                     <?php echo $__env->make('partials.content-testimonials', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+                        <?php echo $__env->make('partials.content-testimonials', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
                     <?php endwhile; ?>
                 </div>
-              
+                <?php if (isset($component)) { $__componentOriginal44d6f84b10a19020b7858e09eb0b603d = $component; } ?>
+<?php if (isset($attributes)) { $__attributesOriginal44d6f84b10a19020b7858e09eb0b603d = $attributes; } ?>
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.load-more','data' => []] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>
+<?php $component->withName('load-more'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag && $constructor = (new ReflectionClass(Illuminate\View\AnonymousComponent::class))->getConstructor()): ?>
+<?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
+<?php endif; ?>
+<?php $component->withAttributes([]); ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__attributesOriginal44d6f84b10a19020b7858e09eb0b603d)): ?>
+<?php $attributes = $__attributesOriginal44d6f84b10a19020b7858e09eb0b603d; ?>
+<?php unset($__attributesOriginal44d6f84b10a19020b7858e09eb0b603d); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginal44d6f84b10a19020b7858e09eb0b603d)): ?>
+<?php $component = $__componentOriginal44d6f84b10a19020b7858e09eb0b603d; ?>
+<?php unset($__componentOriginal44d6f84b10a19020b7858e09eb0b603d); ?>
+<?php endif; ?>
             </div>
         </section>
     </div>

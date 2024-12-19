@@ -170,51 +170,50 @@
 
 
         <?php if(!empty($introContent['sales_representative'])): ?>
+            <?php
+                $salesReps = $introContent['sales_representative'];
+                $isSingleCard = count($salesReps) === 1;
+            ?>
             <section class="mt-16 lg:mt-36">
                 <h2 class="text-center mb-10 font-semibold font-arno_pro_subhead text-xl md:text-2xl lg:text-3xl"><?php echo e($introContent['Section_Title']); ?></h2>
 
-                <div class="sm:flex sm:flex-row sm:justify-center sm:items-center w-full sm:gap-4 md:gap-6">
-                    <?php $__currentLoopData = $introContent['sales_representative']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $salesRep): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                        <div class="mb-10 bg-white shadow-lg ">
-                            <div class="flex flex-col">
-                                <div class="w-full">
-                                    <?php
-                                        // Get image ID
-                                        $image_id = $salesRep['image'];
-                                        
-                                        // Get the alt text of the image
-                                        $image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', true);
-                                    ?>
-                                    <?php echo wp_get_attachment_image($image_id, 'full', false, ['alt' => $image_alt]); ?>
+                <div class="<?php echo e($isSingleCard ? 'flex justify-center' : 'grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6'); ?> w-full">
+                    <?php $__currentLoopData = $salesReps; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $salesRep): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                        <div class="bg-white shadow-lg flex flex-col h-full">
+                            <div class="w-full h-64 lg:h-80 overflow-hidden">
+                                <?php
+                                    // Get image ID
+                                    $image_id = $salesRep['image'];
+                                    
+                                    // Get the alt text of the image
+                                    $image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', true);
+                                ?>
+                                <?php echo wp_get_attachment_image($image_id, 'full', false, ['alt' => $image_alt, 'class' => 'h-full w-full object-left-top object-cover']); ?>
 
-                                    
+                            </div>
+                            <div class="flex-grow py-5 px-4 flex flex-col justify-between">
+                                <div>
+                                    <h3 class="font-arno_pro_subhead capitalize font-semibold text-lg text-[#707070]"><?php echo e($salesRep['name']); ?></h3>
+                                    <p class="font-[300] text-primary-green capitalize"><?php echo e($salesRep['position']); ?></p>
                                 </div>
-                                <div class="py-5 px-4">
-                                    <div class="">
-                                        <h3 class="font-arno_pro_subhead capitalize font-semibold text-lg text-[#707070]"><?php echo e($salesRep['name']); ?></h3>
-                                        <p class="font-[300] text-primary-green capitalize"><?php echo e($salesRep['position']); ?></p>
-                                    </div>
-                                    
-                                    <div class="mt-3">
-                                        <span class="text-primary-green capitalize block"><?php echo e($salesRep['community_name']); ?></span>
-                                        <?php if($salesRep['email']): ?>
-                                            <span class="block">Email: <a href="mailto:<?php echo e($salesRep['email']); ?>"><?php echo e($salesRep['email']); ?></a></span>
-                                        <?php endif; ?>
-        
-                                        <?php if($salesRep['email']): ?>
-                                            <span class="block">Phone: <a href="tell:<?php echo e($salesRep['phone']); ?>" class="text-simms-gold underline"><?php echo e(App\format_phone_number($salesRep['phone'] )); ?></a></span>
-                                        <?php endif; ?>
-                                        
-                                    </div>
+                                <div class="mt-3">
+                                    <span class="text-primary-green capitalize block"><?php echo e($salesRep['community_name']); ?></span>
+                                    <?php if($salesRep['email']): ?>
+                                        <span class="block">Email: <a href="mailto:<?php echo e($salesRep['email']); ?>" class="underline text-simms-gold"><?php echo e($salesRep['email']); ?></a></span>
+                                    <?php endif; ?>
+
+                                    <?php if($salesRep['phone']): ?>
+                                        <span class="block">Phone: <a href="tel:<?php echo e($salesRep['phone']); ?>" class="text-simms-gold underline"><?php echo e(App\format_phone_number($salesRep['phone'])); ?></a></span>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                         </div>
                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                 </div>
-
-                
             </section>
         <?php endif; ?>
+
+
         
     </div>
 </div>
