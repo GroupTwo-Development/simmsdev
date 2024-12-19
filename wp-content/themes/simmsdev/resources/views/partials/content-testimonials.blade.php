@@ -4,7 +4,7 @@
             {!! $testimonial_fields['testimonial']  !!}
         </div>
         <div class="mt-4">
-            <p class="font-semibold capitalize">{{ $testimonial_fields['name'] }}</p>
+            <p class="font-semibold font-arno_pro_subhead capitalize">{{ $testimonial_fields['name'] }}</p>
         </div>
     </div>
 @endif
