@@ -2,12 +2,18 @@
     <div class="container mx-auto">
         <div class="flex flex-row justify-between items-center w-full py-5 xl:py-8">
             
-            <div class="max-w-40">
+            
+            
+
+            <div class="max-w-40 relative desktop-logo">
                 <?php if(function_exists('the_custom_logo')): ?>
                     <?php (the_custom_logo()); ?>
                 <?php endif; ?>
-                <hr class="h-0.5 bg-white rounded-md">
+               
+                
             </div>
+
+
            
             
             <?php if(has_nav_menu('primary_navigation')): ?>

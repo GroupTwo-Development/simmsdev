@@ -561,6 +561,84 @@
             "allow_in_bindings": 0,
             "preview_size": "medium",
             "library": "all"
+        },
+        {
+            "key": "field_67641ef135401",
+            "label": "Gold Logo",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_field_group_condition": 0,
+            "placement": "left",
+            "endpoint": 0,
+            "no_preference": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_67642ac1aec3b",
+            "label": "Main Logo",
+            "name": "main_logo",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_field_group_condition": 0,
+            "uploader": "",
+            "acfe_thumbnail": 0,
+            "return_format": "url",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "allow_in_bindings": 0,
+            "preview_size": "medium",
+            "library": "all"
+        },
+        {
+            "key": "field_67641ec167d4c",
+            "label": "Logo Hover",
+            "name": "hover_logo",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_field_group_condition": 0,
+            "uploader": "",
+            "acfe_thumbnail": 0,
+            "return_format": "url",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "allow_in_bindings": 0,
+            "preview_size": "medium",
+            "library": "all"
         }
     ],
     "location": [
@@ -588,5 +666,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1734016812
+    "modified": 1734617816
 }

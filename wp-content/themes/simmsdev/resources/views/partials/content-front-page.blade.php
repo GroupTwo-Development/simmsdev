@@ -156,8 +156,8 @@
                 <div class="bg-[rgba(0,40,41,0.9)] lg:w-1/2 py-12 px-4 lg:px-12 lg:py-2 flex flex-col justify-center lg:-ml-16 xl:-ml-20 2xl:-ml-28 z-10 lg:h-[400px] xl:h-[500px]">
                     @if($feature_testimonials)
                         <div class="">
-                            <span class="text-simms-gold font-semibold tracking-[0.15em] text-center text-sm uppercase block mb-2">The marketing headline is (42) characters.</span>
-                            <h4 class="font-normal text-white text-2xl lg:text-3xl xl:text-3xl mb-3 font-arno_pro_subhead lg:px-8 text-center">This headline can be forty 40 characters</h4>
+                            <span class="text-simms-gold font-semibold tracking-[0.15em] text-center text-sm uppercase block mb-2">People Are Talking</span>
+                            <h4 class="font-normal text-white text-2xl lg:text-3xl xl:text-3xl mb-3 font-arno_pro_subhead lg:px-8 text-center">Hear What Our Buyers Are Saying</h4>
                             <div>
                                 <div class="swiper featureTestimonials">
                                     <div class="swiper-wrapper xl:pb-8">

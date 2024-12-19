@@ -23,25 +23,25 @@
     </section>
 @endif
 
-<div class="relative object-cover w-full pt-10 pb-16" style="background-image: url('@asset('images/pattern2.png')')">
+<div class="relative object-cover w-full pt-10 pb-16 lg:pt-20 xl:pt-28" style="background-image: url('@asset('images/pattern2.png')')">
     {{-- Section One --}}
     @if (!empty($resourcesSectionOne['resource_slider']))
         
         <div class="container mx-auto">
-            <div class="bg-white py-10 px-4">
+            <div class="bg-white pt-1 px-4">
                 @if ($resourcesSectionOne['resource_slider'])
                     @php $i = 1; @endphp
-                    <div x-data="{ selectedAccordionItem: null }" class="w-full divide-y divide-primary-green overflow-hidden">
+                    <div x-data="{ selectedAccordionItem: null }" class="w-full overflow-hidden">
                         @foreach ($resourcesSectionOne['resource_slider'] as $index => $resource)
                             @php
                                 $questionId = 'controlsAccordionItem' . $index;
                                 $answerId = 'accordionItem' . $index;
                             @endphp
-                            <div class="divide-y divide-[#00676D]">
+                            <div class="border-t-2 border-primary-green last:border-b-2">
                                 <button 
                                     id="{{ $questionId }}" 
                                     type="button"
-                                    class="flex w-full items-center justify-between gap-4 bg-white p-4 text-left underline-offset-2 hover:bg-neutral-50/75 focus-visible:bg-neutral-50/75 focus-visible:underline focus-visible:outline-none text-[#002829] font-semibold text-lg font-arno_pro_subhead"
+                                    class="flex w-full items-center justify-between gap-4 bg-white p-4 lg:py-5 text-left underline-offset-2  text-[#002829] font-semibold text-lg lg:text-xl font-arno_pro_subhead xl:text-2xl"
                                     aria-controls="{{ $answerId }}"
                                     @click="selectedAccordionItem = selectedAccordionItem === '{{ $index }}' ? null : '{{ $index }}'"
                                     :class="selectedAccordionItem === '{{ $index }}' ? 'font-bold' : 'font-medium'"
@@ -68,22 +68,23 @@
     {{-- Section Two --}}
     @if (!empty($resourcesSectionTwo['resource_slider']))
         <div class="container mx-auto">
-            <div class="bg-white py-10 px-4">
+            <div class=" py-10 px-4 lg:pt-20 xl:pt-28">
                 <header class="text-center pb-10 lg:pb-5">
-                    <h2 class="text-3xl sm:text-4xl font-arno_pro_subhead font-normal text-[#002829] mb-5">{{ __('Frequently Asked Questions') }}</h2>
+                    <h2 class="text-3xl sm:text-4xl font-arno_pro_subhead font-normal text-black mb-5">{{ __('Frequently Asked Questions') }}</h2>
                 </header>
                 @if ($resourcesSectionTwo['resource_slider'])
-                    <div x-data="{ selectedAccordionItem: null }" class="w-full divide-y divide-primary-green overflow-hidden">
+                   <div class="bg-white">
+                    <div x-data="{ selectedAccordionItem: null }" class="w-full overflow-hidden">
                         @foreach ($resourcesSectionTwo['resource_slider'] as $index => $resource)
                             @php
                                 $questionTwoId = 'controlsAccordionItem' . $index;
                                 $answerTwoId = 'accordionItem' . $index;
                             @endphp
-                            <div class="divide-y divide-[#00676D]">
+                            <div class="border-t-2 border-primary-green last:border-b-2">
                                 <button 
                                     id="{{ $questionTwoId }}" 
                                     type="button"
-                                    class="flex w-full items-center justify-between gap-4 bg-white py-4 px-2 lg:px-4 text-left underline-offset-2 hover:bg-neutral-50/75 focus-visible:bg-neutral-50/75 focus-visible:underline focus-visible:outline-none text-[#002829] font-semibold text-lg font-arno_pro_subhead"
+                                    class="flex w-full items-center justify-between gap-4 bg-white p-4 lg:py-5 text-left  text-[#002829] font-semibold text-lg lg:text-xl font-arno_pro_subhead xl:text-2xl"
                                     aria-controls="{{ $questionTwoId }}"
                                     @click="selectedAccordionItem = selectedAccordionItem === '{{ $index }}' ? null : '{{ $index }}'"
                                     :class="selectedAccordionItem === '{{ $index }}' ? 'font-bold' : 'font-medium'"
@@ -101,6 +102,7 @@
                             </div>
                         @endforeach
                     </div>
+                   </div>
                 @endif
             </div>
         </div>
@@ -108,7 +110,7 @@
 
     {{-- Section Three --}}
     @if (!empty($resourcesSectionThree['resource_slider']))
-        <div class="mt-10">
+        <div class="mt-10 lg:pt-20 xl:pt-28">
             <div class="container mx-auto">
                 <header class="text-center pb-10 lg:pb-5">
                     <h2 class="text-3xl sm:text-4xl font-arno_pro_subhead font-normal text-[#002829] mb-5">{{ __('Special Offers') }}</h2>

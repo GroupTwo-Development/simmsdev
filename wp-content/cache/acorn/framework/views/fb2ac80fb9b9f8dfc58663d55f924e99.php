@@ -1,5 +1,5 @@
 <?php if($testimonial_fields): ?>
-    <div class="bg-light-green py-10 px-4 mb-10 text-center shadow-md">
+    <div class="bg-light-green py-10 px-4 text-center shadow-md flex flex-col justify-between h-full">
         <div>
             <?php echo $testimonial_fields['testimonial']; ?>
 

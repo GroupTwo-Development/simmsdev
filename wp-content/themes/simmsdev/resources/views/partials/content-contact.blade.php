@@ -166,50 +166,49 @@
 
 
         @if (!empty($introContent['sales_representative']))
+            @php
+                $salesReps = $introContent['sales_representative'];
+                $isSingleCard = count($salesReps) === 1;
+            @endphp
             <section class="mt-16 lg:mt-36">
                 <h2 class="text-center mb-10 font-semibold font-arno_pro_subhead text-xl md:text-2xl lg:text-3xl">{{ $introContent['Section_Title'] }}</h2>
 
-                <div class="sm:flex sm:flex-row sm:justify-center sm:items-center w-full sm:gap-4 md:gap-6">
-                    @foreach ($introContent['sales_representative'] as $salesRep)
-                        <div class="mb-10 bg-white shadow-lg ">
-                            <div class="flex flex-col">
-                                <div class="w-full">
-                                    @php
-                                        // Get image ID
-                                        $image_id = $salesRep['image'];
-                                        
-                                        // Get the alt text of the image
-                                        $image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', true);
-                                    @endphp
-                                    {!! wp_get_attachment_image($image_id, 'full', false, ['alt' => $image_alt]) !!}
+                <div class="{{ $isSingleCard ? 'flex justify-center' : 'grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6' }} w-full">
+                    @foreach ($salesReps as $salesRep)
+                        <div class="bg-white shadow-lg flex flex-col h-full">
+                            <div class="w-full h-64 lg:h-80 overflow-hidden">
+                                @php
+                                    // Get image ID
+                                    $image_id = $salesRep['image'];
                                     
+                                    // Get the alt text of the image
+                                    $image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', true);
+                                @endphp
+                                {!! wp_get_attachment_image($image_id, 'full', false, ['alt' => $image_alt, 'class' => 'h-full w-full object-left-top object-cover']) !!}
+                            </div>
+                            <div class="flex-grow py-5 px-4 flex flex-col justify-between">
+                                <div>
+                                    <h3 class="font-arno_pro_subhead capitalize font-semibold text-lg text-[#707070]">{{ $salesRep['name'] }}</h3>
+                                    <p class="font-[300] text-primary-green capitalize">{{ $salesRep['position'] }}</p>
                                 </div>
-                                <div class="py-5 px-4">
-                                    <div class="">
-                                        <h3 class="font-arno_pro_subhead capitalize font-semibold text-lg text-[#707070]">{{ $salesRep['name'] }}</h3>
-                                        <p class="font-[300] text-primary-green capitalize">{{ $salesRep['position'] }}</p>
-                                    </div>
-                                    
-                                    <div class="mt-3">
-                                        <span class="text-primary-green capitalize block">{{ $salesRep['community_name'] }}</span>
-                                        @if ($salesRep['email'])
-                                            <span class="block">Email: <a href="mailto:{{ $salesRep['email'] }}">{{ $salesRep['email'] }}</a></span>
-                                        @endif
-        
-                                        @if ($salesRep['email'])
-                                            <span class="block">Phone: <a href="tell:{{ $salesRep['phone'] }}" class="text-simms-gold underline">{{ App\format_phone_number($salesRep['phone'] ) }}</a></span>
-                                        @endif
-                                        
-                                    </div>
+                                <div class="mt-3">
+                                    <span class="text-primary-green capitalize block">{{ $salesRep['community_name'] }}</span>
+                                    @if ($salesRep['email'])
+                                        <span class="block">Email: <a href="mailto:{{ $salesRep['email'] }}" class="underline text-simms-gold">{{ $salesRep['email'] }}</a></span>
+                                    @endif
+
+                                    @if ($salesRep['phone'])
+                                        <span class="block">Phone: <a href="tel:{{ $salesRep['phone'] }}" class="text-simms-gold underline">{{ App\format_phone_number($salesRep['phone']) }}</a></span>
+                                    @endif
                                 </div>
                             </div>
                         </div>
                     @endforeach
                 </div>
-
-                
             </section>
         @endif
+
+
         
     </div>
 </div>

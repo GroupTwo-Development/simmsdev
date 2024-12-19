@@ -384,7 +384,7 @@ p {
 }
 
 .facetwp-load-more {
-  @apply py-2 px-3 font-[500] text-sm border-b-2 border-primary-green border-2 text-primary-green uppercase;
+  @apply py-2.5 px-7 font-[500] text-sm lg:text-lg border-b-2 border-primary-green border-2 hover:bg-simms-gold hover:border-simms-gold hover:text-black text-primary-green uppercase;
 }
 
 .map-area #facetwp-map {
@@ -466,4 +466,8 @@ p {
 
 .self-guided a {
   @apply text-simms-gold border-b-[2px] border-simms-gold hover:text-white hover:border-white !important;
+}
+
+.custom-logo-link img {
+  @apply w-[207px] h-[65px];
 }
