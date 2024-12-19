@@ -78,12 +78,14 @@
 
 
 @if ($section_two)
-    <section class="bg-cover bg-primary-green object-cover" style="background-image: url('@asset('images/pattern1.png')')">
+    <section 
+        class="bg-cover bg-primary-green bg-repeat object-cover md:bg-contain lg:bg-contain"
+        style="background-image: url('@asset('images/pattern1.png')'); background-size: 150%; background-position: center;">
         <div class="container mx-auto py-20 xl:py-32">
             <div class="shadow-xl lg:flex lg:flex-row lg:justify-center">
                 {{-- image left --}}
                 <div class="lg:w-1/4">
-                    <div class="w-full h-full section_two_img  left-img relative">
+                    <div class="w-full h-full section_two_img left-img relative">
                         @php
                         // Get image ID
                         $image_id = $section_two['image_left'];
@@ -105,13 +107,13 @@
 
                         @if ($section_two['link_sec_two'])
                             <div class="mt-5">
-                                <x-cta-link href="{{ $section_two['link_sec_two']['url'] }}" class="text-secondary-green border-b-secondary-green mt-3 md:mt-5 hover:text-white transition-all ease-in-out">{{ $section_two['link_sec_two']['title'] }}</x-cta-link>
+                                <x-cta-link href="{{ $section_two['link_sec_two']['url'] }}" class="text-secondary-green border-b-secondary-green mt-3 md:mt-5 hover:text-white hover:border-white transition-all ease-in-out">{{ $section_two['link_sec_two']['title'] }}</x-cta-link>
                             </div>
                         @endif
                     </div>
                 </div>
 
-                {{-- image left --}}
+                {{-- image right --}}
                 <div class="lg:w-1/4">
                     <div class="w-full h-full section_two_img right-img relative">
                         @php
@@ -128,6 +130,7 @@
         </div>
     </section>
 @endif
+
 
 @if ($section_three)
    <section class="relative bg-cover object-cover py-16 lg:py-20 xl:py-48 inset-0 " style="background-image:url('{{ $section_three['bg_image'] }}')">

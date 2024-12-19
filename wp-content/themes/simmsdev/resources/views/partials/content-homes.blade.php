@@ -29,7 +29,7 @@
                         @if (isset($associated_community['community'][0]))
                             <div class="px-3 flex flex-col items-start text-left">
 
-                                <span class="block font-normal text-sm">Community:</span>
+                                <span class="block font-normal text-sm uppercase">Community:</span>
                                 <span class="text-sm font-medium capitalize block">
                                     <a href="{{ $associated_community['community'][0]['permalink'] }}" class="hover:text-simms-gold">{!! $associated_community['community'][0]['title_home'] !!}</a>
                                 </span>
@@ -38,7 +38,7 @@
 
                         @if (!empty($associated_floorplans[0]))
                             <div class="px-3 flex flex-col items-start text-left">
-                                <span class="block font-normal text-sm">Floorplan:</span>
+                                <span class="block font-normal text-sm uppercase">Floorplan:</span>
                                 <span class="text-sm font-medium capitalize block">
                                     <a href="{{ $associated_floorplans[0]['permalink'] }}" class="hover:text-simms-gold">{!! $associated_floorplans[0]['name'] !!}</a>
                                 </span>
