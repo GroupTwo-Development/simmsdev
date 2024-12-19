@@ -8,7 +8,8 @@ export const initFooterContent = async (err) => {
   const defaultTitle = 'We Believe in Building Communities';
   const defaultContent =
     '<p>Simms only builds homes in the communities we develop and they are specially customized for you. Between the maintenance free lifestyle you’ll enjoy and the variety of communities we offer, we know we have the perfect home, townhome, or patio home for you. Our thoughtful community planning process starts with decades of experience and ends with you, the homebuyer, in mind. Browse our communities below to find the right place to call your new home.</p>';
-  const defaultImage = '/wp-content/uploads/2024/10/Component-27-–-14.jpg';
+  const defaultImage =
+    '/wp-content/uploads/2024/12/AdobeStock_170848578-scaled.jpeg';
 
   // Function to set default content
   const setDefaultContent = () => {

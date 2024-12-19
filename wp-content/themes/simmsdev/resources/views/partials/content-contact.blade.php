@@ -171,7 +171,7 @@
                 $isSingleCard = count($salesReps) === 1;
             @endphp
             <section class="mt-16 lg:mt-36">
-                <h2 class="text-center mb-10 font-semibold font-arno_pro_subhead text-xl md:text-2xl lg:text-3xl">{{ $introContent['Section_Title'] }}</h2>
+                <h2 class="text-center mb-10 font-semibold font-arno_pro_subhead text-xl md:text-2xl lg:text-3xl xl:text-4xl">{{ $introContent['Section_Title'] }}</h2>
 
                 <div class="flex flex-row justify-center items-center gap-5">
                     @foreach ($salesReps as $salesRep)

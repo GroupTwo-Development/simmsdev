@@ -2,7 +2,9 @@
 @props(['title', 'date', 'image', 'link'])
 <div class="max-w-sm bg-white shadow mb-5">
     <div class="">
+       <a href="{{ $link }}">
         <img src="{{ $image }}" alt="" class="h-[250px] w-full object-cover bg-cover object-center">
+       </a>
     </div>
     <div class="p-5">
         <div>
