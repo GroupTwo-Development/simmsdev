@@ -177,9 +177,9 @@
             <section class="mt-16 lg:mt-36">
                 <h2 class="text-center mb-10 font-semibold font-arno_pro_subhead text-xl md:text-2xl lg:text-3xl"><?php echo e($introContent['Section_Title']); ?></h2>
 
-                <div class="<?php echo e($isSingleCard ? 'flex justify-center' : 'grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6'); ?> w-full">
+                <div class="flex flex-row justify-center items-center gap-5">
                     <?php $__currentLoopData = $salesReps; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $salesRep): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                        <div class="bg-white shadow-lg flex flex-col h-full">
+                        <div class="bg-white shadow-lg flex flex-col h-full sm:w-1/2 lg:w-1/3 xl:w-1/3">
                             <div class="w-full h-64 lg:h-80 overflow-hidden">
                                 <?php
                                     // Get image ID

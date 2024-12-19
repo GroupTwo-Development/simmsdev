@@ -38,7 +38,7 @@
                                 $questionId = 'controlsAccordionItem' . $index;
                                 $answerId = 'accordionItem' . $index;
                             ?>
-                            <div class="border-t-2 border-primary-green last:border-b-2">
+                            <div class="border-t-[2px] border-primary-green last:border-b-2">
                                 <button 
                                     id="<?php echo e($questionId); ?>" 
                                     type="button"
@@ -83,7 +83,7 @@
                                 $questionTwoId = 'controlsAccordionItem' . $index;
                                 $answerTwoId = 'accordionItem' . $index;
                             ?>
-                            <div class="border-t-2 border-primary-green last:border-b-2">
+                            <div class="border-t-[2px] border-primary-green last:border-b-2">
                                 <button 
                                     id="<?php echo e($questionTwoId); ?>" 
                                     type="button"
