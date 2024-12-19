@@ -33,6 +33,22 @@
 <?php $component = $__componentOriginal67ccc8fcfa79786f1e51efaca77350ff; ?>
 <?php unset($__componentOriginal67ccc8fcfa79786f1e51efaca77350ff); ?>
 <?php endif; ?>
+    
+    <section class="border-b-[1px] lg:bg-primary-green lg:py-8">
+        <div class="container mx-auto">
+            <div class="flex flex-row justify-center items-center">
+                <div class="lg:hidden">
+                    <?php echo do_shortcode('[facetwp facet="categories"]'); ?>
+
+                </div>
+
+                <div class="hidden lg:block desktop-filter">
+                    <?php echo do_shortcode('[facetwp facet="_categories"]'); ?>
+                </div>
+              
+            </div>
+        </div>
+    </section>
     <div  class="relative object-cover w-full pt-10 pb-16" style="background-image: url('<?= \Roots\asset('images/pattern2.png'); ?>')">
 
         <div class="mt-1">
@@ -70,7 +86,7 @@
 
         <div class="mt-1">
             <div class="container mx-auto">
-               <div class="sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-3  content-center">
+               <div class="facetwp-template sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-3  content-center">
                     <?php while(have_posts()): ?> <?php (the_post()); ?>
                         <?php echo $__env->make( 'partials.content-blog', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
                     <?php endwhile; ?>
@@ -78,13 +94,26 @@
 
                
                <div class="pt-6 pagination flex justify-center items-center content-center">
-                <div class="flex flex-row">
-                    <?php echo e(the_posts_navigation(array(
-                        'prev_text' => '<span class="pagination-item" aria-hidden="true"><i class="fa-solid fa-circle-chevron-left text-3xl"></i></span>',
-                        'next_text' => '<span class="pagination-item text-3xl" aria-hidden="true"><i class="fa-solid fa-circle-chevron-right"></i></span>',
-                    ))); ?>
-
-                </div>
+                <?php if (isset($component)) { $__componentOriginal44d6f84b10a19020b7858e09eb0b603d = $component; } ?>
+<?php if (isset($attributes)) { $__attributesOriginal44d6f84b10a19020b7858e09eb0b603d = $attributes; } ?>
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.load-more','data' => []] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>
+<?php $component->withName('load-more'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag && $constructor = (new ReflectionClass(Illuminate\View\AnonymousComponent::class))->getConstructor()): ?>
+<?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
+<?php endif; ?>
+<?php $component->withAttributes([]); ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__attributesOriginal44d6f84b10a19020b7858e09eb0b603d)): ?>
+<?php $attributes = $__attributesOriginal44d6f84b10a19020b7858e09eb0b603d; ?>
+<?php unset($__attributesOriginal44d6f84b10a19020b7858e09eb0b603d); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginal44d6f84b10a19020b7858e09eb0b603d)): ?>
+<?php $component = $__componentOriginal44d6f84b10a19020b7858e09eb0b603d; ?>
+<?php unset($__componentOriginal44d6f84b10a19020b7858e09eb0b603d); ?>
+<?php endif; ?>
                </div>
             </div>
         </div>

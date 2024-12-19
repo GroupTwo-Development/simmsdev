@@ -15,6 +15,22 @@
             <img src="@asset('assets/blog.jpg')" alt="">        
         </x-slot>
     </x-primary-header>
+    {{-- Filter --}}
+    <section class="border-b-[1px] lg:bg-primary-green lg:py-8">
+        <div class="container mx-auto">
+            <div class="flex flex-row justify-center items-center">
+                <div class="lg:hidden">
+                    @shortcode('[facetwp facet="categories"]')
+
+                </div>
+
+                <div class="hidden lg:block desktop-filter">
+                    @shortcode('[facetwp facet="_categories"]')
+                </div>
+              
+            </div>
+        </div>
+    </section>
     <div  class="relative object-cover w-full pt-10 pb-16" style="background-image: url('@asset('images/pattern2.png')')">
 
         <div class="mt-1">
@@ -32,7 +48,7 @@
 
         <div class="mt-1">
             <div class="container mx-auto">
-               <div class="sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-3  content-center">
+               <div class="facetwp-template sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-3  content-center">
                     @while(have_posts()) @php(the_post())
                         @include( 'partials.content-blog')
                     @endwhile
@@ -40,12 +56,7 @@
 
                {{-- page navigation --}}
                <div class="pt-6 pagination flex justify-center items-center content-center">
-                <div class="flex flex-row">
-                    {{ the_posts_navigation(array(
-                        'prev_text' => '<span class="pagination-item" aria-hidden="true"><i class="fa-solid fa-circle-chevron-left text-3xl"></i></span>',
-                        'next_text' => '<span class="pagination-item text-3xl" aria-hidden="true"><i class="fa-solid fa-circle-chevron-right"></i></span>',
-                    )) }}
-                </div>
+                <x-load-more />
                </div>
             </div>
         </div>

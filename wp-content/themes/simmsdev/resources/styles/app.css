@@ -471,3 +471,15 @@ p {
 .custom-logo-link img {
   @apply w-[207px] h-[65px];
 }
+
+.desktop-filter .facetwp-facet-_categories {
+  @apply flex flex-row justify-center items-center gap-5;
+}
+
+.desktop-filter .facetwp-facet-_categories .facetwp-radio {
+  @apply text-white font-agenda font-[500] text-lg uppercase;
+}
+
+[data-type='radio'] .facetwp-counter {
+  display: none;
+}

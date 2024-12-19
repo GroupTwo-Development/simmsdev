@@ -8,7 +8,7 @@
                         @if ($plans_items['marketing_switch'] == 'yes')
                              <span class="text-primary-green font-semibold tracking[0.15em] uppercase text-sm block mb-2">{{ $plans_items['marketing_text'] }}</span>
                         @endif
-                        <h1 class="font-arno_pro_subhead font-normal text-3xl md:text-4xl" aria-describedby="{{ $title }}">{{ $title }}</h1>
+                        <h1 class="font-arno_pro_subhead font-normal text-3xl md:text-4xl" aria-describedby="{{ $title }}">{!! $title !!}</h1>
                     </div>
 
                     {{-- Community spec --}}
