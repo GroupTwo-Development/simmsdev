@@ -22,7 +22,7 @@
                 $image_id = $testimonialPage_header['background_image_testimonials'];
                
             ?>
-             <img src="<?php echo e($testimonialPage_header['background_image_testimonials']); ?>" alt="testimonials">     
+              <?php echo App\get_image_with_alt($image_id, 'full', ['class' => 'bg-cover object-cover h-24 sm:h-28 md:h-36 lg:h-56 xl:h-52 object-center-top']); ?>   
          <?php $__env->endSlot(); ?>
      <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>

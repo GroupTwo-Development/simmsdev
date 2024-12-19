@@ -37,7 +37,7 @@
                                 $questionId = 'controlsAccordionItem' . $index;
                                 $answerId = 'accordionItem' . $index;
                             @endphp
-                            <div class="border-t-2 border-primary-green last:border-b-2">
+                            <div class="border-t-[2px] border-primary-green last:border-b-2">
                                 <button 
                                     id="{{ $questionId }}" 
                                     type="button"
@@ -80,7 +80,7 @@
                                 $questionTwoId = 'controlsAccordionItem' . $index;
                                 $answerTwoId = 'accordionItem' . $index;
                             @endphp
-                            <div class="border-t-2 border-primary-green last:border-b-2">
+                            <div class="border-t-[2px] border-primary-green last:border-b-2">
                                 <button 
                                     id="{{ $questionTwoId }}" 
                                     type="button"
