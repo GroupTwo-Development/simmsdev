@@ -1,11 +1,13 @@
 
 @props(['title', 'date', 'image', 'link'])
 <div class="max-w-sm bg-white shadow mb-5">
-    <div class="">
-       <a href="{{ $link }}">
-        <img src="{{ $image }}" alt="" class="h-[250px] w-full object-cover bg-cover object-center">
-       </a>
-    </div>
+    @if ($image)
+        <div class="">
+            <a href="{{ $link }}">
+            <img src="{{ $image }}" alt="" class="h-[250px] w-full object-cover bg-cover object-center">
+            </a>
+        </div>
+    @endif
     <div class="p-5">
         <div>
             <span class="font-normal capitalize text-[16px] tracking-tighter mb-2">Posted: <time datetime="{{ $date }}" class="text-primary-green">{{ $date }}</time></span>
