@@ -66,7 +66,7 @@
                           <div class="text-white mb-1 text-sm lg:flex gap-1">
                             <span class="lg:text-left block ">{{ $contact['contact_name']  }}</span>
                         
-                            <a href="tel:{{ $contact['contact_phone']}}" class="text-simms-gold"> Contact: {{ $contact['contact_phone'] }}</a>
+                            <a href="tel:{{ $contact['contact_phone']}}" class="text-simms-gold"> Contact: {{ App\format_phone_number($contact['contact_phone']) }} </a>
                           </div>
                         </div>
                     @endforeach
@@ -80,7 +80,7 @@
                   rel="noopener noreferrer" 
                   class="text-simms-gold lg:text-left transition mt-3 block">
                     <span class="text-white lg:text-left">Corporate Office:</span>
-                    {{ $quickLinkHeader['address1'] }} {{ $quickLinkHeader['address2'] }}, 
+                    {{ $quickLinkHeader['address1'] }}{{ $quickLinkHeader['address2'] .',' }} 
                     {{ $quickLinkHeader['city'] }}, {{ $quickLinkHeader['state'] }} {{ $quickLinkHeader['zip'] }}
                 </a>
                 

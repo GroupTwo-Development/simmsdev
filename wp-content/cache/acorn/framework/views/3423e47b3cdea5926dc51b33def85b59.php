@@ -12,8 +12,8 @@
                             <div class="relative h-full z-10">
                                 <div class="container mx-auto h-full">
                                     <div class="bannerSlider-content  flex flex-col justify-center items-center h-full text-center">
-                                        <span class="block text-simms-gold uppercase tracking-[0.07em] font-semibold text-sm sm:text-xl mb-2"><?php echo e($slide['slider_subtitle']); ?></span>
-                                        <h2 class="bannerSlider-title text-white font-semibold tracking-[0.01em] text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-arno_pro_subhead"><?php echo e($slide['slider_title']); ?></h2>
+                                        <span class="block text-simms-gold uppercase tracking-[0.07em] font-semibold text-sm sm:text-xl lg:text-3xl  mb-2 md:mb-4 lg:mb-5 xl:mb-6"><?php echo e($slide['slider_subtitle']); ?></span>
+                                        <h2 class="bannerSlider-title text-white font-semibold font-arno_pro_subhead tracking-[0.01em] text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl lg:mb-4 xl:mb-8"><?php echo e($slide['slider_title']); ?></h2>
                                         <?php if($slide['slider_link']): ?>
                                             <?php if (isset($component)) { $__componentOriginalf45da169b4dc4f6c9e263e97c3b1ce59 = $component; } ?>
 <?php if (isset($attributes)) { $__attributesOriginalf45da169b4dc4f6c9e263e97c3b1ce59 = $attributes; } ?>
@@ -24,7 +24,7 @@
 <?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag && $constructor = (new ReflectionClass(App\View\Components\CtaLink::class))->getConstructor()): ?>
 <?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
 <?php endif; ?>
-<?php $component->withAttributes(['href' => ''.e($slide['slider_link']['url']).'','class' => 'text-white mt-3 md:mt-5 hover:text-simms-gold transition-all ease-in-out']); ?><?php echo e($slide['slider_link']['title']); ?> <?php echo $__env->renderComponent(); ?>
+<?php $component->withAttributes(['href' => ''.e($slide['slider_link']['url']).'','class' => 'text-white mt-3 md:mt-5 hover:text-simms-gold hover:border-simms-gold transition-all ease-in-out']); ?><?php echo e($slide['slider_link']['title']); ?> <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
 <?php if (isset($__attributesOriginalf45da169b4dc4f6c9e263e97c3b1ce59)): ?>
 <?php $attributes = $__attributesOriginalf45da169b4dc4f6c9e263e97c3b1ce59; ?>
@@ -45,8 +45,7 @@
                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
             </div>
             <div class="swiper-pagination"></div>
-            <div class="swiper-button-next bg-white rounded-full h-7 w-7"></div>
-            <div class="swiper-button-prev bg-white rounded-full h-7 w-7"></div>
+            
         </div>
     </section>
 <?php endif; ?>
@@ -54,6 +53,7 @@
 <?php if($section_one): ?>
     <div class="mt-32  lg:mt-48 xl:mt-56 relative"></div>
     <section id="section_one" class="bg-cover object-cover min-h-[750px] lg:min-h-[500px] z-0 relative" style="background-image:linear-gradient(rgba(236, 236, 236, 0.251), rgba(234, 234, 234, 0.247)), url('<?php echo e($section_one['background_image']); ?>')">
+        <div class="absolute inset-0 bg-[rgba(255,255,255,0.75)]"></div>
         <div class="relative mb-16">
             
             <div class="container mx-auto">
@@ -141,7 +141,7 @@
 
                         </div>
 
-                        <?php if($section_one['section_cta_link']): ?>
+                        <?php if($section_two['link_sec_two']): ?>
                             <div class="mt-5">
                                 <?php if (isset($component)) { $__componentOriginalf45da169b4dc4f6c9e263e97c3b1ce59 = $component; } ?>
 <?php if (isset($attributes)) { $__attributesOriginalf45da169b4dc4f6c9e263e97c3b1ce59 = $attributes; } ?>
@@ -187,15 +187,15 @@
 <?php endif; ?>
 
 <?php if($section_three): ?>
-   <section class="relative bg-cover object-cover py-16 lg:py-20 xl:py-36 inset-0 " style="background-image:url('<?php echo e($section_three['bg_image']); ?>')">
+   <section class="relative bg-cover object-cover py-16 lg:py-20 xl:py-48 inset-0 " style="background-image:url('<?php echo e($section_three['bg_image']); ?>')">
      <!-- Overlay -->
      <div class="absolute inset-0 bg-[rgba(255,255,255,0.75)]"></div>
         <div class="container mx-auto relative">
             
             <div class="relative lg:flex lg:flex-row lg:justify-center lg:items-center w-full">
                 
-                <div class="lg:w-1/2">
-                    <div class="h-full  w-full section_three_img relative">
+                <div class="lg:w-1/2 lg:h-[550px] xl:h-[600px]">
+                    <div class="h-full  w-full relative home-testimonial_img">
                         <?php
                         // Get image ID
                         $image_id = $section_three['feature_image'];
@@ -208,18 +208,18 @@
                     </div>
                 </div>
                 
-                <div class="bg-[rgba(0,40,41,0.9)] lg:w-1/2 py-12 px-4 lg:px-12 lg:py-2 flex flex-col justify-center h-[450px] lg:-ml-16 xl:-ml-20 2xl:-ml-28 z-10">
+                <div class="bg-[rgba(0,40,41,0.9)] lg:w-1/2 py-12 px-4 lg:px-12 lg:py-2 flex flex-col justify-center lg:-ml-16 xl:-ml-20 2xl:-ml-28 z-10 lg:h-[400px] xl:h-[500px]">
                     <?php if($feature_testimonials): ?>
                         <div class="">
-                            <span class="text-simms-gold font-semibold tracking-[0.15em] text-center block mb-2">The marketing headline is (42) characters.</span>
+                            <span class="text-simms-gold font-semibold tracking-[0.15em] text-center text-sm uppercase block mb-2">The marketing headline is (42) characters.</span>
                             <h4 class="font-normal text-white text-2xl lg:text-3xl xl:text-3xl mb-3 font-arno_pro_subhead lg:px-8 text-center">This headline can be forty 40 characters</h4>
                             <div>
                                 <div class="swiper featureTestimonials">
                                     <div class="swiper-wrapper xl:pb-8">
                                         <?php $__currentLoopData = $feature_testimonials; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $testimonial): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                             <div class="swiper-slide">
-                                                <div class="sm:px-10 md:px-16">
-                                                   <blockquote class="text-white text-center lg:px-4">
+                                                <div class="sm:px-10 md:px-16 lg:px-0 xl:px-14">
+                                                   <blockquote class="text-white text-center">
                                                         <?php echo $testimonial['testimonial']; ?>
 
                                                          <cite><?php echo e($testimonial['name']); ?></cite>  
@@ -230,8 +230,23 @@
                                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                     </div>
                                     <div class="swiper-pagination"></div>
-                                    <div class="swiper-button-next bg-simms-gold text-primary-green rounded-full h-7 w-7"></div>
-                                    <div class="swiper-button-prev bg-simms-gold rounded-full h-7 w-7"></div>
+                                    <div class="swiper-button-next bg-primary-green rounded-full h-[28px] w-[28px] flex items-center justify-center">
+                                        <svg id="Component_47_1" data-name="Component 47 – 1" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35">
+                                            <g id="Group_586" data-name="Group 586" transform="translate(35 34.875) rotate(180)">
+                                              <circle id="Ellipse_153" data-name="Ellipse 153" cx="17.5" cy="17.5" r="17.5" transform="translate(0 -0.125)" fill="#CEC778"/>
+                                              <path id="Polygon_2" data-name="Polygon 2" d="M8.5,0,17,15H0Z" transform="translate(8 25.875) rotate(-90)" fill="#002829"/>
+                                            </g>
+                                          </svg>
+                                          
+                                      </div>
+                                    <div class="swiper-button-prev  rounded-full h-7 w-7">
+                                        <svg id="Component_48_1" data-name="Component 48 – 1" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35">
+                                            <g id="Group_323" data-name="Group 323" transform="translate(0 0.125)">
+                                              <path id="Path_11959" data-name="Path 11959" d="M17.5,0A17.5,17.5,0,1,1,0,17.5,17.5,17.5,0,0,1,17.5,0Z" transform="translate(0 -0.125)" fill="#CEC778"/>
+                                              <path id="Polygon_2" data-name="Polygon 2" d="M8.5,0,17,15H0Z" transform="translate(8 25.875) rotate(-90)" fill="#002829"/>
+                                            </g>
+                                          </svg>
+                                    </div>
                                 </div>
                             </div>
 
@@ -246,7 +261,7 @@
 <?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag && $constructor = (new ReflectionClass(App\View\Components\CtaLink::class))->getConstructor()): ?>
 <?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
 <?php endif; ?>
-<?php $component->withAttributes(['href' => '/testimonials','class' => 'text-white mt-3 md:mt-5 hover:text-simms-gold transition-all ease-in-out']); ?>READ MORE REVIEWS <?php echo $__env->renderComponent(); ?>
+<?php $component->withAttributes(['href' => '/testimonials','class' => 'text-white mt-3 md:mt-5 hover:text-simms-gold hover:border-simms-gold transition-all ease-in-out']); ?>READ MORE REVIEWS <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
 <?php if (isset($__attributesOriginalf45da169b4dc4f6c9e263e97c3b1ce59)): ?>
 <?php $attributes = $__attributesOriginalf45da169b4dc4f6c9e263e97c3b1ce59; ?>

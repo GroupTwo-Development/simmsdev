@@ -15,15 +15,13 @@ export const bannerSlider = async (err) => {
   const BannerSlider = new Swiper('.bannerSlider', {
     modules: [Navigation, Pagination, Scrollbar],
     loop: true,
+    navigation: false,
 
     autoplay: {
       delay: 2500,
       disableOnInteraction: false,
     },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
+
     pagination: {
       el: '.swiper-pagination',
       clickable: true,

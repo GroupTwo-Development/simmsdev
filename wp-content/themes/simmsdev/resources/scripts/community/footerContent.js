@@ -5,9 +5,9 @@ export const initFooterContent = async (err) => {
     return;
   }
 
-  const defaultTitle = 'Welcome to SimsDev';
+  const defaultTitle = 'We Believe in Building Communities';
   const defaultContent =
-    '<p>This body copy paragraph can be up to 500 characters. It should reflect whatever topic is written above in the headline. In home building, creativity shapes dreams into tangible sanctuaries. Each nail, each board is a step toward realizing visions—a harmonious blend of purpose and design. From foundation to finish every detail is crafted with care, transforming blueprints into havens of comfort and joy. Homes become more than structures; they’re where laughter echoes and love fills every corner.</p>';
+    '<p>Simms only builds homes in the communities we develop and they are specially customized for you. Between the maintenance free lifestyle you’ll enjoy and the variety of communities we offer, we know we have the perfect home, townhome, or patio home for you. Our thoughtful community planning process starts with decades of experience and ends with you, the homebuyer, in mind. Browse our communities below to find the right place to call your new home.</p>';
   const defaultImage = '/wp-content/uploads/2024/10/Component-27-–-14.jpg';
 
   // Function to set default content
