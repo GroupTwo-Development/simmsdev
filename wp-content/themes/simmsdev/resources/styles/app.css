@@ -455,3 +455,7 @@ p {
 .home-testimonial_img img {
   @apply lg:w-full lg:h-full xl:h-full xl:w-full;
 }
+
+.about-sec-two img {
+  @apply bg-cover bg-center w-full object-cover object-center lg:h-full lg:w-full;
+}

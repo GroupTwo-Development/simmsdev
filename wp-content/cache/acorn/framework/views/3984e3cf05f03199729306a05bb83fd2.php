@@ -45,20 +45,22 @@
 
                 
                 <?php if($aboutUsSectionOne['description']): ?>
-                    <div class="text-center lg:text-left bg-[#E5EFF0] py-10 md:py-12  px-8 md:px-16 lg:w-1/2">
+                    <div class="text-center lg:text-left bg-[#E5EFF0] py-10 md:py-12  px-8 md:px-16 lg:w-1/2 flex flex-col justify-center items-center">
                         <div>
-                            <?php if($aboutUsSectionOne['title']): ?>
-                                <span class="font-arno_pro_subhead text-sm uppercase tracking-[0.15em] text-primary-green font-semibold block mb-2"><?php echo $aboutUsSectionOne['sub_title']; ?></span>
-                            <?php endif; ?>
+                            <div>
+                                <?php if($aboutUsSectionOne['title']): ?>
+                                    <span class="font-agenda  text-sm uppercase tracking-[0.15em] text-primary-green font-semibold block mb-2"><?php echo $aboutUsSectionOne['sub_title']; ?></span>
+                                <?php endif; ?>
+    
+                                <?php if($aboutUsSectionOne['title']): ?>
+                                    <h2 class="font-arno_pro_subhead font-normal text-3xl md:text-4xl mb-5"><?php echo $aboutUsSectionOne['title']; ?></h2>
+                                <?php endif; ?>
+            
+                            </div>
+                            <div>
+                                <?php echo $aboutUsSectionOne['description']; ?>
 
-                            <?php if($aboutUsSectionOne['title']): ?>
-                                <h2 class="font-arno_pro_subhead font-normal text-3xl md:text-4xl mb-5"><?php echo $aboutUsSectionOne['title']; ?></h2>
-                            <?php endif; ?>
-        
-                        </div>
-                        <div>
-                            <?php echo $aboutUsSectionOne['description']; ?>
-
+                            </div>
                         </div>
                     </div>
                 <?php endif; ?>
@@ -68,17 +70,17 @@
 <?php endif; ?>
 
 <?php if($aboutUsSectionTwo): ?>
-    <section id="elevations" class="relative object-cover mt-1 w-full" style="background-image: url('<?= \Roots\asset('assets/pattern2.png'); ?>')">
-        <div class="container mx-auto py-10 lg:py-14">
+    <section id="elevations" class="relative object-cover mt-1 w-full about-sec-two" style="background-image: url('<?= \Roots\asset('assets/pattern2.png'); ?>')">
+        <div class="container mx-auto py-10 lg:py-28">
             
-            <div class=" flex flex-col lg:flex-row lg:justify-center items-center w-full  xl:max-w-screen-lg xl:mx-auto">
+            <div class=" flex flex-col lg:flex-row lg:justify-center items-center w-full  xl:max-w-screen-xl xl:mx-auto">
                 
                 <?php if($aboutUsSectionTwo['description']): ?>
-                    <div class="text-center lg:text-left bg-white py-10 md:py-12  px-8 md:px-16 lg:w-1/2 relative shadow-lg lg:h-[400px] lg:mx-0 lg:-mr-14 z-10">
-                        <div class="lg:h-[300px]">
+                    <div class="text-center lg:text-left bg-white py-10 md:py-12  px-8 md:px-16 lg:w-1/2 relative shadow-lg lg:h-[400px] xl:h-[450px] lg:mx-0 lg:-mr-14 z-10 flex flex-col justify-center items-center">
+                        <div class="">
                             <div class="">
                                 <?php if($aboutUsSectionTwo['sub_title']): ?>
-                                    <span class="font-arno_pro_subhead  text-sm uppercase tracking-[0.15em] text-primary-green font-semibold block mb-2"><?php echo $aboutUsSectionTwo['sub_title']; ?></span>
+                                    <span class="font-agenda  text-sm uppercase tracking-[0.15em] text-primary-green font-semibold block mb-2"><?php echo $aboutUsSectionTwo['sub_title']; ?></span>
                                 <?php endif; ?>
     
                                 <?php if($aboutUsSectionTwo['title']): ?>
@@ -96,7 +98,7 @@
 
                 
                 <?php if($aboutUsSectionTwo['image']): ?>
-                    <div class="flex justify-center items-center lg:w-1/2 relative">
+                    <div class="flex justify-center items-center lg:w-1/2 relative lg:h-[500px] xl:h-[600px]">
                         <?php
                         // Get image ID
                         $image_id = $aboutUsSectionTwo['image'];
@@ -141,7 +143,7 @@
                     <div class="text-center lg:text-left bg-simms-gold py-10 md:py-12  px-8 md:px-16 lg:w-1/2">
                         <div>
                             <?php if($aboutUsSectionThree['title']): ?>
-                                <span class="font-arno_pro_subhead text-sm uppercase tracking-[0.15em] text-[#002829] font-semibold block mb-2"><?php echo $aboutUsSectionThree['sub_title']; ?></span>
+                                <span class="font-agenda  text-sm uppercase tracking-[0.15em] text-[#002829] font-semibold block mb-2"><?php echo $aboutUsSectionThree['sub_title']; ?></span>
                             <?php endif; ?>
 
                             <?php if($aboutUsSectionThree['title']): ?>
@@ -163,24 +165,27 @@
 <?php if($aboutUsSectionFour): ?>
     <section id="section_one" class="bg-cover object-cover relative object-center  xl:h-[400px]" style="background-image: url('<?php echo e($aboutUsSectionFour['background_image']); ?>')">
         <div class="container mx-auto pt-10 xl:pt-28">
-            <div class="bg-white shadow-lg flex flex-col lg:flex-row lg:justify-center w-full  xl:max-w-screen-lg xl:mx-auto z-10 overflow-hidden relative">
+            <div class="absolute inset-0 bg-[rgba(255,255,255,0.75)]"></div>
+            <div class="bg-white shadow-lg flex flex-col lg:flex-row lg:justify-center w-full  xl:max-w-screen-xl xl:mx-auto z-10 overflow-hidden relative">
 
                 
                 <?php if($aboutUsSectionFour['description']): ?>
-                    <div class="text-center lg:text-left bg-secondary-green py-10 md:py-12  px-8 xl:py-10 md:px-16 lg:w-1/2">
+                    <div class="text-center lg:text-left bg-secondary-green py-10 md:py-12  px-8 xl:py-10 md:px-16 lg:w-1/2 flex flex-col justify-center items-center">
                         <div>
-                            <?php if($aboutUsSectionFour['title']): ?>
-                            <span class="font-arno_pro_subhead text-sm uppercase tracking-[0.15em] text-simms-gold font-semibold block mb-2"><?php echo $aboutUsSectionFour['sub_title']; ?></span>
-                            <?php endif; ?>
+                            <div>
+                                <?php if($aboutUsSectionFour['title']): ?>
+                                <span class="font-agenda  text-sm uppercase tracking-[0.15em] text-simms-gold font-semibold block mb-2"><?php echo $aboutUsSectionFour['sub_title']; ?></span>
+                                <?php endif; ?>
+    
+                                <?php if($aboutUsSectionFour['title']): ?>
+                                    <h2 class="font-arno_pro_subhead font-normal text-3xl text-white md:text-3xl mb-5"><?php echo $aboutUsSectionFour['title']; ?></h2>
+                                <?php endif; ?>
+            
+                            </div>
+                            <div class="text-white">
+                                <?php echo $aboutUsSectionFour['description']; ?>
 
-                            <?php if($aboutUsSectionFour['title']): ?>
-                                <h2 class="font-arno_pro_subhead font-normal text-3xl text-white md:text-3xl mb-5"><?php echo $aboutUsSectionFour['title']; ?></h2>
-                            <?php endif; ?>
-        
-                        </div>
-                        <div class="text-white">
-                            <?php echo $aboutUsSectionFour['description']; ?>
-
+                            </div>
                         </div>
                     </div>
                 <?php endif; ?>
@@ -209,7 +214,7 @@
     <section id="elevations" class="relative object-cover pt-14 xl:pt-56 w-full" style="background-image: url('<?= \Roots\asset('assets/pattern2.png'); ?>')">
         <div class="container mx-auto py-10 lg:py-14">
             
-            <div class=" flex flex-col lg:flex-row lg:justify-center items-center w-full  xl:max-w-screen-lg xl:mx-auto">
+            <div class=" flex flex-col lg:flex-row lg:justify-center items-center w-full  xl:max-w-screen-xl xl:mx-auto">
               
 
                 
@@ -231,17 +236,16 @@
 
                   
                   <?php if($aboutUsSectionFive['description']): ?>
-                  <div class="text-center lg:text-left bg-white py-10 md:py-12  px-8 md:px-16 lg:w-1/2 relative shadow-lg lg:h-[400px] lg:mx-0 lg:-ml-14 z-10">
-                      <div class="lg:h-[410px]">
+                  <div class="text-center lg:text-left bg-white py-10 md:py-12  px-8 md:px-16 lg:w-1/2 relative shadow-lg lg:h-[400px] lg:mx-0 lg:-ml-14 z-10 flex flex-col justify-center items-center">
+                      <div class="lg:h-[410px] flex flex-col justify-center">
                           <div class="">
                               <?php if($aboutUsSectionFive['sub_title']): ?>
-                                <span class="font-arno_pro_subhead uppercase tracking-[0.15em] text-sm text-primary-green font-semibold block mb-2"><?php echo $aboutUsSectionFive['sub_title']; ?></span>
+                                <span class="font-agenda  uppercase tracking-[0.15em] text-sm text-primary-green text-left font-semibold block mb-2"><?php echo $aboutUsSectionFive['sub_title']; ?></span>
                               <?php endif; ?>
   
                               <?php if($aboutUsSectionFive['title']): ?>
                                   <h2 class="font-arno_pro_subhead font-normal text-3xl md:text-3xl mb-5"><?php echo $aboutUsSectionFive['title']; ?></h2>
                               <?php endif; ?>
-          
                           </div>
                           <div>
                               <?php echo $aboutUsSectionFive['description']; ?>

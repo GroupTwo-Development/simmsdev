@@ -42,7 +42,7 @@
 
                 @if ($quickLinkHeader)
                     <div class="mb-8">
-                        <h2 class="text-simms-lime font-semibold mb-1">Follow us</h2>
+                        <h2 class="text-simms-lime font-semibold mb-1 font-arno_pro_subhead">Follow us</h2>
                         <ul class="flex flex-row justify-start w-full items-start content-start gap-2">
                             <li class="h-8 w-8 rounded-full bg-primary-green flex flex-col justify-center items-center"><a href="{{$quickLinkHeader['fb']}}" target="_blank" class=""><i class="fa-brands fa-facebook-f text-white"></i></a></li>
                             <li class="h-8 w-8 rounded-full bg-primary-green flex flex-col justify-center items-center"><a href="{{$quickLinkHeader['instagram']}}" target="_blank"><i class="fa-brands fa-instagram text-white"></i></a></li>
@@ -62,7 +62,7 @@
             @if ($introContent['form_contact'])
                 <div class="mt-10 lg:mt-0 lg:w-2/3 contact-page-form">
                     <div class="w-full">
-                        <h2 class="font-semibold font-arno_pro_subhead mb-5">{!! $introContent['title_contact_form']  !!}</h2>
+                        <h2 class="font-semibold font-arno_pro_subhead mb-5 text-lg lg:text-2xl xl:text-3xl">{!! $introContent['title_contact_form']  !!}</h2>
                         <div>
                             {!! $introContent['form_contact'] !!}
                         </div>

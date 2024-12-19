@@ -36,9 +36,9 @@
     <header class="bg-primary-green py-5">
         <div class="container mx-auto">
             <div class="flex flex-row justify-center items-center gap-10">
-                <a href="/photos" class="font-arno_pro_subhead font-[500] text-white text-lg uppercase">Photos</a>
-                <a href="/videos" class="font-arno_pro_subhead font-[500] text-white text-lg uppercase">Videos</a>
-                <a href="/virtual-tours" class="font-arno_pro_subhead font-[500] text-white text-lg uppercase">Virtual tours</a>
+                <a href="/photos" class="font-agenda font-[500] text-white text-lg uppercase tracking-[0.06em] hover:text-simms-gold transition-all ease-in-out">Photos</a>
+                <a href="/videos" class="font-agenda font-[500] text-white text-lg uppercase tracking-[0.06em] hover:text-simms-gold transition-all ease-in-out">Videos</a>
+                <a href="/virtual-tours" class="font-agenda font-[500] text-white text-lg uppercase tracking-[0.06em] hover:text-simms-gold transition-all ease-in-out">Virtual tours</a>
             </div>
         </div>
     </header>
