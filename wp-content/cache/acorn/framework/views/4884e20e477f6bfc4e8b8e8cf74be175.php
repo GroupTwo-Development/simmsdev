@@ -38,9 +38,10 @@
 
 
           <!-- Heroicon: chevron-down -->
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-simms-gold" viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+          <svg id="Component_51_1" data-name="Component 51 – 1" xmlns="http://www.w3.org/2000/svg" width="9" height="6" viewBox="0 0 19 16">
+            <path id="Polygon_10" data-name="Polygon 10" d="M9.5,0,19,16H0Z" transform="translate(19 16) rotate(180)" fill="#cec778"/>
           </svg>
+          
       </button>
 
       <!-- Panel -->

@@ -114,12 +114,14 @@
 
 
 <?php if($section_two): ?>
-    <section class="bg-cover bg-primary-green object-cover" style="background-image: url('<?= \Roots\asset('images/pattern1.png'); ?>')">
+    <section 
+        class="bg-cover bg-primary-green bg-repeat object-cover md:bg-contain lg:bg-contain"
+        style="background-image: url('<?= \Roots\asset('images/pattern1.png'); ?>'); background-size: 150%; background-position: center;">
         <div class="container mx-auto py-20 xl:py-32">
             <div class="shadow-xl lg:flex lg:flex-row lg:justify-center">
                 
                 <div class="lg:w-1/4">
-                    <div class="w-full h-full section_two_img  left-img relative">
+                    <div class="w-full h-full section_two_img left-img relative">
                         <?php
                         // Get image ID
                         $image_id = $section_two['image_left'];
@@ -152,7 +154,7 @@
 <?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag && $constructor = (new ReflectionClass(App\View\Components\CtaLink::class))->getConstructor()): ?>
 <?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
 <?php endif; ?>
-<?php $component->withAttributes(['href' => ''.e($section_two['link_sec_two']['url']).'','class' => 'text-secondary-green border-b-secondary-green mt-3 md:mt-5 hover:text-white transition-all ease-in-out']); ?><?php echo e($section_two['link_sec_two']['title']); ?> <?php echo $__env->renderComponent(); ?>
+<?php $component->withAttributes(['href' => ''.e($section_two['link_sec_two']['url']).'','class' => 'text-secondary-green border-b-secondary-green mt-3 md:mt-5 hover:text-white hover:border-white transition-all ease-in-out']); ?><?php echo e($section_two['link_sec_two']['title']); ?> <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
 <?php if (isset($__attributesOriginalf45da169b4dc4f6c9e263e97c3b1ce59)): ?>
 <?php $attributes = $__attributesOriginalf45da169b4dc4f6c9e263e97c3b1ce59; ?>
@@ -185,6 +187,7 @@
         </div>
     </section>
 <?php endif; ?>
+
 
 <?php if($section_three): ?>
    <section class="relative bg-cover object-cover py-16 lg:py-20 xl:py-48 inset-0 " style="background-image:url('<?php echo e($section_three['bg_image']); ?>')">

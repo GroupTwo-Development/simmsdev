@@ -47,7 +47,7 @@
                     <div class="text-center lg:text-left bg-simms-gold py-10 md:py-12 px-8 md:px-10 lg:px-8 lg:w-1/2">
                         <div class="text-left">
                             @if ($energySectionOne['title'])
-                                <span class="font-arno_pro_subhead text-sm uppercase tracking-[0.15em] text-[#002829] font-semibold block mb-2">{!! $energySectionOne['sub_title'] !!}</span>
+                                <span class="font-agenda text-sm uppercase tracking-[0.15em] text-[#002829] font-semibold block mb-2">{!! $energySectionOne['sub_title'] !!}</span>
                             @endif
 
                             @if ($energySectionOne['title'])
@@ -58,7 +58,7 @@
                         @if ($energySectionOne['description'])
                             <ul>
                                 @foreach ($energySectionOne['description'] as $item)
-                                    <li class="flex flex-row items-center gap-2 mb-4"><i><svg xmlns="http://www.w3.org/2000/svg" width="11" height="13" viewBox="0 0 11 13">
+                                    <li class="flex flex-row items-start gap-2 mb-4"><i><svg xmlns="http://www.w3.org/2000/svg" width="11" height="13" viewBox="0 0 11 13">
                                         <path id="Polygon_3" data-name="Polygon 3" d="M6.5,0,13,11H0Z" transform="translate(11) rotate(90)" fill="#fff"/>
                                       </svg>
                                       </i> <span class="block text-left">{{ $item['s1_highlights'] }}</span></li>
@@ -74,18 +74,18 @@
 @endif
 
 @if ($energySectionTwo)
-    <section id="section_one" class="bg-cover object-cover relative object-center ee-section-two lg:h-[350px]  xl:h-[400px] pb-20" style="background-image: url('{{ $energySectionTwo['background_image'] }}')">
+    <section id="section_one" class="bg-cover ee-sec-two object-cover relative object-center ee-section-two lg:h-[350px]  xl:h-[400px] pb-20" style="background-image: url('{{ $energySectionTwo['background_image'] }}')">
         <div class="absolute inset-0 bg-white bg-opacity-[0.75] z-10"></div>
         <div class="container mx-auto pt-10 xl:pt-28 relative z-20">
             <div class=" flex flex-col lg:flex-row lg:justify-center xl:items-center w-full  xl:max-w-screen-xl xl:mx-auto z-10 overflow-hidden relative">
 
                 {{-- Content Right --}}
                 @if ($energySectionTwo['description'])
-                    <div class="text-center relative shadow-lg  lg:text-left bg-secondary-green py-10 md:py-12 xl:h-[480px]  px-8 xl:py-10 md:px-16 xl:-mr-28 z-20 lg:w-1/2">
+                    <div class="text-center relative shadow-lg  lg:text-left bg-[rgba(0,40,41,0.9)] py-10 md:py-12 xl:h-[500px]  px-8 xl:py-10 md:px-16 xl:-mr-28 z-20 lg:w-1/2">
                        <div>
                             <div>
                                 @if ($energySectionTwo['title'])
-                                <span class="font-arno_pro_subhead text-sm uppercase tracking-[0.15em] text-simms-gold font-semibold block mb-2">{!! $energySectionTwo['sub_title'] !!}</span>
+                                <span class="font-agenda text-sm uppercase tracking-[0.15em] text-simms-gold font-semibold block mb-2">{!! $energySectionTwo['sub_title'] !!}</span>
                                 @endif
 
                                 @if ($energySectionTwo['title'])
@@ -132,8 +132,13 @@
 
 @if ($energySectionThree)
     <section id="section_one" class="bg-cover relative object-cover pt-16 lg:pt-96" style="background-image: url('@asset('assets/pattern2.png')')">
-        <div class="lg:h-[400px] absolute bottom-0 w-full" style="background-image: url('{{ $energySectionThree['background_image'] }}')"></div>
-        
+         <!-- Background Image with Overlay -->
+         <div class="lg:h-[400px] absolute bottom-0 w-full">
+            <!-- Background Image -->
+            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('{{ $energySectionThree['background_image'] }}')"></div>
+            <!-- Overlay -->
+            <div class="absolute inset-0 bg-[rgba(255,255,255,0.75)]"></div>
+        </div>
         <div class="container mx-auto py-10 lg:py-32 relative z-20">
             <div class="flex flex-col lg:flex-row lg:justify-center xl:items-center w-full xl:max-w-screen-xl xl:mx-auto z-10 overflow-hidden relative">
                 {{-- image content --}}
@@ -154,11 +159,11 @@
 
                 {{-- Content Right --}}
                 @if ($energySectionThree['description'])
-                    <div class="text-center lg:text-left lg:flex lg:flex-col lg:justify-center bg-white text-black  relative py-10 md:py-12 xl:h-[450px]  px-8 xl:py-10 md:px-16 xl:-ml-28 z-20 lg:w-1/2">
+                    <div class="text-center lg:text-left lg:flex lg:flex-col lg:justify-center bg-white text-black  relative py-10 md:py-12 xl:h-[400px]  px-8 xl:py-10 md:px-16 xl:-ml-28 z-20 lg:w-1/2">
                         <div>
                             <div>
                                 @if ($energySectionThree['title'])
-                                    <span class="font-arno_pro_subhead text-sm uppercase tracking-[0.15em] text-primary-green font-semibold block mb-2">{!! $energySectionThree['sub_title'] !!}</span>
+                                    <span class="font-agenda text-sm uppercase tracking-[0.15em] text-primary-green font-semibold block mb-2">{!! $energySectionThree['sub_title'] !!}</span>
                                 @endif
     
                                 @if ($energySectionThree['title'])
@@ -196,7 +201,7 @@
                         <div>
                             <div class="">
                                 @if ($energySectionFour['sub_title'])
-                                    <span class="font-arno_pro_subhead uppercase tracking-[0.15em] text-sm text-primary-green font-semibold block mb-2">{!! $energySectionFour['sub_title'] !!}</span>
+                                    <span class="font-agenda uppercase tracking-[0.15em] text-sm text-primary-green font-semibold block mb-2">{!! $energySectionFour['sub_title'] !!}</span>
                                 @endif
 
                                 @if ($energySectionFour['title'])

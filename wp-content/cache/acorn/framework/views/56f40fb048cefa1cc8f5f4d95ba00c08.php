@@ -154,8 +154,8 @@
                     <div class="container mx-auto">
                         <div id="footer-text" class="flex flex-col justify-center items-center m-4 sm:m-8">
                             <div class="text-white py-6 px-4 xl:px-6 xl:py-8 text-left">
-                                <span class="block text-simms-gold text-sm mb-2 tracking-[0.015rem] uppercase font-semibold">New Home Communities</span>
-                                <h1 class="font-arno_pro_subhead text-2xl mb-1"></h1>
+                                <span class="block text-simms-gold text-sm mb-2 tracking-[0.015rem] lg:mb-5 uppercase font-semibold">New Home Communities</span>
+                                <h1 class="font-arno_pro_subhead text-2xl lg:text-3xl xl:text-4xl mb-1 lg:mb-4"></h1>
                                 <div id="footer-description"></div>
                             </div>
                         </div>

@@ -372,7 +372,7 @@ p {
 }
 
 .contact-page-form form section .wpcf7-submit {
-  @apply uppercase font-[500] border-b-2 border-primary-green;
+  @apply uppercase font-[500] border-b-2 border-primary-green text-right;
 }
 
 .contact-page-form form section .item-1 {
@@ -458,4 +458,12 @@ p {
 
 .about-sec-two img {
   @apply bg-cover bg-center w-full object-cover object-center lg:h-full lg:w-full;
+}
+
+.ee-sec-two img {
+  @apply bg-cover bg-center w-full object-cover object-center lg:h-full lg:w-full;
+}
+
+.self-guided a {
+  @apply text-simms-gold border-b-[2px] border-simms-gold hover:text-white hover:border-white !important;
 }
