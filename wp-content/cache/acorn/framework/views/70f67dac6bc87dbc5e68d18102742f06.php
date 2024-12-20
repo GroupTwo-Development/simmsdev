@@ -14,7 +14,7 @@
             </div>
         </div>
     </div>
-    <div class="h-24 sm:h-28 md:h-36 lg:h-[180px] xl:h-[220px]  bg-cover object-cover object-left-top hidden lg:block">
+    <div class="h-24 sm:h-28 md:h-36 lg:h-[350px] xl:h-[400px]  bg-cover object-cover object-left-top hidden lg:block header-banner-img">
       <div class="h-full">
         <?php echo e($bg_image); ?>
 
