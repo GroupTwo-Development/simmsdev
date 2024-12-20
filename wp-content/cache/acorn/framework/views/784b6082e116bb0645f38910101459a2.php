@@ -18,7 +18,7 @@
 
          <?php $__env->endSlot(); ?>
          <?php $__env->slot('bg_image', null, []); ?> 
-            <img src="<?= \Roots\asset('assets/contact-header.jpg'); ?>" alt="contact">        
+            <img src="<?= \Roots\asset('assets/contact-header.jpeg'); ?>" alt="contact">        
          <?php $__env->endSlot(); ?>
      <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
