@@ -10,19 +10,33 @@
 <?php endif; ?>
 <?php $component->withAttributes([]); ?>
      <?php $__env->slot('subtitle', null, []); ?> 
+<<<<<<< HEAD
         <?php echo e($primaryPageHeader['plans_sub_title']); ?>
 
      <?php $__env->endSlot(); ?>
      <?php $__env->slot('title', null, []); ?> 
         <?php echo e($primaryPageHeader['plans_title']); ?>
+=======
+      <?php echo e(__('Find Your Home')); ?>
+
+     <?php $__env->endSlot(); ?>
+     <?php $__env->slot('title', null, []); ?> 
+        <?php echo e(__('Floorplans')); ?>
+>>>>>>> main
 
      <?php $__env->endSlot(); ?>
      <?php $__env->slot('bg_image', null, []); ?> 
         <?php
+<<<<<<< HEAD
             $image_id = $primaryPageHeader['plans_header_img'];
         ?>
         <?php echo App\get_image_with_alt($image_id, 'full', ['class' => 'bg-cover object-cover h-24 sm:h-28 md:h-36 lg:h-56 xl:h-52 object-center-top']); ?>
 
+=======
+            $image_id = $primaryPageHeader['community_header_img'];
+        ?>
+        <img src="<?= \Roots\asset('assets/floorplan-header.jpg'); ?>" alt="">        
+>>>>>>> main
      <?php $__env->endSlot(); ?>
  <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>

@@ -13,11 +13,13 @@
 } ?>
 <?php unset($__defined_vars); ?>
 <div class="max-w-sm bg-white shadow mb-5">
-    <div class="">
-       <a href="<?php echo e($link); ?>">
-        <img src="<?php echo e($image); ?>" alt="" class="h-[250px] w-full object-cover bg-cover object-center">
-       </a>
-    </div>
+    <?php if($image): ?>
+        <div class="">
+            <a href="<?php echo e($link); ?>">
+            <img src="<?php echo e($image); ?>" alt="" class="h-[250px] w-full object-cover bg-cover object-center">
+            </a>
+        </div>
+    <?php endif; ?>
     <div class="p-5">
         <div>
             <span class="font-normal capitalize text-[16px] tracking-tighter mb-2">Posted: <time datetime="<?php echo e($date); ?>" class="text-primary-green"><?php echo e($date); ?></time></span>
