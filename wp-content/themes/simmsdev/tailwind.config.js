@@ -24,7 +24,8 @@ const config = {
         'light-green-two': 'rgba(0, 103, 109, 0.75)',
       }, // Extend Tailwind's default colors
       backgroundColor: {
-        overlay: 'rgba(0, 40, 41, 0.75)', // Add custom overlay color
+        overlay: 'rgba(0, 40, 41, 0.75)',
+        blackOverlay: 'rgba(0, 0, 0, .40)', // Add custom overlay color
         // pattern: "url('../../images/pattern.svg')",
         pattern_img: "url('images/pattern1.png')",
       },

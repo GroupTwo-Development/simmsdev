@@ -21,7 +21,7 @@
             <?php
                 $image_id = $primaryPageHeader['homes_header_img'];
             ?>
-            <img src="<?= \Roots\asset('assets/hero-ee.jpg'); ?>" alt="">        
+            <img src="<?= \Roots\asset('assets/AwardsHeader.jpg'); ?>" alt="">        
          <?php $__env->endSlot(); ?>
      <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>

@@ -6,4 +6,7 @@
 
 
 
+
+
+
 <?php /**PATH /Users/grouptwodev/Herd/simmsdev-app/wp-content/themes/simmsdev/resources/views/sections/header.blade.php ENDPATH**/ ?>

@@ -12,7 +12,7 @@
             @php
                 $image_id = $primaryPageHeader['homes_header_img'];
             @endphp
-            <img src="@asset('assets/blog.jpg')" alt="">        
+            <img src="@asset('assets/blog-header.jpg')" alt="">        
         </x-slot>
     </x-primary-header>
     {{-- Filter --}}

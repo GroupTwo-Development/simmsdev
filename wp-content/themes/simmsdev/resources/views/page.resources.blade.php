@@ -16,7 +16,7 @@
             @php
                 $image_id = $primaryPageHeader['homes_header_img'];
             @endphp
-            <img src="@asset('assets/resources.jpg')" alt="">        
+            <img src="@asset('assets/ResourcesHeaderImage.jpg')" alt="resources header image">        
         </x-slot>
     </x-primary-header>
 

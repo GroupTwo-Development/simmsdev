@@ -70,6 +70,7 @@ class FrontPage extends Composer
      public function sectionTwo()
      {
         $image_left = get_field('image_left') ?? null;
+        $section_image_two = get_field('section_image_two') ?? null;
         $sub_title = get_field('sub_title_sec_two') ?? null;
         $title_section = get_field('title_section_two') ?? null;
         $content = get_field('content_sec_two') ?? null;
@@ -79,6 +80,7 @@ class FrontPage extends Composer
         return [
             'image_left' => $image_left,
             'sub_title' => $sub_title,
+            'section_image' => $section_image_two,
             'title_section' => $title_section,
             'content' => $content,
             'link_sec_two' => $link_sec_two,
@@ -90,10 +92,14 @@ class FrontPage extends Composer
      {
         $bg_image = get_field('background_image_sec_three') ?? null;
         $feature_image = get_field('section_feature_image_sec_three') ?? null;
+       
+
 
         return [
             'bg_image' => $bg_image,
             'feature_image' => $feature_image,
+            
+       
         ];
      }
 
@@ -141,7 +147,16 @@ class FrontPage extends Composer
     
         // Restore original post data
         wp_reset_postdata();
+        
+        $subtitle_hp_testimonials = get_field('subtitle_hp_testimonials') ?? null;
+        $title_hp_testimonials = get_field('title_hp_testimonials') ?? null;
     
-        return $testimonials;
+        return [
+            'testimonials' => $testimonials,
+            'featured_titles' => [
+                'subtitle' => $subtitle_hp_testimonials,
+                'title' => $title_hp_testimonials,
+            ],
+        ];
     }
 }

@@ -4,7 +4,7 @@
     <section id="pointsofinterest" class="relative object-cover mt-1 w-full" style="background-image: url('@asset('assets/pattern2.png')')">
         <div class="container mx-auto">
             <div class="py-16 lg:py-16 xl:py-20  w-full">
-                <h2 class="font-arno_pro_subhead font-normal text-3xl md:text-4xl lg:text-5xl  text-center mb-10 lg:mb-16">Points of Interest</h2>
+                <h2 class="font-arno_pro_subhead font-normal text-3xl md:text-4xl lg:text-5xl  text-center mb-10 lg:mb-16">{{ __("Why You'll Love Living Here") }}</h2>
                 {{-- content --}}
                 <div class="md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-3 w-full">
                     @foreach ($communities_items['point_of_interest'] as $interest)

@@ -344,6 +344,35 @@
             "selected": 0
         },
         {
+            "key": "field_6765e42810f43",
+            "label": "Section Image",
+            "name": "section_image_two",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_field_group_condition": 0,
+            "uploader": "",
+            "acfe_thumbnail": 0,
+            "return_format": "id",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "allow_in_bindings": 0,
+            "preview_size": "medium",
+            "library": "all"
+        },
+        {
             "key": "field_6713ea7a8f859",
             "label": "Image Left",
             "name": "image_left",
@@ -488,7 +517,7 @@
         },
         {
             "key": "field_67142472889de",
-            "label": "Section Three",
+            "label": "Featured Testimonials",
             "name": "",
             "aria-label": "",
             "type": "tab",
@@ -563,6 +592,50 @@
             "allow_in_bindings": 0,
             "preview_size": "medium",
             "library": "all"
+        },
+        {
+            "key": "field_6765e361a41e0",
+            "label": "Subtitle",
+            "name": "subtitle_hp_testimonials",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_field_group_condition": 0,
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6765e3b2a41e1",
+            "label": "Title",
+            "name": "title_hp_testimonials",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_field_group_condition": 0,
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
@@ -599,5 +672,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1734041510
+    "modified": 1734730874
 }

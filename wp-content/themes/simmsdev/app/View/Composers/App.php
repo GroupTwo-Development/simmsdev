@@ -118,6 +118,12 @@ class App extends Composer
         $homes_title = get_field('title_comm_qmi', 'option') ?? null;
         $homes_sub_title = get_field('subtitle_comm_qmi', 'option') ?? null;
         $homes_header_img = get_field('header_image_comm_qmi', 'option') ?? null;
+
+        $plans_title = get_field('title_comm_plan', 'option') ?? null;
+        $plans_sub_title = get_field('subtitle_comm_plan', 'option') ?? null;
+        $plans_header_img = get_field('header_image_comm_plan', 'option') ?? null;
+
+
         $hover_logo = get_field('hover_logo', 'option') ?? null;
        
 
@@ -130,6 +136,10 @@ class App extends Composer
             'homes_sub_title' => $homes_sub_title,
             'homes_header_img' => $homes_header_img,
             'hover_logo' => $hover_logo,
+            'plans_title' => $plans_title,
+            'plans_sub_title' => $plans_sub_title,
+            'plans_header_img' => $plans_header_img,
+            
         
             
         ];
