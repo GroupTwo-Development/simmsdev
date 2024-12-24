@@ -79,6 +79,8 @@ class Communities extends Composer
         $community_coming_soon = get_field('community_coming_soon');
         $coming_coming_soon_swtich = $community_coming_soon['coming_coming_soon'] ?? '';
         $join_the_vip_list = $community_coming_soon['join_the_vip_list'] ?? '';
+        $comm_address = get_field('comm_address') ?? '';
+        $comm_postal_code = get_field('comm_postal_code') ?? '';
     
 
         return [
@@ -86,8 +88,10 @@ class Communities extends Composer
             'plan_marketing_headline' => $plan_marketing_headline,
             'name' => get_the_title(),
             'link' => get_the_permalink(),
+            'address' => $comm_address,
             'city' => $comm_city,
             'state' => $comm_state,
+            'postal_code' => $comm_postal_code,
             'min_sqft' => $comm_min_SqFt,
             'max_sqft' => $comm_max_SqFt,
             'min_price' => $comm_min_price,

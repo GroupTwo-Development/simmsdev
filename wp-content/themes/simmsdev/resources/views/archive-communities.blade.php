@@ -37,7 +37,7 @@
          {{-- Main Content - Conditionally Render Map or Cards --}}
 
          
-        <div  x-show="!showMap" >
+        <div x-show="!showMap" >
             <div class="container mx-auto">
                 {{-- Query loop --}}
                 <div class="community-wrapper relative facetwp-template grid grid-cols-1 sm:g sm:grid-cols-2 sm:gap-3 lg:gap-5 xl:gap-10 lg:grid-cols-3 content  justify-center items-start content-center lg:pt-12">

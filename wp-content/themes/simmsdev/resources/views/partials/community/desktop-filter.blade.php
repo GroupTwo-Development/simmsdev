@@ -26,7 +26,7 @@
                <div>
                    <button @click="showMap = !showMap" role="button"
                            class="relative h-[50px] flex items-center cursor-pointer px-[8px] lg:px-1 py-[5px] font-[300] text-lg">
-                           <span x-text="showMap ? 'Card' : 'Map'"></span>
+                           <span x-text="showMap ? 'Cards' : 'Map'"></span>
                            <i :class="showMap ? 'fa-solid fa-table-cells-large' : 'fa-solid fa-location-dot'" class="ml-2 text-primary-green text-lg"></i>
                        </button>
                </div>

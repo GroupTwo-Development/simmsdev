@@ -9,7 +9,9 @@
                              <span class="text-primary-green font-semibold tracking[0.15em] uppercase text-sm block mb-2">{{ $communities_items['plan_marketing_headline'] }}</span>
                         @endif
                         <h1 class="font-arno_pro_subhead font-normal text-3xl md:text-4xl">{{ $title }}</h1>
-                        <span class="text-sm font-[300]">{{ $communities_items['city'] . ', ' . $communities_items['state'] }}</span>
+                        <span class="text-sm font-[300]">
+                            {{ $communities_items['address'] . ', ' . $communities_items['city'] . ', ' . $communities_items['state'] . ' ' . $communities_items['postal_code'] }}
+                        </span>
                     </div>
     
                     {{-- Community spec --}}

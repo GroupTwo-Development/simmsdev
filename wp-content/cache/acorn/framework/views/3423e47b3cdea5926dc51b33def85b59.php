@@ -8,12 +8,12 @@
                             <div class="duration-700 ease-in-out">
                                 <img src="<?php echo e($slide['image']); ?>"  class="absolute block w-full object-cover bg-cover h-full">
                             </div>
-                            <div class="absolute inset-0 bg-overlay overflow-hidden h-full"></div> <!-- Overlay with rgba color -->
+                            <div class="absolute inset-0 bg-blackOverlay overflow-hidden h-full"></div> <!-- Overlay with rgba color -->
                             <div class="relative h-full z-10">
                                 <div class="container mx-auto h-full">
                                     <div class="bannerSlider-content  flex flex-col justify-center items-center h-full text-center">
                                         <span class="block text-simms-gold uppercase tracking-[0.07em] font-semibold text-sm sm:text-xl lg:text-3xl  mb-2 md:mb-4 lg:mb-5 xl:mb-6"><?php echo e($slide['slider_subtitle']); ?></span>
-                                        <h2 class="bannerSlider-title text-white font-semibold font-arno_pro_subhead tracking-[0.01em] text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl lg:mb-4 xl:mb-8"><?php echo e($slide['slider_title']); ?></h2>
+                                        <h2 class="bannerSlider-title text-white font-[400] font-arno_pro_subhead tracking-[0.01em] text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl lg:mb-4 xl:mb-8"><?php echo e($slide['slider_title']); ?></h2>
                                         <?php if($slide['slider_link']): ?>
                                             <?php if (isset($component)) { $__componentOriginalf45da169b4dc4f6c9e263e97c3b1ce59 = $component; } ?>
 <?php if (isset($attributes)) { $__attributesOriginalf45da169b4dc4f6c9e263e97c3b1ce59 = $attributes; } ?>
@@ -117,34 +117,35 @@
     <section 
         class="bg-cover bg-primary-green bg-repeat object-cover md:bg-contain lg:bg-contain"
         style="background-image: url('<?= \Roots\asset('images/pattern1.png'); ?>'); background-size: 150%; background-position: center;">
-        <div class="container mx-auto py-20 xl:py-32">
-            <div class="shadow-xl lg:flex lg:flex-row lg:justify-center">
-                
-                <div class="lg:w-1/4">
-                    <div class="w-full h-full section_two_img left-img relative">
-                        <?php
-                        // Get image ID
-                        $image_id = $section_two['image_left'];
-                        
-                        // Get the alt text of the image
-                        $image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', true);
-                        ?>
-                        <?php echo wp_get_attachment_image($image_id, 'full', false, ['alt' => $image_alt]); ?>
+        <div class="container mx-auto py-20 xl:py-28">
+            <div class="relative">
+                <div class="bg-white shadow-2xl  lg:flex lg:flex-row lg:w-full lg:justify-between">
+                   
+                    <div class="lg:w-1/2 relative">
+                        <div class="w-full h-full right-img relative">
+                            <?php
+                                // Get image ID
+                                $image_id = $section_two['section_image'];
+                                
+                                // Get the alt text of the image
+                                $image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', true);
+                            ?>
+                            <?php echo wp_get_attachment_image($image_id, 'full', false, ['alt' => $image_alt]); ?>
 
+                        </div>
                     </div>
-                </div>
-                
-                <div class="bg-simms-gold py-10 lg:py-5 md:py-16 px-5 lg:px-8 xl:px-16 text-center lg:w-1/2">
-                    <div class="flex flex-col justify-center items-center content-center h-full">
-                        <span class="block font-semibold text-primary-green uppercase tracking-[0.15em] mb-3 text-sm"><?php echo e($section_two['sub_title']); ?></span>
-                        <h2 class="font-normal text-white text-2xl lg:text-3xl xl:text-4xl mb-3 font-arno_pro_subhead lg:px-14 text-center"><?php echo e($section_two['title_section']); ?></h2>
-                        <div>
-                            <?php echo $section_two['content']; ?>
-
+                    <div class="py-12 xl:py-12 px-6 lg:px-10 xl:px-14 lg:w-1/2 flex flex-col content-center justify-center">
+                        <?php if($section_two['sub_title']): ?>
+                            <span class="block font-semibold text-primary-green uppercase tracking-[0.15em] mb-3 text-sm"><?php echo e($section_two['sub_title']); ?></span>
+                        <?php endif; ?>
+                    
+                        <h2 class="font-normal text-2xl lg:text-3xl xl:text-4xl mb-3 font-arno_pro_subhead xl:pr-16"><?php echo e($section_two['title_section']); ?></h2>
+                        <div class="mb-5 xl:pr-14">
+                            <p> <?php echo $section_two['content']; ?></p>
                         </div>
 
                         <?php if($section_two['link_sec_two']): ?>
-                            <div class="mt-5">
+                            <div>
                                 <?php if (isset($component)) { $__componentOriginalf45da169b4dc4f6c9e263e97c3b1ce59 = $component; } ?>
 <?php if (isset($attributes)) { $__attributesOriginalf45da169b4dc4f6c9e263e97c3b1ce59 = $attributes; } ?>
 <?php $component = App\View\Components\CtaLink::resolve([] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>
@@ -154,7 +155,7 @@
 <?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag && $constructor = (new ReflectionClass(App\View\Components\CtaLink::class))->getConstructor()): ?>
 <?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
 <?php endif; ?>
-<?php $component->withAttributes(['href' => ''.e($section_two['link_sec_two']['url']).'','class' => 'text-secondary-green border-b-secondary-green mt-3 md:mt-5 hover:text-white hover:border-white transition-all ease-in-out']); ?><?php echo e($section_two['link_sec_two']['title']); ?> <?php echo $__env->renderComponent(); ?>
+<?php $component->withAttributes(['href' => ''.e($section_two['link_sec_two']['url']).'','class' => 'text-primary-green border-b-primary-green mt-3 md:mt-5 hover:text-simms-gold transition-all ease-in-out']); ?><?php echo e($section_two['link_sec_two']['title']); ?> <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
 <?php if (isset($__attributesOriginalf45da169b4dc4f6c9e263e97c3b1ce59)): ?>
 <?php $attributes = $__attributesOriginalf45da169b4dc4f6c9e263e97c3b1ce59; ?>
@@ -166,21 +167,6 @@
 <?php endif; ?>
                             </div>
                         <?php endif; ?>
-                    </div>
-                </div>
-
-                
-                <div class="lg:w-1/4">
-                    <div class="w-full h-full section_two_img right-img relative">
-                        <?php
-                        // Get image ID
-                        $image_id = $section_two['image_right'];
-                        
-                        // Get the alt text of the image
-                        $image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', true);
-                        ?>
-                        <?php echo wp_get_attachment_image($image_id, 'full', false, ['alt' => $image_alt]); ?>
-
                     </div>
                 </div>
             </div>
@@ -214,12 +200,18 @@
                 <div class="bg-[rgba(0,40,41,0.9)] lg:w-1/2 py-12 px-4 lg:px-12 lg:py-2 flex flex-col justify-center lg:-ml-16 xl:-ml-20 2xl:-ml-28 z-10 lg:h-[400px] xl:h-[500px]">
                     <?php if($feature_testimonials): ?>
                         <div class="">
-                            <span class="text-simms-gold font-semibold tracking-[0.15em] text-center text-sm uppercase block mb-2">People Are Talking</span>
-                            <h4 class="font-normal text-white text-2xl lg:text-3xl xl:text-3xl mb-3 font-arno_pro_subhead lg:px-8 text-center">Hear What Our Buyers Are Saying</h4>
+                            <?php if($feature_testimonials['featured_titles']): ?>
+                                <span class="text-simms-gold font-semibold tracking-[0.15em] text-center text-sm uppercase block mb-2"><?php echo e($feature_testimonials['featured_titles']['subtitle']); ?></span>
+                            <?php endif; ?>
+                           
+                            <?php if($feature_testimonials['featured_titles']): ?>
+                                <h4 class="font-normal text-white text-2xl lg:text-3xl xl:text-3xl mb-3 font-arno_pro_subhead lg:px-8 text-center"><?php echo e($feature_testimonials['featured_titles']['title']); ?></h4>
+                            <?php endif; ?>
+                           
                             <div>
                                 <div class="swiper featureTestimonials">
                                     <div class="swiper-wrapper xl:pb-8">
-                                        <?php $__currentLoopData = $feature_testimonials; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $testimonial): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                        <?php $__currentLoopData = $feature_testimonials['testimonials']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $testimonial): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                             <div class="swiper-slide">
                                                 <div class="sm:px-10 md:px-16 lg:px-0 xl:px-14">
                                                    <blockquote class="text-white text-center">

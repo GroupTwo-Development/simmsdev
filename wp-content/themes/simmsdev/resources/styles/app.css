@@ -432,10 +432,6 @@ p {
   @apply top-[90%] lg:top-[50%];
 }
 
-/* .testimonial-swiper-two .swiper-button-prev::after {
-  @apply text-secondary-green;
-} */
-
 .testimonial-swiper-two .swiper-pagination-bullets {
   @apply lg:bottom-[0];
 }
@@ -483,8 +479,11 @@ p {
 [data-type='radio'] .facetwp-counter {
   display: none;
 }
-
 .header-banner-img img {
+  width: 100%; /* Adjust the width to fit container */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensures the image covers the container */
+  object-position: top center; /* Positions the image at the top center */
   height: 100%;
   width: 100%;
   object-fit: cover;
