@@ -432,10 +432,6 @@ p {
   @apply top-[90%] lg:top-[50%];
 }
 
-/* .testimonial-swiper-two .swiper-button-prev::after {
-  @apply text-secondary-green;
-} */
-
 .testimonial-swiper-two .swiper-pagination-bullets {
   @apply lg:bottom-[0];
 }
