@@ -23,7 +23,6 @@
             @include('partials.content-contact')
         @endwhile
     </div>
-
 @endsection
 
 
