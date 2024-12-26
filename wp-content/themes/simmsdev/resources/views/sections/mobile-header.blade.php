@@ -7,7 +7,6 @@
                 @if (function_exists('the_custom_logo'))
                     @php(the_custom_logo())
                 @endif
-                <hr class="h-0.5 bg-white rounded-md">
             </div>
             {{-- mobile toggle --}}
             <div>

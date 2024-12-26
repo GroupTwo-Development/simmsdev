@@ -1,117 +1,79 @@
 <footer class="content-info bg-secondary-green">
-  {{-- news section --}}
-  @if ($footerContent['logo_footer'] || $footerContent['content_footer'])
-    <div class="pt-10 pb-10">
-      <div class="container mx-auto">
-        <div class="flex flex-col lg:flex-row lg:justify-between lg:items-center lg:content-center justify-center items-center lg:gap-5 w-full">
+  <div class="container mx-auto">
+    {{-- wrapper --}}
+    <div class="pt-10 flex flex-col lg:flex-row lg:justify-between lg:items-center lg:content-center justify-center items-center gap-8 w-full">
+        {{-- content left --}}
+        <div>
           {{-- logo --}}
-          <div class="flex flex-row justify-start items-center gap-3 lg:w-1/4">
-            <div class="mb-5 ">
-                @php
-                // Get image ID
-                $image_id = $footerContent['logo_footer'];
-                
-                // Get the alt text of the image
-                $image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', true);
-                @endphp
-                {!! wp_get_attachment_image($image_id, 'full', false, ['alt' => $image_alt]) !!}
+          <div class="flex flex-col justify-items-center lg:justify-start items-center lg:items-start content-center lg:content-start">
+              <div class="">
+                @if (function_exists('the_custom_logo'))
+                    {!! the_custom_logo() !!}
+                @endif
               </div>
-            <div>
-              <span class="font-arno_pro_subhead font-normal text-2xl text-white">Stay in Touch</span>
-            </div>
-          </div>
-          <div class="text-center lg:text-left text-white mb-5 lg:w-1/2">
-              {!! $footerContent['content_footer'] !!}
-          </div>
-          <div class="lg:text-righ lg:flex lg:justify-end lg:w-1/4">
-            <button type="button" class="bg-simms-gold uppercase font-semibold tracking-[0.1em] text-center lg:text-right text-black inline-block px-3 py-3 whitespace-nowrap hover:bg-white transition-all ease-in-out">
-              GET IN THE KNOW
-            </button>
-           </div>
-        </div>
-
-      </div>
-    </div>
-  @endif
-
-  {{-- multi-logo and contact --}}
-  <div>
-    <div class="container mx-auto">
-        {{-- content --}}
-        <div class="flex flex-col lg:flex-row lg:justify-between lg:items-center justify-center items-center gap-8 w-full">
-          {{-- logo --}}
-            @if ($footerContent['multi_logo'])
-              <div class="lg:w-1/6">
-                <div class="mb-5">
-                  @php
-                  // Get image ID
-                  $image_id = $footerContent['multi_logo'];
-                  
-                  // Get the alt text of the image
-                  $image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', true);
-                  @endphp
-                  {!! wp_get_attachment_image($image_id, 'full', false, ['alt' => $image_alt]) !!}
+              <div>
+                <div>
+                    <a href="https://www.google.com/maps/dir/?api=1&destination={{ urlencode($quickLinkHeader['address1'] . ' ' . $quick_links_header['address2'] . ', ' . $quickLinkHeader['city'] . ', ' . $quickLinkHeader['state'] . ' ' . $quickLinkHeader['zip']) }}"
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      class="text-simms-gold text-center lg:text-left transition mt-3 block">
+                        <span class="text-white text-center lg:text-left block">Corporate Office:</span>
+                        {{ $quickLinkHeader['address1'] }}{{ $quickLinkHeader['address2'] .',' }} 
+                        {{ $quickLinkHeader['city'] }}, {{ $quickLinkHeader['state'] }} {{ $quickLinkHeader['zip'] }}
+                    </a>
+                    @if($main_phone_Number['phone'] )
+                    <a href="tel:{{ App\clean_phone_number($main_phone_Number['phone'])}}" class="text-simms-gold text-center lg:text-left transition block"><span class="text-white lg:text-left">Phone:</span>
+                        {{ App\format_phone_number($main_phone_Number['phone'] ) }}
+                    </a>
+                  @endif
                 </div>
               </div>
-            @endif
-            {{-- contact --}}
-            <div class="flex flex-col lg:justify-between justify-center  w-full lg:w-2/3">
-              {{-- contact item --}}
-              @if ($footerContent['feature_communities'])
-                  <div class="text-center border-b-[1px] border-white lg:flex lg:flex-row lg:justify-between w-full lg:gap-4">
-                    @foreach ($footerContent['feature_communities'] as $contact)
-                    {{-- @dd($contact) --}}
-                        <div class="mb-3">
-                          <span class="text-white lg:text-left font-semibold block text-sm">{{ $contact['community_available_home'] }}</span>
-                          <div class="text-white mb-1 text-sm lg:flex gap-1">
-                            <span class="lg:text-left block ">{{ $contact['contact_name']  }}</span>
-                        
-                            <a href="tel:{{ $contact['contact_phone']}}" class="text-simms-gold"> Contact: {{ App\format_phone_number($contact['contact_phone']) }} </a>
-                          </div>
-                        </div>
-                    @endforeach
-                  </div>
-              @endif
-              <div class="lg:flex lg:justify-start">
-                 {{-- Phone number --}}
-               
-                 <a href="https://www.google.com/maps/dir/?api=1&destination={{ urlencode($quickLinkHeader['address1'] . ' ' . $quick_links_header['address2'] . ', ' . $quickLinkHeader['city'] . ', ' . $quickLinkHeader['state'] . ' ' . $quickLinkHeader['zip']) }}"
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  class="text-simms-gold lg:text-left transition mt-3 block">
-                    <span class="text-white lg:text-left">Corporate Office:</span>
-                    {{ $quickLinkHeader['address1'] }}{{ $quickLinkHeader['address2'] .',' }} 
-                    {{ $quickLinkHeader['city'] }}, {{ $quickLinkHeader['state'] }} {{ $quickLinkHeader['zip'] }}
-                </a>
-                
-              </div>
-            </div>
-
-            {{-- social media --}}
-            @if ($quickLinkHeader)
-              <div class="lg:w-1/6 lg:flex lg:flex-row lg:justify-end">
-                <ul class="social-media flex gap-3">
-                  <li><a href="{{$quickLinkHeader['fb']}}" target="_blank" class="footer-social-media"><i class="fa-brands fa-facebook-f"></i></a></li>
-                  <li><a href="{{$quickLinkHeader['instagram']}}" target="_blank" class="footer-social-media"><i class="fa-brands fa-instagram"></i></a></li>
-                  <li><a href="{{$quickLinkHeader['youtube']}}" target="_blank" class="footer-social-media"><i class="fa-brands fa-youtube-square"></i></a></li>
-                </ul>
-              </div>
-            @endif
-          <div>
-
+          </div>
         </div>
+        {{-- content right --}}
+        <div class=footer-content-right>
+          <span class="font-arno_pro_subhead text-center lg:text-left font-normal text-2xl lg:text-3xl mb-2 text-white block">Stay Connected</span>
+          {{-- social media --}}
+          @if ($quickLinkHeader)
+            <div class="">
+              <ul class="social-media flex flex-row justify-center lg:justify-start gap-3">
+                <li><a href="{{$quickLinkHeader['fb']}}" target="_blank" class="footer-social-media"><i class="fa-brands fa-facebook-f"></i></a></li>
+                <li><a href="{{$quickLinkHeader['instagram']}}" target="_blank" class="footer-social-media"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="{{$quickLinkHeader['youtube']}}" target="_blank" class="footer-social-media"><i class="fa-brands fa-youtube-square"></i></a></li>
+              </ul>
+            </div>
+          @endif
+
+
+          {{-- partners --}}
+          @if ($footerContent['partner_logos'])
+              <div class="mt-6 flex flex-row justify-center lg:justify-start items-center lg:items-start w-full gap-3">
+                  @foreach ($footerContent['partner_logos'] as $partner)
+                    @php
+                      // Get image ID
+                      $image_id = $partner['logo'];
+                      
+                      // Get the alt text of the image
+                      $image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', true);
+                    @endphp
+                    <div>
+                      {!! wp_get_attachment_image($image_id, 'full', false, ['alt' => $image_alt]) !!}
+                    </div>
+                  @endforeach
+              </div>
+          @endif
+        <div>
       </div>
     </div>
-  </div>
+   </div>
   {{-- Copy right --}}
-  <div class="mt-10">
-    <div class="container mx-auto">
-      <div class=" text-white pb-5 flex flex-col justify-center items-center lg:flex lg:flex-row lg:justify-between w-full lg:content-center">
+  <div class="mt-5 lg:mt-4">
+      <div class=" text-white pb-5 flex flex-col justify-center items-center lg:flex lg:flex-row lg:justify-between lg:content-center w-full">
           <div>
-            <p class="text-[13px]">©{{ Date('Y') }} Charles Simms Development. All Rights Reserved | <a href="/privacy-policy">Privacy Policy</a> | <a href="/grouptwo.com" target="_blank">Site by GroupTwo</a></p>
+            <span class="text-[16px] lg:text-[12px] text-center lg:text-left block">©{{ Date('Y') }} Charles Simms Development. All Rights Reserved <span class="hidden">|</span><a class="text-simms-gold underline" href="/privacy-policy">Privacy Policy</a> <span class="hidden">|</span> <a href="/grouptwo.com" target="_blank">Site by GroupTwo</a></span>
           </div>
-          <div class="text-[13px] lg:flex lg:flex-row lg:justify-between lg:items-center gap-3">
-            <p class="text-sm">Prices and terms of Simms Development are subject to change. Contact our sales team for more information.</p>
+          <div class="text-[16px] lg:text-[10px] lg:flex lg:flex-row lg:justify-between lg:items-center pt-1 lg:pt-0 gap-3">
+            <span class="text-sm lg:text-[10px]">Prices and terms of Simms Development are subject to change. Contact our sales team for more information.</span>
             <div class="text-center flex justify-center mt-5">
               <svg id="Component_46_1" data-name="Component 46 – 1" xmlns="http://www.w3.org/2000/svg" width="29.075" height="30" viewBox="0 0 29.075 30">
                 <g id="EHO_logo_White" data-name="EHO logo White">
@@ -175,6 +137,5 @@
             </div>
           </div>
       </div>
-    </div>
   </div>
 </footer>
