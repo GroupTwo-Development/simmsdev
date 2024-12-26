@@ -57,11 +57,14 @@ class App extends Composer
 
     public function getFooterContent()
     {
-        $logo_footer = get_field('logo_footer', 'option');
+        $logo_footer = get_field('footer_logo', 'option');
         $content_footer = get_field('content_footer', 'option');
         $newsletter_form = get_field('newsletter_form', 'option');
         $multi_logo = get_field('multi_logo', 'option');
         $feature_communities = get_field('feature_communities', 'option');
+        $partner_logos = get_field('vendors_logo', 'option');
+       
+        
 
         return [
             'logo_footer' => $logo_footer,
@@ -69,6 +72,7 @@ class App extends Composer
             'newsletter_form' => $newsletter_form,
             'multi_logo' => $multi_logo,
             'feature_communities' => $feature_communities,
+            'partner_logos' => $partner_logos,
         ];
     }
 

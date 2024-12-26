@@ -156,7 +156,7 @@
                 <div class="bg-[#00676D] bg-repeat bg-cover opacity-[1]  flex flex-col justify-center lg:w-1/2" style="background-image: url('<?= \Roots\asset('images/pattern3.png'); ?>')">
                     <div class="container mx-auto">
                         <div id="footer-text" class="flex flex-col justify-center items-center m-4 sm:m-8">
-                            <div class="text-white py-6 px-4 xl:px-6 xl:py-8 text-left">
+                            <div class="text-white py-6 px-4 xl:px-6 xl:py-8 text-left xl:ml-14">
                                 <span class="block text-simms-gold text-sm mb-2 tracking-[0.015rem] lg:mb-5 uppercase font-semibold">New Home Communities</span>
                                 <h1 class="font-arno_pro_subhead text-2xl lg:text-3xl xl:text-4xl mb-1 lg:mb-4"></h1>
                                 <div id="footer-description"></div>

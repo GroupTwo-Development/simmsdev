@@ -142,95 +142,6 @@
             ]
         },
         {
-            "key": "field_6714882be03dd",
-            "label": "Newsletter Section",
-            "name": "",
-            "aria-label": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "acfe_field_group_condition": 0,
-            "placement": "top",
-            "endpoint": 0,
-            "no_preference": 0,
-            "selected": 0
-        },
-        {
-            "key": "field_67148843e03de",
-            "label": "Logo",
-            "name": "logo_footer",
-            "aria-label": "",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "acfe_field_group_condition": 0,
-            "uploader": "",
-            "acfe_thumbnail": 0,
-            "return_format": "id",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
-            "allow_in_bindings": 0,
-            "preview_size": "medium",
-            "library": "all"
-        },
-        {
-            "key": "field_67148858e03df",
-            "label": "Content",
-            "name": "content_footer",
-            "aria-label": "",
-            "type": "textarea",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "acfe_field_group_condition": 0,
-            "default_value": "",
-            "acfe_textarea_code": 0,
-            "maxlength": "",
-            "allow_in_bindings": 0,
-            "rows": "",
-            "placeholder": "",
-            "new_lines": ""
-        },
-        {
-            "key": "field_67148879e03e0",
-            "label": "Newsletter Form",
-            "name": "newsletter_form",
-            "aria-label": "",
-            "type": "acf_cf7",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "acfe_field_group_condition": 0,
-            "allow_in_bindings": 1
-        },
-        {
             "key": "field_671487c3e03dc",
             "label": "Footer",
             "name": "",
@@ -251,9 +162,9 @@
             "selected": 0
         },
         {
-            "key": "field_6715526785e8b",
-            "label": "Multi-Logo",
-            "name": "multi_logo",
+            "key": "field_67642ac1aec3b",
+            "label": "Footer Logo",
+            "name": "footer_logo",
             "aria-label": "",
             "type": "image",
             "instructions": "",
@@ -280,9 +191,9 @@
             "library": "all"
         },
         {
-            "key": "field_6715531b85e8c",
-            "label": "Feature Communities",
-            "name": "feature_communities",
+            "key": "field_676d7bbd070cb",
+            "label": "Partners",
+            "name": "vendors_logo",
             "aria-label": "",
             "type": "repeater",
             "instructions": "",
@@ -298,17 +209,17 @@
             "layout": "block",
             "pagination": 0,
             "min": 0,
-            "max": 3,
-            "collapsed": "",
-            "button_label": "Add Row",
+            "max": 4,
+            "collapsed": "field_676d7c62070cc",
+            "button_label": "Add logo",
             "rows_per_page": 20,
             "sub_fields": [
                 {
-                    "key": "field_6715534b85e8d",
-                    "label": "Community Name",
-                    "name": "community_available_home",
+                    "key": "field_676d7c62070cc",
+                    "label": "Logo",
+                    "name": "logo",
                     "aria-label": "",
-                    "type": "text",
+                    "type": "image",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -318,61 +229,20 @@
                         "id": ""
                     },
                     "acfe_field_group_condition": 0,
-                    "default_value": "",
-                    "maxlength": "",
+                    "uploader": "",
+                    "acfe_thumbnail": 0,
+                    "return_format": "id",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
                     "allow_in_bindings": 0,
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_6715531b85e8c"
-                },
-                {
-                    "key": "field_67156bf8a44ab",
-                    "label": "Contact Name",
-                    "name": "contact_name",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "acfe_field_group_condition": 0,
-                    "default_value": "",
-                    "maxlength": "",
-                    "allow_in_bindings": 0,
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_6715531b85e8c"
-                },
-                {
-                    "key": "field_67156c00a44ac",
-                    "label": "Contact Phone",
-                    "name": "contact_phone",
-                    "aria-label": "",
-                    "type": "number",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "acfe_field_group_condition": 0,
-                    "default_value": "",
-                    "min": "",
-                    "max": "",
-                    "allow_in_bindings": 1,
-                    "placeholder": "",
-                    "step": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_6715531b85e8c"
+                    "preview_size": "medium",
+                    "library": "all",
+                    "parent_repeater": "field_676d7bbd070cb"
                 }
             ]
         },
@@ -654,84 +524,6 @@
             "allow_in_bindings": 0,
             "preview_size": "medium",
             "library": "all"
-        },
-        {
-            "key": "field_67641ef135401",
-            "label": "Gold Logo",
-            "name": "",
-            "aria-label": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "acfe_field_group_condition": 0,
-            "placement": "left",
-            "endpoint": 0,
-            "no_preference": 0,
-            "selected": 0
-        },
-        {
-            "key": "field_67642ac1aec3b",
-            "label": "Main Logo",
-            "name": "main_logo",
-            "aria-label": "",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "acfe_field_group_condition": 0,
-            "uploader": "",
-            "acfe_thumbnail": 0,
-            "return_format": "url",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
-            "allow_in_bindings": 0,
-            "preview_size": "medium",
-            "library": "all"
-        },
-        {
-            "key": "field_67641ec167d4c",
-            "label": "Logo Hover",
-            "name": "hover_logo",
-            "aria-label": "",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "acfe_field_group_condition": 0,
-            "uploader": "",
-            "acfe_thumbnail": 0,
-            "return_format": "url",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
-            "allow_in_bindings": 0,
-            "preview_size": "medium",
-            "library": "all"
         }
     ],
     "location": [
@@ -759,5 +551,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1734976478
+    "modified": 1735241840
 }
