@@ -29,37 +29,26 @@
     <?php if(!empty($resourcesSectionOne['resource_slider'])): ?>
         
         <div class="container mx-auto">
-            <div class="bg-white pt-1 px-4">
+            <div class=" pt-4 pb-6 px-4">
                 <?php if($resourcesSectionOne['resource_slider']): ?>
                     <?php $i = 1; ?>
-                    <div x-data="{ selectedAccordionItem: null }" class="w-full overflow-hidden">
+                    <div class="md:grid md:grid-cols-2 md:gap-5 lg:grid-cols-3 lg:gap-8 md:justify-center md:items-center">
                         <?php $__currentLoopData = $resourcesSectionOne['resource_slider']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $index => $resource): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                             <?php
                                 $questionId = 'controlsAccordionItem' . $index;
                                 $answerId = 'accordionItem' . $index;
                             ?>
-                            <div class="border-t-[2px] border-primary-green last:border-b-2">
-                                <button 
-                                    id="<?php echo e($questionId); ?>" 
-                                    type="button"
-                                    class="flex w-full items-center justify-between gap-4 bg-white p-4 lg:py-5 text-left underline-offset-2  text-[#002829] font-semibold text-lg lg:text-xl font-arno_pro_subhead xl:text-2xl"
-                                    aria-controls="<?php echo e($answerId); ?>"
-                                    @click="selectedAccordionItem = selectedAccordionItem === '<?php echo e($index); ?>' ? null : '<?php echo e($index); ?>'"
-                                    :class="selectedAccordionItem === '<?php echo e($index); ?>' ? 'font-bold' : 'font-medium'"
-                                    :aria-expanded="selectedAccordionItem === '<?php echo e($index); ?>'">
-                                    <?php echo e($i); ?>. <?php echo $resource['rfs1_title']; ?>
 
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke="currentColor" class="size-5 shrink-0 transition" aria-hidden="true" :class="selectedAccordionItem === '<?php echo e($index); ?>' ? 'rotate-180' : ''">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-                                    </svg>
-                                </button>
-                                <div x-cloak x-show="selectedAccordionItem === '<?php echo e($index); ?>'" id="<?php echo e($answerId); ?>" role="region" aria-labelledby="<?php echo e($questionId); ?>" x-collapse>
-                                    <div class="p-4 text-sm sm:text-base text-pretty font-agenda font-300">
-                                        <?php echo $resource['rfs1_description']; ?>
-
-                                    </div>
+                            
+                            <div class="bg-white shadow-xl mb-10 py-10 px-6">
+                                
+                                <div class="text-center"><span class="h-[45px] w-[45px] rounded-full mx-auto border-[3px] border-simms-gold flex flex-col justify-center items-center mb-6"><i class="not-italic text-2xl font-semibold text-simms-gold"><?php echo e($i); ?></i></span></div>
+                                <div>
+                                    <h3 class="text-center font-arno_pro_subhead text-simms-rust text-2xl lg:text-3xl mb-4"><?php echo $resource['rfs1_title']; ?></h3>
+                                    <div class="line-clamp-3"><?php echo $resource['rfs1_description']; ?></div>
                                 </div>
                             </div>
+                            
                             <?php $i++; ?>
                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                     </div>
@@ -108,40 +97,6 @@
                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                     </div>
                    </div>
-                <?php endif; ?>
-            </div>
-        </div>
-    <?php endif; ?>
-
-    
-    <?php if(!empty($resourcesSectionThree['resource_slider'])): ?>
-        <div class="mt-10 lg:pt-20 xl:pt-28">
-            <div class="container mx-auto">
-                <header class="text-center pb-10 lg:pb-5">
-                    <h2 class="text-3xl sm:text-4xl font-arno_pro_subhead font-normal text-[#002829] mb-5"><?php echo e(__('Special Offers')); ?></h2>
-                </header>
-                <?php if(!empty($resourcesSectionThree['resource_slider']) && is_array($resourcesSectionThree['resource_slider'])): ?>
-                    <div class="sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-5">
-                        <?php $__currentLoopData = $resourcesSectionThree['resource_slider']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $index => $resource): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                            <article class="bg-[#E5EFF0] shadow-lg mb-10 px-6 py-14 text-center <?php echo e($index >= 3 ? 'hidden' : ''); ?>">
-                                <h3 class="text-[#534E50] font-arno_pro_subhead font-normal mb-5 text-2xl"><?php echo e($resource['offer_title']); ?></h3>
-                                <div class="text-base font-normal">
-                                    <?php echo $resource['offer_description']; ?>
-
-                                </div>
-                                <div class="mt-4">
-                                    <span class="text-simms-lime uppercase"><?php echo e($resource['learn_more_text']); ?></span>
-                                </div>
-                            </article>
-                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                    </div>
-                    <?php if(count($resourcesSectionThree['resource_slider']) > 3): ?>
-                        <div class="text-center mt-6">
-                            <button id="load-more" class="bg-simms-gold text-white py-2 px-4 rounded hover:bg-opacity-90 transition duration-300">
-                                Load More
-                            </button>
-                        </div>
-                    <?php endif; ?>
                 <?php endif; ?>
             </div>
         </div>

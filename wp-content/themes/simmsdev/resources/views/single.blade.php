@@ -8,12 +8,12 @@
         <x-slot name="title">
             {{ __('Simms Community Blog') }}
         </x-slot>
-        <x-slot name="bg_image">
+        {{-- <x-slot name="bg_image">
             @php
                 $image_id = $primaryPageHeader['homes_header_img'];
             @endphp
             <img src="@asset('assets/blog.jpg')" alt="">        
-        </x-slot>
+        </x-slot> --}}
     </x-primary-header>
     <div  class="relative object-cover w-full pt-10 pb-16" style="background-image: url('@asset('images/pattern2.png')')">
 

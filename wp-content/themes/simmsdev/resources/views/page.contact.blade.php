@@ -12,9 +12,8 @@
         <x-slot name="title">
             {{ __('Contact Us') }}
         </x-slot>
-        <x-slot name="bg_image">
-            <img src="@asset('assets/contact-header.jpeg')" alt="contact">        
-        </x-slot>
+
+      
     </x-primary-header>
 
 

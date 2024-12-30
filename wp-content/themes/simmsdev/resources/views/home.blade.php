@@ -8,12 +8,7 @@
         <x-slot name="title">
             {{ __('Simms Community Blog') }}
         </x-slot>
-        <x-slot name="bg_image">
-            @php
-                $image_id = $primaryPageHeader['homes_header_img'];
-            @endphp
-            <img src="@asset('assets/blog-header.jpg')" alt="">        
-        </x-slot>
+       
     </x-primary-header>
     {{-- Filter --}}
     <section class="border-b-[1px] lg:bg-primary-green lg:py-8">
