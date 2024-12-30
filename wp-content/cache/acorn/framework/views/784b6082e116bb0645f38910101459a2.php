@@ -17,9 +17,8 @@
             <?php echo e(__('Contact Us')); ?>
 
          <?php $__env->endSlot(); ?>
-         <?php $__env->slot('bg_image', null, []); ?> 
-            <img src="<?= \Roots\asset('assets/contact-header.jpeg'); ?>" alt="contact">        
-         <?php $__env->endSlot(); ?>
+
+      
      <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
 <?php if (isset($__attributesOriginal67ccc8fcfa79786f1e51efaca77350ff)): ?>

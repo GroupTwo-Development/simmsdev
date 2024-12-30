@@ -14,14 +14,14 @@
 
          <?php $__env->endSlot(); ?>
          <?php $__env->slot('title', null, []); ?> 
-            <?php echo e(__('Energy Efficiency')); ?>
+            <?php echo e(__('Special Offers & Promotions')); ?>
 
          <?php $__env->endSlot(); ?>
          <?php $__env->slot('bg_image', null, []); ?> 
             <?php
                 $image_id = $primaryPageHeader['homes_header_img'];
             ?>
-            <img src="<?= \Roots\asset('assets/ee.jpeg'); ?>" alt="">        
+            <img src="<?= \Roots\asset('assets/ResourcesHeaderImage.jpg'); ?>" alt="resources header image">        
          <?php $__env->endSlot(); ?>
      <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
@@ -37,7 +37,7 @@
 
     <div>
         <?php while(have_posts()): ?> <?php (the_post()); ?>
-            <?php echo $__env->make('partials.content-energy', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+            <?php echo $__env->make('partials.content-promotions', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
         <?php endwhile; ?>
     </div>
 
@@ -46,4 +46,4 @@
 
 
 
-<?php echo $__env->make('layouts.primary-app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /Users/grouptwodev/Herd/simmsdev-app/wp-content/themes/simmsdev/resources/views/page-energy.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('layouts.primary-app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /Users/grouptwodev/Herd/simmsdev-app/wp-content/themes/simmsdev/resources/views/page.special.blade.php ENDPATH**/ ?>

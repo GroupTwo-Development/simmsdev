@@ -17,12 +17,7 @@
             <?php echo e(__('Simms Community Blog')); ?>
 
          <?php $__env->endSlot(); ?>
-         <?php $__env->slot('bg_image', null, []); ?> 
-            <?php
-                $image_id = $primaryPageHeader['homes_header_img'];
-            ?>
-            <img src="<?= \Roots\asset('assets/blog-header.jpg'); ?>" alt="">        
-         <?php $__env->endSlot(); ?>
+       
      <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
 <?php if (isset($__attributesOriginal67ccc8fcfa79786f1e51efaca77350ff)): ?>

@@ -268,120 +268,6 @@
                     "parent_repeater": "field_671a6d5181abf"
                 }
             ]
-        },
-        {
-            "key": "field_671a6cfb08e69",
-            "label": "Section Three",
-            "name": "",
-            "aria-label": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "acfe_field_group_condition": 0,
-            "placement": "left",
-            "endpoint": 0,
-            "no_preference": 0,
-            "selected": 0
-        },
-        {
-            "key": "field_671a6cfb08ee4",
-            "label": "Offer Cards",
-            "name": "rfs3_offers",
-            "aria-label": "",
-            "type": "repeater",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "acfe_field_group_condition": 0,
-            "acfe_repeater_stylised_button": 0,
-            "layout": "block",
-            "pagination": 0,
-            "min": 0,
-            "max": 0,
-            "collapsed": "",
-            "button_label": "Add Row",
-            "rows_per_page": 20,
-            "sub_fields": [
-                {
-                    "key": "field_671a6e4a81ac3",
-                    "label": "Offer Title",
-                    "name": "offer_title",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "acfe_field_group_condition": 0,
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_671a6cfb08ee4"
-                },
-                {
-                    "key": "field_671a6e5c81ac4",
-                    "label": "Offer Description",
-                    "name": "offer_description",
-                    "aria-label": "",
-                    "type": "textarea",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "acfe_field_group_condition": 0,
-                    "default_value": "",
-                    "acfe_textarea_code": 0,
-                    "maxlength": 500,
-                    "allow_in_bindings": 1,
-                    "rows": "",
-                    "placeholder": "",
-                    "new_lines": "wpautop",
-                    "parent_repeater": "field_671a6cfb08ee4"
-                },
-                {
-                    "key": "field_671a6e7d81ac5",
-                    "label": "Learn More Text",
-                    "name": "learn_more_text",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "acfe_field_group_condition": 0,
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_671a6cfb08ee4"
-                }
-            ]
         }
     ],
     "location": [
@@ -416,5 +302,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1734096011
+    "modified": 1735590994
 }

@@ -21,7 +21,7 @@
             <?php
                 $image_id = $primaryPageHeader['homes_header_img'];
             ?>
-            <img src="<?= \Roots\asset('assets/GalleryHeaderOPTION2.jpg'); ?>" alt="">        
+            <img src="<?= \Roots\asset('assets/GalleryHeader.jpg'); ?>" alt="Gallery">        
          <?php $__env->endSlot(); ?>
      <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>

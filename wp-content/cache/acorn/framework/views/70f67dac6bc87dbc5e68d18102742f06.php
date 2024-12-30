@@ -14,10 +14,13 @@
             </div>
         </div>
     </div>
+    <?php if($bg_image): ?>
     <div class="h-24 sm:h-28 md:h-36 lg:h-[350px] xl:h-[400px]  bg-cover object-cover object-left-top hidden lg:block header-banner-img">
-      <div class="h-full">
-        <?php echo e($bg_image); ?>
+        <div class="h-full">
+          <?php echo e($bg_image); ?>
 
+        </div>
       </div>
-    </div>
+    <?php endif; ?>
+   
 </section><?php /**PATH /Users/grouptwodev/Herd/simmsdev-app/wp-content/themes/simmsdev/resources/views/components/primary-header.blade.php ENDPATH**/ ?>

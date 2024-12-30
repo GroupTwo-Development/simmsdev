@@ -21,7 +21,7 @@
             <?php
                 $image_id = $primaryPageHeader['homes_header_img'];
             ?>
-            <img src="<?= \Roots\asset('assets/ResourcesHeaderImage.jpg'); ?>" alt="resources header image">        
+            <img src="<?= \Roots\asset('assets/resourcesHeader.jpeg'); ?>" alt="resources header image">        
          <?php $__env->endSlot(); ?>
      <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>

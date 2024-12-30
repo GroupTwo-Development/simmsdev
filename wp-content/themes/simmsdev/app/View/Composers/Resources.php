@@ -25,9 +25,9 @@ class Resources extends Composer
             'introContent' => $this->resourcesContent(),
             'resourcesSectionOne' => $this->resourcesSectionOne(),
             'resourcesSectionTwo' => $this->resourcesSectionTwo(),
-            'resourcesSectionThree' => $this->resourcesSectionThree(),
         ];
     }
+    
 
     public function resourcesContent()
     {
@@ -60,16 +60,4 @@ class Resources extends Composer
             'resource_slider' => $resource_slider,
         ];
     }
-
-
-    public function resourcesSectionThree()
-    {
-        
-        $resource_slider = get_field('rfs3_offers') ?? '';
-
-        return [
-            'resource_slider' => $resource_slider,
-        ];
-    }
-
 }
