@@ -16,7 +16,7 @@
             @php
                 $image_id = $primaryPageHeader['homes_header_img'];
             @endphp
-            <img src="@asset('assets/GalleryHeader.jpg')" alt="Gallery">        
+            <img src="@asset('assets/GalleryHeader (1).jpg')" alt="Gallery">        
         </x-slot>
     </x-primary-header>
     <header class="bg-primary-green py-5">

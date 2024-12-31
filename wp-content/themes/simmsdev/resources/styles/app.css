@@ -324,7 +324,7 @@ p {
 }
 
 .award-section-three .swiper-pagination-bullet-active {
-  @apply bg-secondary-green;
+  @apply bg-simms-gold;
 }
 
 .award-section-one .swiper-pagination-bullet {
@@ -449,7 +449,7 @@ p {
 }
 
 .home-testimonial_img img {
-  @apply lg:w-full lg:h-full xl:h-full xl:w-full;
+  @apply lg:w-full lg:h-full xl:h-full xl:w-full object-cover;
 }
 
 .about-sec-two img {

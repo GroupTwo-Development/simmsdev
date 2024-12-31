@@ -23,47 +23,76 @@
 <?php endif; ?>
 
 <?php if($aboutUsSectionOne): ?>
-    <section id="section_one" class="bg-cover object-cover relative lg:mt-36" style="background-image: url('<?php echo e($aboutUsSectionOne['background_image']); ?>')">
+    <section id="section_one" class="bg-cover object-cover relative lg:mt-36 xl:mt-56 award-section-three" style="background-image: url('<?php echo e($aboutUsSectionOne['background_image']); ?>')">
         <div class="container mx-auto py-10 ">
-            <div class="bg-white shadow-lg flex flex-col lg:flex-row lg:justify-center w-full lg:-mt-28 xl:-mt-36 lg:mb-10 xl:max-w-screen-lg xl:mx-auto">
-                
-                <?php if($aboutUsSectionOne['image']): ?>
-                    <div class="flex justify-center items-center lg:w-1/2 relative">
-                        <?php
-                        // Get image ID
-                        $image_id = $aboutUsSectionOne['image'];
-                        
-                        // Get the alt text of the image
-                        $image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', true);
-                        ?>
-                        <div class="h-full w-full section-img">
-                            <?php echo wp_get_attachment_image($image_id, 'large', false, ['alt' => $image_alt], ['class' => 'w-full h-full']); ?>
 
-                        </div>
-                    </div>
-                <?php endif; ?>
+            <div class="bg-white shadow-lg flex flex-col lg:flex-row lg:justify-center w-full lg:-mt-28 xl:-mt-36 lg:mb-10 xl:max-w-screen-xl xl:mx-auto">
 
                 
-                <?php if($aboutUsSectionOne['description']): ?>
-                    <div class="text-center lg:text-left bg-[#E5EFF0] py-10 md:py-12  px-8 md:px-16 lg:w-1/2 flex flex-col justify-center items-center">
-                        <div>
-                            <div>
-                                <?php if($aboutUsSectionOne['title']): ?>
-                                    <span class="font-agenda  text-sm uppercase tracking-[0.15em] text-primary-green font-semibold block mb-2"><?php echo $aboutUsSectionOne['sub_title']; ?></span>
-                                <?php endif; ?>
-    
-                                <?php if($aboutUsSectionOne['title']): ?>
-                                    <h2 class="font-arno_pro_subhead font-normal text-3xl md:text-4xl mb-5"><?php echo $aboutUsSectionOne['title']; ?></h2>
-                                <?php endif; ?>
-            
-                            </div>
-                            <div>
-                                <?php echo $aboutUsSectionOne['description']; ?>
+                <?php if($aboutUsSectionOne['award_slider']): ?>
+                   <div class="text-center lg:text-left bg-[#E5EFF0]  py-10 md:py-12 px-8 md:px-10 lg:px-8 lg:w-1/2">
+                       <?php if($aboutUsSectionOne['award_slider']): ?>
+                           <div class="">
+                               <div>
+                                   <div class="swiper testimonial-swiper-three">
+                                       <div class="swiper-wrapper pb-20 pt-5 lg:pt-16">
+                                           <?php $__currentLoopData = $aboutUsSectionOne['award_slider']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $slide): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                               <div class="swiper-slide">
+                                                   <div class="sm:px-10 md:px-16">
+                                                       <span class="font-agenda  text-sm uppercase tracking-[0.15em] text-primary-green font-semibold block mb-2"><?php echo $slide['awards_subtitle']; ?></span>
+                                                       <h4 class="font-arno_pro_subhead font-normal text-3xl md:text-4xl mb-5 text-center"><?php echo $slide['title_awards']; ?></h4>
+                                                       <div class="text-center lg:pt-4 text-black font-normal">
+                                                           <?php echo $slide['description_awards']; ?>
 
-                            </div>
-                        </div>
-                    </div>
-                <?php endif; ?>
+                                                       </div>
+                                                   </div>
+                                               </div>
+                                           <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                       </div>
+                                       <div class="swiper-pagination"></div>
+                                       <div class="swiper-button-next bg-primary-green rounded-full h-[28px] w-[28px] flex items-center justify-center">
+                                           <svg id="Component_47_1" data-name="Component 47 – 1" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35">
+                                               <g id="Group_586" data-name="Group 586" transform="translate(35 34.875) rotate(180)">
+                                               <circle id="Ellipse_153" data-name="Ellipse 153" cx="17.5" cy="17.5" r="17.5" transform="translate(0 -0.125)" fill="#002829"/>
+                                               <path id="Polygon_2" data-name="Polygon 2" d="M8.5,0,17,15H0Z" transform="translate(8 25.875) rotate(-90)" fill="#CEC778"/>
+                                               </g>
+                                           </svg>
+                                           
+                                       </div>
+                                       <div class="swiper-button-prev  rounded-full h-7 w-7">
+                                           <svg id="Component_48_1" data-name="Component 48 – 1" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35">
+                                               <g id="Group_323" data-name="Group 323" transform="translate(0 0.125)">
+                                               <path id="Path_11959" data-name="Path 11959" d="M17.5,0A17.5,17.5,0,1,1,0,17.5,17.5,17.5,0,0,1,17.5,0Z" transform="translate(0 -0.125)" fill="#002829"/>
+                                               <path id="Polygon_2" data-name="Polygon 2" d="M8.5,0,17,15H0Z" transform="translate(8 25.875) rotate(-90)" fill="#CEC778"/>
+                                               </g>
+                                           </svg>
+                                       </div>
+                                   </div>
+                               </div>        
+                           </div>
+                       <?php endif; ?>
+                   </div>
+               <?php endif; ?>
+
+               
+               <?php if($aboutUsSectionOne['award_slider']): ?>
+                   <div class="flex justify-center items-center lg:w-1/2 relative">
+                       <div class="swiper lg:h-[450px] w-full  relative  flex flex-col image-swiper-three">
+                           <div class="swiper-wrapper">
+                               <?php $__currentLoopData = $aboutUsSectionOne['award_slider']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $slide): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                               <div class="swiper-slide flex justify-center items-center">
+                                   <?php
+                                   $image_id = $slide['image_awards'];
+                                   $image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', true);
+                                   ?>
+                                   <?php echo wp_get_attachment_image($image_id, 'full', false, ['alt' => $image_alt]); ?>
+
+                               </div>
+                               <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                           </div>
+                       </div>
+                   </div>
+               <?php endif; ?>
             </div>
         </div>
     </section>

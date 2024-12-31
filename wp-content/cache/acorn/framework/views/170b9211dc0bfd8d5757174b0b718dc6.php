@@ -177,49 +177,49 @@
 
                      
                      <?php if($awardSectionThree['award_slider']): ?>
-                     <div class="text-center lg:text-left bg-simms-gold py-10 md:py-12 px-8 md:px-10 lg:px-8 lg:w-1/2">
-                         <?php if($awardSectionThree['award_slider']): ?>
-                         <div class="">
-                             <div>
-                                 <div class="swiper testimonial-swiper-three">
-                                     <div class="swiper-wrapper pb-20 pt-5 lg:pt-16">
-                                         <?php $__currentLoopData = $awardSectionThree['award_slider']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $slide): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                             <div class="swiper-slide">
-                                                 <div class="sm:px-10 md:px-16">
-                                                     <span class="text-secondary-green text-[18px]  uppercase text-center block mb-1"><?php echo $slide['aas3_sub-title']; ?></span>
-                                                     <h4 class="font-normal text-white text-2xl lg:text-2xl  mb-3 lg:mb-2 font-arno_pro_subhead lg:px-14 text-center"><?php echo $slide['aas3_title']; ?></h4>
-                                                     <div class="text-center lg:pt-4 text-black font-normal">
-                                                         <?php echo $slide['aas3_description']; ?>
+                        <div class="text-center lg:text-left bg-simms-gold py-10 md:py-12 px-8 md:px-10 lg:px-8 lg:w-1/2">
+                            <?php if($awardSectionThree['award_slider']): ?>
+                                <div class="">
+                                    <div>
+                                        <div class="swiper testimonial-swiper-three">
+                                            <div class="swiper-wrapper pb-20 pt-5 lg:pt-16">
+                                                <?php $__currentLoopData = $awardSectionThree['award_slider']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $slide): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                                    <div class="swiper-slide">
+                                                        <div class="sm:px-10 md:px-16">
+                                                            <span class="text-secondary-green text-[18px]  uppercase text-center block mb-1"><?php echo $slide['aas3_sub-title']; ?></span>
+                                                            <h4 class="font-normal text-white text-2xl lg:text-2xl  mb-3 lg:mb-2 font-arno_pro_subhead lg:px-14 text-center"><?php echo $slide['aas3_title']; ?></h4>
+                                                            <div class="text-center lg:pt-4 text-black font-normal">
+                                                                <?php echo $slide['aas3_description']; ?>
 
-                                                     </div>
-                                                 </div>
-                                             </div>
-                                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                                     </div>
-                                     <div class="swiper-pagination"></div>
-                                     <div class="swiper-button-next bg-primary-green rounded-full h-[28px] w-[28px] flex items-center justify-center">
-                                        <svg id="Component_47_1" data-name="Component 47 – 1" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35">
-                                            <g id="Group_586" data-name="Group 586" transform="translate(35 34.875) rotate(180)">
-                                              <circle id="Ellipse_153" data-name="Ellipse 153" cx="17.5" cy="17.5" r="17.5" transform="translate(0 -0.125)" fill="#002829"/>
-                                              <path id="Polygon_2" data-name="Polygon 2" d="M8.5,0,17,15H0Z" transform="translate(8 25.875) rotate(-90)" fill="#CEC778"/>
-                                            </g>
-                                          </svg>
-                                          
-                                      </div>
-                                    <div class="swiper-button-prev  rounded-full h-7 w-7">
-                                        <svg id="Component_48_1" data-name="Component 48 – 1" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35">
-                                            <g id="Group_323" data-name="Group 323" transform="translate(0 0.125)">
-                                              <path id="Path_11959" data-name="Path 11959" d="M17.5,0A17.5,17.5,0,1,1,0,17.5,17.5,17.5,0,0,1,17.5,0Z" transform="translate(0 -0.125)" fill="#002829"/>
-                                              <path id="Polygon_2" data-name="Polygon 2" d="M8.5,0,17,15H0Z" transform="translate(8 25.875) rotate(-90)" fill="#CEC778"/>
-                                            </g>
-                                          </svg>
-                                    </div>
-                                 </div>
-                             </div>        
-                         </div>
-                     <?php endif; ?>
-                     </div>
-                 <?php endif; ?>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                            </div>
+                                            <div class="swiper-pagination"></div>
+                                            <div class="swiper-button-next bg-primary-green rounded-full h-[28px] w-[28px] flex items-center justify-center">
+                                                <svg id="Component_47_1" data-name="Component 47 – 1" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35">
+                                                    <g id="Group_586" data-name="Group 586" transform="translate(35 34.875) rotate(180)">
+                                                    <circle id="Ellipse_153" data-name="Ellipse 153" cx="17.5" cy="17.5" r="17.5" transform="translate(0 -0.125)" fill="#002829"/>
+                                                    <path id="Polygon_2" data-name="Polygon 2" d="M8.5,0,17,15H0Z" transform="translate(8 25.875) rotate(-90)" fill="#CEC778"/>
+                                                    </g>
+                                                </svg>
+                                                
+                                            </div>
+                                            <div class="swiper-button-prev  rounded-full h-7 w-7">
+                                                <svg id="Component_48_1" data-name="Component 48 – 1" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35">
+                                                    <g id="Group_323" data-name="Group 323" transform="translate(0 0.125)">
+                                                    <path id="Path_11959" data-name="Path 11959" d="M17.5,0A17.5,17.5,0,1,1,0,17.5,17.5,17.5,0,0,1,17.5,0Z" transform="translate(0 -0.125)" fill="#002829"/>
+                                                    <path id="Polygon_2" data-name="Polygon 2" d="M8.5,0,17,15H0Z" transform="translate(8 25.875) rotate(-90)" fill="#CEC778"/>
+                                                    </g>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>        
+                                </div>
+                            <?php endif; ?>
+                        </div>
+                    <?php endif; ?>
 
                 
                 <?php if($awardSectionThree['image']): ?>

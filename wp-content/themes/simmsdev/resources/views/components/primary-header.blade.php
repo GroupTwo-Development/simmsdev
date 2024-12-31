@@ -14,7 +14,7 @@
         </div>
     </div>
     @if ($bg_image)
-    <div class="h-24 sm:h-28 md:h-36 lg:h-[350px] xl:h-[400px]  bg-cover object-cover object-left-top hidden lg:block header-banner-img">
+    <div class="h-24 sm:h-28 md:h-36 lg:h-[350px] xl:h-[450px] 2xl:h-[500px] bg-cover object-cover object-left-top hidden lg:block header-banner-img">
         <div class="h-full">
           {{ $bg_image }}
         </div>
