@@ -373,35 +373,6 @@
             "library": "all"
         },
         {
-            "key": "field_6713ea7a8f859",
-            "label": "Image Left",
-            "name": "image_left",
-            "aria-label": "",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "acfe_field_group_condition": 0,
-            "uploader": "",
-            "acfe_thumbnail": 0,
-            "return_format": "id",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
-            "allow_in_bindings": 0,
-            "preview_size": "medium",
-            "library": "all"
-        },
-        {
             "key": "field_6713eb728f85b",
             "label": "Sub Title",
             "name": "sub_title_sec_two",
@@ -485,35 +456,6 @@
             "acfe_field_group_condition": 0,
             "return_format": "array",
             "allow_in_bindings": 0
-        },
-        {
-            "key": "field_6713ebc98f85e",
-            "label": "Image Right",
-            "name": "image_right_sec_two",
-            "aria-label": "",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "acfe_field_group_condition": 0,
-            "uploader": "",
-            "acfe_thumbnail": 0,
-            "return_format": "id",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
-            "allow_in_bindings": 0,
-            "preview_size": "medium",
-            "library": "all"
         },
         {
             "key": "field_67142472889de",
@@ -672,5 +614,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1734730874
+    "modified": 1735624673
 }

@@ -172,69 +172,67 @@
 
                      {{-- Content Right --}}
                      @if ($awardSectionThree['award_slider'])
-                     <div class="text-center lg:text-left bg-simms-gold py-10 md:py-12 px-8 md:px-10 lg:px-8 lg:w-1/2">
-                         @if($awardSectionThree['award_slider'])
-                         <div class="">
-                             <div>
-                                 <div class="swiper testimonial-swiper-three">
-                                     <div class="swiper-wrapper pb-20 pt-5 lg:pt-16">
-                                         @foreach($awardSectionThree['award_slider'] as $slide)
-                                             <div class="swiper-slide">
-                                                 <div class="sm:px-10 md:px-16">
-                                                     <span class="text-secondary-green text-[18px]  uppercase text-center block mb-1">{!! $slide['aas3_sub-title'] !!}</span>
-                                                     <h4 class="font-normal text-white text-2xl lg:text-2xl  mb-3 lg:mb-2 font-arno_pro_subhead lg:px-14 text-center">{!! $slide['aas3_title'] !!}</h4>
-                                                     <div class="text-center lg:pt-4 text-black font-normal">
-                                                         {!! $slide['aas3_description'] !!}
-                                                     </div>
-                                                 </div>
-                                             </div>
-                                         @endforeach
-                                     </div>
-                                     <div class="swiper-pagination"></div>
-                                     <div class="swiper-button-next bg-primary-green rounded-full h-[28px] w-[28px] flex items-center justify-center">
-                                        <svg id="Component_47_1" data-name="Component 47 – 1" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35">
-                                            <g id="Group_586" data-name="Group 586" transform="translate(35 34.875) rotate(180)">
-                                              <circle id="Ellipse_153" data-name="Ellipse 153" cx="17.5" cy="17.5" r="17.5" transform="translate(0 -0.125)" fill="#002829"/>
-                                              <path id="Polygon_2" data-name="Polygon 2" d="M8.5,0,17,15H0Z" transform="translate(8 25.875) rotate(-90)" fill="#CEC778"/>
-                                            </g>
-                                          </svg>
-                                          
-                                      </div>
-                                    <div class="swiper-button-prev  rounded-full h-7 w-7">
-                                        <svg id="Component_48_1" data-name="Component 48 – 1" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35">
-                                            <g id="Group_323" data-name="Group 323" transform="translate(0 0.125)">
-                                              <path id="Path_11959" data-name="Path 11959" d="M17.5,0A17.5,17.5,0,1,1,0,17.5,17.5,17.5,0,0,1,17.5,0Z" transform="translate(0 -0.125)" fill="#002829"/>
-                                              <path id="Polygon_2" data-name="Polygon 2" d="M8.5,0,17,15H0Z" transform="translate(8 25.875) rotate(-90)" fill="#CEC778"/>
-                                            </g>
-                                          </svg>
-                                    </div>
-                                 </div>
-                             </div>        
-                         </div>
-                     @endif
-                     </div>
-                 @endif
-
-                {{-- image content --}}
-                @if ($awardSectionThree['image'])
-                    <div class="flex justify-center items-center lg:w-1/2 relative">
-                        <div class="swiper lg:h-[450px] w-full  relative  flex flex-col image-swiper-three">
-                            <div class="swiper-wrapper">
-                                @foreach($awardSectionThree['award_slider'] as $slide)
-                                <div class="swiper-slide flex justify-center items-center">
-                                    @php
-                                    $image_id = $slide['award_image'];
-                                    $image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', true);
-                                    @endphp
-                                    {!! wp_get_attachment_image($image_id, 'full', false, ['alt' => $image_alt]) !!}
+                        <div class="text-center lg:text-left bg-simms-gold py-10 md:py-12 px-8 md:px-10 lg:px-8 lg:w-1/2">
+                            @if($awardSectionThree['award_slider'])
+                                <div class="">
+                                    <div>
+                                        <div class="swiper testimonial-swiper-three">
+                                            <div class="swiper-wrapper pb-20 pt-5 lg:pt-16">
+                                                @foreach($awardSectionThree['award_slider'] as $slide)
+                                                    <div class="swiper-slide">
+                                                        <div class="sm:px-10 md:px-16">
+                                                            <span class="text-secondary-green text-[18px]  uppercase text-center block mb-1">{!! $slide['aas3_sub-title'] !!}</span>
+                                                            <h4 class="font-normal text-white text-2xl lg:text-2xl  mb-3 lg:mb-2 font-arno_pro_subhead lg:px-14 text-center">{!! $slide['aas3_title'] !!}</h4>
+                                                            <div class="text-center lg:pt-4 text-black font-normal">
+                                                                {!! $slide['aas3_description'] !!}
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                @endforeach
+                                            </div>
+                                            <div class="swiper-pagination"></div>
+                                            <div class="swiper-button-next bg-primary-green rounded-full h-[28px] w-[28px] flex items-center justify-center">
+                                                <svg id="Component_47_1" data-name="Component 47 – 1" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35">
+                                                    <g id="Group_586" data-name="Group 586" transform="translate(35 34.875) rotate(180)">
+                                                    <circle id="Ellipse_153" data-name="Ellipse 153" cx="17.5" cy="17.5" r="17.5" transform="translate(0 -0.125)" fill="#002829"/>
+                                                    <path id="Polygon_2" data-name="Polygon 2" d="M8.5,0,17,15H0Z" transform="translate(8 25.875) rotate(-90)" fill="#CEC778"/>
+                                                    </g>
+                                                </svg>
+                                                
+                                            </div>
+                                            <div class="swiper-button-prev  rounded-full h-7 w-7">
+                                                <svg id="Component_48_1" data-name="Component 48 – 1" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35">
+                                                    <g id="Group_323" data-name="Group 323" transform="translate(0 0.125)">
+                                                    <path id="Path_11959" data-name="Path 11959" d="M17.5,0A17.5,17.5,0,1,1,0,17.5,17.5,17.5,0,0,1,17.5,0Z" transform="translate(0 -0.125)" fill="#002829"/>
+                                                    <path id="Polygon_2" data-name="Polygon 2" d="M8.5,0,17,15H0Z" transform="translate(8 25.875) rotate(-90)" fill="#CEC778"/>
+                                                    </g>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>        
                                 </div>
-                                @endforeach
+                            @endif
+                        </div>
+                    @endif
+
+                    {{-- image content --}}
+                    @if ($awardSectionThree['image'])
+                        <div class="flex justify-center items-center lg:w-1/2 relative">
+                            <div class="swiper lg:h-[450px] w-full  relative  flex flex-col image-swiper-three">
+                                <div class="swiper-wrapper">
+                                    @foreach($awardSectionThree['award_slider'] as $slide)
+                                    <div class="swiper-slide flex justify-center items-center">
+                                        @php
+                                        $image_id = $slide['award_image'];
+                                        $image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', true);
+                                        @endphp
+                                        {!! wp_get_attachment_image($image_id, 'full', false, ['alt' => $image_alt]) !!}
+                                    </div>
+                                    @endforeach
+                                </div>
                             </div>
                         </div>
-                    </div>
-                @endif
-
-           
+                    @endif
             </div>
         </div>
     </section>

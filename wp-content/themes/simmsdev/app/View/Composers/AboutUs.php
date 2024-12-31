@@ -55,17 +55,11 @@ class AboutUs extends Composer
     public function aboutUsSectionOne()
     {
         $background_image_sec_one = get_field('background_image_sec_one') ?? '';
-        $aus1_sub_title = get_field('aus1_sub-title') ?? '';
-        $aus1_title = get_field('aus1_title') ?? '';
-        $aus1_description = get_field('aus1_description') ?? '';
-        $aus1_image = get_field('aus1_image') ?? '';
+        $award_slider = get_field('aas1_slider_about') ?? '';
 
         return [
             'background_image' => $background_image_sec_one,
-            'sub_title' => $aus1_sub_title,
-            'title' => $aus1_title,
-            'description' => $aus1_description,
-            'image' => $aus1_image,
+            'award_slider' => $award_slider,
         ];
     }
 
