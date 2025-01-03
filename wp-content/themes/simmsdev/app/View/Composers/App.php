@@ -127,6 +127,9 @@ class App extends Composer
         $plans_sub_title = get_field('subtitle_comm_plan', 'option') ?? null;
         $plans_header_img = get_field('header_image_comm_plan', 'option') ?? null;
 
+        $modal_headshot = get_field('header_image', 'option') ?? null;
+        $global_contact_form = get_field('global_contact_form', 'option') ?? null;
+
 
         $hover_logo = get_field('hover_logo', 'option') ?? null;
        
@@ -143,6 +146,8 @@ class App extends Composer
             'plans_title' => $plans_title,
             'plans_sub_title' => $plans_sub_title,
             'plans_header_img' => $plans_header_img,
+            'modal_headshot' => $modal_headshot,
+            'global_contact_form' => $global_contact_form,
             
         
             

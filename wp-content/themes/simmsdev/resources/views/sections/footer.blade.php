@@ -6,7 +6,7 @@
         <div>
           {{-- logo --}}
           <div class="flex flex-col justify-items-center lg:justify-start items-center lg:items-start content-center lg:content-start">
-              <div class="">
+              <div id="footer-logo">
                 @if (function_exists('the_custom_logo'))
                     {!! the_custom_logo() !!}
                 @endif

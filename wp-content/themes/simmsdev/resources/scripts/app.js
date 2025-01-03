@@ -37,7 +37,7 @@ domReady(async () => {
   initFooterContent();
   initCommunityGallery();
   initVideoPlayer();
-  loadMore();
+  // loadMore();
   initLocationMap();
   featureTestimonal();
 });
