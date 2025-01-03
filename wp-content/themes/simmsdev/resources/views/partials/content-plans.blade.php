@@ -1,7 +1,7 @@
 <div class="w-full">
     <article class="group flex flex-col  bg-white shadow-md mb-8 w-full">
         <div class="h-56 md:h-56 xl:h-64 overflow-hidden relative"> 
-            @if($gallery['card_image'])
+            @if (!empty($gallery['card_image']))
                 <img src="{{$gallery['card_image']['sizes']['large']}}" class="object-cover transition duration-700 ease-out group-hover:scale-105" alt="{{$gallery['card_image']['alt']}}" />
             @endif
 

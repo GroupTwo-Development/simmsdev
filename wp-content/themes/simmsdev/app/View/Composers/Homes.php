@@ -37,10 +37,12 @@ class Homes extends Composer
      */
     public function gallery_data()
     {
-        return array(
-            'card_image' => collect($this->fields()['photos'])->first(),
-            'slider_gallery' => collect($this->fields()['photos'])
-        );
+        $photos = $this->fields()['photos'] ?? []; // Ensure 'photos' exists, default to an empty array if not
+    
+        return [
+            'card_image' => collect($photos)->first(), // Get the first item from the 'photos' array
+            'slider_gallery' => collect($photos), // Collect all photos
+        ];
     }
 
     public function homeCardItems()
@@ -179,99 +181,74 @@ class Homes extends Composer
 
     public function associatedFloorplans()
     {
-        $asociated_plans = [];
         $associatedPlan = collect($this->fields()['home_floorplan']) ?? [];
         $publishedFloorplans = $associatedPlan->filter(function ($floorplan) {
             return $floorplan instanceof \WP_Post && $floorplan->post_status === 'publish';
         });
-
-        foreach ($publishedFloorplans as $floorplan) {
-            $plan_beds_group = get_field('plan_beds_group', $floorplan->ID) ?? [];
-            $plan_baths_group = get_field('plan_baths_group', $floorplan->ID) ?? [];
-            $half_bath_group = get_field('plan_half_baths_group', $floorplan->ID) ?? [];
-
-            $card_image = collect(get_field('plan_photos', $floorplan->ID))->first() ?? null;
-            $slider_gallery = collect(get_field('plan_photos', $floorplan->ID))->toArray() ?? [];
-
-            // Filter for only published "available homes"
-            $plan_available_homes = get_field('plan_available_homes', $floorplan->ID) ?? [];
-            $published_homes = is_array($plan_available_homes)
-            ? array_filter($plan_available_homes, function($home) {
+    
+        // Get the first published floorplan
+        $firstFloorplan = $publishedFloorplans->first();
+    
+        if (!$firstFloorplan) {
+            return null; // No floorplans found
+        }
+    
+        $plan_beds_group = get_field('plan_beds_group', $firstFloorplan->ID) ?? [];
+        $plan_baths_group = get_field('plan_baths_group', $firstFloorplan->ID) ?? [];
+        $half_bath_group = get_field('plan_half_baths_group', $firstFloorplan->ID) ?? [];
+    
+        $card_image = collect(get_field('plan_photos', $firstFloorplan->ID))->first() ?? null;
+        $slider_gallery = collect(get_field('plan_photos', $firstFloorplan->ID))->toArray() ?? [];
+    
+        // Filter for only published "available homes"
+        $plan_available_homes = get_field('plan_available_homes', $firstFloorplan->ID) ?? [];
+        $published_homes = is_array($plan_available_homes)
+            ? array_filter($plan_available_homes, function ($home) {
                 return get_post_status($home->ID) === 'publish';
             })
             : [];
-
-
-            $asociated_plans[] = [
-                'name' => get_field('plan_name', $floorplan->ID) ?? null,
-                'permalink' => get_the_permalink($floorplan),
-                'beds' => $plan_beds_group['Plan_beds'] ?? null,
-                'baths' => $plan_baths_group['plan_full_baths'] ?? null,
-                'half_baths' => $half_bath_group['plan_half_baths'] ?? null,
-                'garages' => get_field('plan_garages', $floorplan->ID) ?? null,
-                'stories' => get_field('plan_stories', $floorplan->ID) ?? null,
-                'plan_base_sqft' => get_field('plan_base_sqft', $floorplan->ID) ?? null,
-                'plan_add_marketing_headline' => get_field('plan_add_marketing_headline', $floorplan->ID) ?? null,
-                'plan_marketing_headline' => get_field('plan_marketing_headline', $floorplan->ID) ?? null,
-                'plan_base_price' => get_field('plan_base_price', $floorplan->ID) ?? null,
-                'card_image' => $card_image,
-                'slider_gallery' => $slider_gallery,
-                'available_homes' => $published_homes,
-            ];
-        }
-
-
-        return $asociated_plans;
+    
+        return [
+            'name' => get_field('plan_name', $firstFloorplan->ID) ?? null,
+            'permalink' => get_the_permalink($firstFloorplan),
+            'beds' => $plan_beds_group['Plan_beds'] ?? null,
+            'baths' => $plan_baths_group['plan_full_baths'] ?? null,
+            'half_baths' => $half_bath_group['plan_half_baths'] ?? null,
+            'garages' => get_field('plan_garages', $firstFloorplan->ID) ?? null,
+            'stories' => get_field('plan_stories', $firstFloorplan->ID) ?? null,
+            'plan_base_sqft' => get_field('plan_base_sqft', $firstFloorplan->ID) ?? null,
+            'plan_add_marketing_headline' => get_field('plan_add_marketing_headline', $firstFloorplan->ID) ?? null,
+            'plan_marketing_headline' => get_field('plan_marketing_headline', $firstFloorplan->ID) ?? null,
+            'plan_base_price' => get_field('plan_base_price', $firstFloorplan->ID) ?? null,
+            'card_image' => $card_image,
+            'slider_gallery' => $slider_gallery,
+            'available_homes' => $published_homes,
+        ];
     }
+    
 
     public function associatedCommunity()
     {
-        $associated_community = [];
-
-
+        // Get the 'home_community' field as a collection
         $associatedCommunity = collect($this->fields()['home_community']) ?? [];
-
-
-        // Filter homes by checking if each item is a WP_Post object and has 'publish' status
-        $publishedCommunity = $associatedCommunity->filter(function ($community) {
+    
+        // Find the first community that is a WP_Post object with 'publish' status
+        $firstPublishedCommunity = $associatedCommunity->first(function ($community) {
             return $community instanceof \WP_Post && $community->post_status === 'publish';
         });
-
-        // If there are no published homes, return an empty array
-        if ($publishedCommunity->isEmpty()) {
-            return [
-                'totalhomes' => 0,
-                'homes' => []
-            ];
+    
+        // If no published community exists, return null
+        if (!$firstPublishedCommunity) {
+            return null;
         }
-
-        foreach ($publishedCommunity as $community) {
-
-
-            // $published_plan = is_array($assigned_plan_in_home)
-            // ? array_filter($assigned_plan_in_home, function($plan) {
-            //     return get_post_status($plan->ID) === 'publish';
-            // })
-            // : [];
-
-            // $first_published_plan = $published_plan[0] ?? null;
-
-
-
-            $associated_homes[] = [
-                'title_home' => get_the_title($community),
-                'permalink' => get_the_permalink($community),
-
-                // 'assigned_plan' => $first_published_plan,
-                // 'assigned_plan_permalink' => $first_published_plan ? get_permalink($first_published_plan->ID) : null,
-            ];
-        }
-
+    
+        // Return data for the first published community
         return [
-
-            'community' => $associated_homes
+            'title_home' => get_the_title($firstPublishedCommunity),
+            'permalink'  => get_the_permalink($firstPublishedCommunity),
         ];
     }
+    
 
 
     public function video_converter()

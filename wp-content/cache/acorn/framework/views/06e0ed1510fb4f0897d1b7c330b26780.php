@@ -1,13 +1,14 @@
+
 <div class="w-full">
     <article class="group flex flex-col overflow-hidden bg-white shadow-md mb-8 w-full">
         <div class="h-56 md:h-56 xl:h-64 overflow-hidden relative">
-            <?php if($homes_items['status']['value'] == 'Sold'): ?>
-                <img src="<?= \Roots\asset('/assets/just-sold.jpg'); ?> " class="object-cover transition duration-700 ease-out group-hover:scale-105 bg-cover object-center w-full" alt="<?php echo e($gallery['card_image']['alt']); ?>" />
-                <?php else: ?>
-                <?php if($gallery['card_image']): ?>
-                    <img src="<?php echo e($gallery['card_image']['sizes']['large']); ?>" class="object-cover transition duration-700 ease-out group-hover:scale-105 bg-cover object-center " alt="<?php echo e($gallery['card_image']['alt']); ?>" />
-                <?php endif; ?>
+        <?php if(is_array($homes_items) && isset($homes_items['status']) && isset($homes_items['status']['value']) && $homes_items['status']['value'] == 'Sold'): ?>
+            <img src="<?= \Roots\asset('/assets/just-sold.jpg'); ?>" class="object-cover transition duration-700 ease-out group-hover:scale-105 bg-cover object-center w-full" alt="<?php echo e($gallery['card_image']['alt']); ?>" />
+        <?php else: ?>
+            <?php if(!empty($gallery['card_image'])): ?>
+                <img src="<?php echo e($gallery['card_image']['sizes']['large']); ?>" class="object-cover transition duration-700 ease-out group-hover:scale-105 bg-cover object-center" alt="<?php echo e($gallery['card_image']['alt']); ?>" />
             <?php endif; ?>
+        <?php endif; ?>
 
             <?php if($homes_items['marketing_switch'] == 'yes'): ?>
                 <div class="bg-simms-gold absolute bottom-0 z-[1] w-full px-6 py-1.5">
@@ -23,24 +24,24 @@
                 </div>
             </div>
 
-            <?php if(isset($associated_floorplans[0]) || isset($associated_community['community'][0])): ?>
+            <?php if(isset($associated_floorplans) || isset($associated_community)): ?>
                 <div class="border-b-[1px] border-simms-gold">
                     <div class="pb-3 flex flex-row justify-start items-center content-center space-x-3">
-                        <?php if(isset($associated_community['community'][0])): ?>
+                        <?php if(isset($associated_community)): ?>
                             <div class="px-3 flex flex-col items-start text-left">
 
                                 <span class="block font-normal text-sm uppercase">Community:</span>
                                 <span class="text-sm font-medium capitalize block">
-                                    <a href="<?php echo e($associated_community['community'][0]['permalink']); ?>" class="hover:text-simms-gold"><?php echo $associated_community['community'][0]['title_home']; ?></a>
+                                    <a href="<?php echo e($associated_community['permalink']); ?>" class="hover:text-simms-gold"><?php echo $associated_community['title_home']; ?></a>
                                 </span>
                             </div>
                         <?php endif; ?>
 
-                        <?php if(!empty($associated_floorplans[0])): ?>
+                        <?php if(!empty($associated_floorplans)): ?>
                             <div class="px-3 flex flex-col items-start text-left">
                                 <span class="block font-normal text-sm uppercase">Floorplan:</span>
                                 <span class="text-sm font-medium capitalize block">
-                                    <a href="<?php echo e($associated_floorplans[0]['permalink']); ?>" class="hover:text-simms-gold"><?php echo $associated_floorplans[0]['name']; ?></a>
+                                    <a href="<?php echo e($associated_floorplans['permalink']); ?>" class="hover:text-simms-gold"><?php echo $associated_floorplans['name']; ?></a>
                                 </span>
                             </div>
                         <?php endif; ?>
