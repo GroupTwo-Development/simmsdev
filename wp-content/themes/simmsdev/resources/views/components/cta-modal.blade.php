@@ -18,11 +18,10 @@
                 </div>
             </div>
         </header>
-        
+    
         <div class="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
            {!! $primaryPageHeader['global_contact_form'] !!}
         </div>
-        
     </div>
 </div>
 

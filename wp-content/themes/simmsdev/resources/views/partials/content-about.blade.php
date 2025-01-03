@@ -71,6 +71,7 @@
                        @endif
                    </div>
                @endif
+               {{-- removed backgroundbg --}}
 
                {{-- image content --}}
                @if ($aboutUsSectionOne['award_slider'])

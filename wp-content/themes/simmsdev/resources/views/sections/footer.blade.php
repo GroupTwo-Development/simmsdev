@@ -26,6 +26,7 @@
                         {{ App\format_phone_number($main_phone_Number['phone'] ) }}
                     </a>
                   @endif
+                  {{-- changes --}}
                 </div>
               </div>
           </div>
