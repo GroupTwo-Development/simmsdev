@@ -6,7 +6,7 @@
         <div>
           
           <div class="flex flex-col justify-items-center lg:justify-start items-center lg:items-start content-center lg:content-start">
-              <div class="">
+              <div id="footer-logo">
                 <?php if(function_exists('the_custom_logo')): ?>
                     <?php echo the_custom_logo(); ?>
 
@@ -29,6 +29,7 @@
 
                     </a>
                   <?php endif; ?>
+                  
                 </div>
               </div>
           </div>

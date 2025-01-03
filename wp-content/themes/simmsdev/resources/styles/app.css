@@ -464,8 +464,11 @@ p {
   @apply text-simms-gold border-b-[2px] border-simms-gold hover:text-white hover:border-white !important;
 }
 
+.custom-logo-link .custom-logo-link {
+  @apply block;
+}
 .custom-logo-link img {
-  @apply w-[207px] h-[65px];
+  @apply max-w-[180px] xl:max-w-[199px] h-auto object-contain;
 }
 
 .desktop-filter .facetwp-facet-_categories {
@@ -497,4 +500,11 @@ p {
 
 .primary-search-page li.current-menu-item a {
   @apply text-simms-gold;
+}
+
+#footer-logo .custom-logo-link img {
+  object-fit: contain;
+  height: auto;
+  width: auto;
+  max-width: 240px;
 }

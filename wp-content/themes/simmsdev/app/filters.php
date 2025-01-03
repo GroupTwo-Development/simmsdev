@@ -65,8 +65,8 @@ add_filter( 'pre_get_posts', function($query){
 add_filter( 'pre_get_posts', function($query){
     if( $query->is_main_query() && !is_admin() && is_post_type_archive( 'homes' ) ) {
         $query->set( 'posts_per_page', 6 );
-        $query->set( 'meta_key', 'home_name' ); 
-        $query->set( 'orderby', 'meta_value' );
+        $query->set('post_status', 'publish');
+        $query->set( 'orderby', 'title' );
         $query->set( 'order', 'ASC' );
     }
     return $query;

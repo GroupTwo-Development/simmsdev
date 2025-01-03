@@ -9,8 +9,8 @@
                 </div>
             </div>
             <div class="w-[50%] bg-primary-green">
-                <div class="flex flex-row justify-start  items-center">
-                    <img src="@asset('images/cta.png')" class="max-w-20  object-cover object-top" alt="cta">
+                <div class="flex flex-row justify-start  items-center w-full h-full">
+                    <img src="{{ $primaryPageHeader['modal_headshot'] }}" class="max-w-20 h-full object-cover bg-cover object-top" alt="cta">
                     <div class="pl-4">
                         <span class="block text-simms-gold text-xl text-left">Contact us:</span>
                         <a href="tel:1-800-123-4567" class="text-white font-semibold text-lg hover:text-simms-gold transition-all ease-in-out">1-800-123-4567</a>
@@ -18,12 +18,10 @@
                 </div>
             </div>
         </header>
+    
         <div class="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
-
-        {!! do_shortcode('[contact-form-7 id="576b2c7" title="Contact form 1"]') !!}
-        
+           {!! $primaryPageHeader['global_contact_form'] !!}
         </div>
-        
     </div>
 </div>
 

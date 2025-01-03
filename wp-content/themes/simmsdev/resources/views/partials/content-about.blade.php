@@ -22,10 +22,10 @@
 @endif
 
 @if ($aboutUsSectionOne)
-    <section id="section_one" class="bg-cover object-cover relative lg:mt-36 xl:mt-56 award-section-three" style="background-image: url('{{ $aboutUsSectionOne['background_image'] }}')">
-        <div class="container mx-auto py-10 ">
+    <section id="section_one" class="bg-cover object-cover relative lg:mt-36 xl:mt-56 award-section-three">
+        <div class="container mx-auto py-10">
 
-            <div class="bg-white shadow-lg flex flex-col lg:flex-row lg:justify-center w-full lg:-mt-28 xl:-mt-36 lg:mb-10 xl:max-w-screen-xl xl:mx-auto">
+            <div class="bg-white shadow-lg flex flex-col lg:flex-row lg:justify-center w-full lg:-mt-28  lg:mb-10 xl:max-w-screen-xl xl:mx-auto">
 
                 {{-- Content Right --}}
                 @if ($aboutUsSectionOne['award_slider'])
@@ -71,6 +71,7 @@
                        @endif
                    </div>
                @endif
+               {{-- removed backgroundbg --}}
 
                {{-- image content --}}
                @if ($aboutUsSectionOne['award_slider'])
