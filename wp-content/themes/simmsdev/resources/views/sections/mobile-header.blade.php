@@ -24,7 +24,7 @@
 </div>
 
  <!-- drawer component -->
- <div id="drawer-menu" class="fixed top-[90px] lg:top-[105px]  left-0 z-40 h-screen py-4 overflow-y-auto transition-transform -translate-x-full bg-white w-80 shadow-md" tabindex="-1" aria-labelledby="drawer-label">
+ <div id="drawer-menu" class="fixed top-[90px] lg:top-[115px]  left-0 z-40 h-screen py-4 overflow-y-auto transition-transform -translate-x-full bg-white w-80 shadow-md" tabindex="-1" aria-labelledby="drawer-label">
     <nav class="nav-primary" aria-label="{{ wp_get_nav_menu_name('primary_navigation_mobile') }}">
         {!! wp_nav_menu([
             'theme_location' => 'primary_navigation_mobile',
