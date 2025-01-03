@@ -14,7 +14,7 @@
               </div>
               <div>
                 <div>
-                    <a href="https://www.google.com/maps/dir/?api=1&destination=<?php echo e(urlencode($quickLinkHeader['address1'] . ' ' . $quick_links_header['address2'] . ', ' . $quickLinkHeader['city'] . ', ' . $quickLinkHeader['state'] . ' ' . $quickLinkHeader['zip'])); ?>"
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=<?php echo e(urlencode($quickLinkHeader['address1'] . ' ' . $quickLinkHeader['address2'] . ', ' . $quickLinkHeader['city'] . ', ' . $quickLinkHeader['state'] . ' ' . $quickLinkHeader['zip'])); ?>"
                       target="_blank" 
                       rel="noopener noreferrer" 
                       class="text-simms-gold text-center lg:text-left transition mt-3 block">
@@ -38,7 +38,7 @@
         <div class=footer-content-right>
           <span class="font-arno_pro_subhead text-center lg:text-left font-normal text-2xl lg:text-3xl mb-2 text-white block">Stay Connected</span>
           
-          <?php if($quickLinkHeader): ?>
+          <?php if(isset($quickLinkHeader)): ?>
             <div class="">
               <ul class="social-media flex flex-row justify-center lg:justify-start gap-3">
                 <li><a href="<?php echo e($quickLinkHeader['fb']); ?>" target="_blank" class="footer-social-media"><i class="fa-brands fa-facebook-f"></i></a></li>
