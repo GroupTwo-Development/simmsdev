@@ -467,6 +467,7 @@ p {
 .custom-logo-link .custom-logo-link {
   @apply block;
 }
+
 .custom-logo-link img {
   @apply max-w-[180px] xl:max-w-[199px] h-auto object-contain;
 }
