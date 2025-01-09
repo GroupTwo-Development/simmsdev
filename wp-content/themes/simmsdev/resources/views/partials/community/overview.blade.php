@@ -97,6 +97,8 @@
                         @endif
                     </div>
                 </div>
+
+                
                 {{-- price --}}
                 @if ($communities_items['min_price'])
                     <div class="py-2">
