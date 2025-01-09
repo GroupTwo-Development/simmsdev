@@ -1,6 +1,6 @@
 <?php if($sliders): ?>
     <section id="bannerSlider-area" class="bannerSlider-area relative w-full overflow-hidden">
-        <div class="swiper bannerSlider h-64 sm:h-72 md:h-96 lg:h-[480px] xl:h-[600px]">
+        <div class="swiper bannerSlider h-64 sm:h-72 md:h-96 lg:h-[550px] xl:h-[700px] 2xl:h-[750px]">
             <div class="swiper-wrapper h-full">
                 <?php $__currentLoopData = $sliders; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $slide): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <div class="swiper-slide h-full">

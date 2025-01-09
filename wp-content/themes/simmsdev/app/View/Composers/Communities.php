@@ -81,6 +81,7 @@ class Communities extends Composer
         $join_the_vip_list = $community_coming_soon['join_the_vip_list'] ?? '';
         $comm_address = get_field('comm_address') ?? '';
         $comm_postal_code = get_field('comm_postal_code') ?? '';
+        $downloadable_brochure = get_field('downloadable_brochure') ?? '';
     
 
         return [
@@ -110,6 +111,7 @@ class Communities extends Composer
             'directions' => $Comm_directions_text,
             'coming_soon_switch' => $coming_coming_soon_swtich,
             'join_the_vip_list' => $join_the_vip_list,
+            'downloadable_brochure' => $downloadable_brochure,
             
        
         ];

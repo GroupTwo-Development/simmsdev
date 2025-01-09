@@ -79,8 +79,26 @@
                                 </div>
                             </div>
                         @endif
+
+                        @if ($communities_items['downloadable_brochure'] )
+                            <div class="border-b-[1px] border-simms-gold">
+                            <div class="pb-3 pt-3 flex flex-row justify-start items-center content-center space-x-3">
+                                @if ($communities_items['downloadable_brochure'])
+
+                                <div class=" flex flex-row items-start text-left gap-1">
+                                    <span class="block font-normal text-sm"><i class="fa-solid fa-file-arrow-down text-simms-lime text-lg"></i></span>
+                                    <span class="text-sm font-medium capitalize block">
+                                    <a href="{{ $communities_items['downloadable_brochure']['url'] }}" class="hover:text-simms-gold">Download Brochure</a>
+                                    </span>
+                                </div>
+                                @endif
+                            </div>
+                            </div>
+                        @endif
                     </div>
                 </div>
+
+                
                 {{-- price --}}
                 @if ($communities_items['min_price'])
                     <div class="py-2">
