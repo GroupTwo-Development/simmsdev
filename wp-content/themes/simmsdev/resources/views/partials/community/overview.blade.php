@@ -23,7 +23,7 @@
                                         <div class="flex flex-row  md:flex-row lg:flex-row xl:flex-row  gap-2 items-center content-center">
                                             <img class="bg-cover object-cover" src="@asset('images/bbeds-icon.png') " /> 
                                             <div>
-                                                <span class="text-sm font-[500]">{{ isset($floorplan_item['min_beds']) }}</span>
+                                                <span class="text-sm font-[500]">{{ $floorplan_item['min_beds'] }}</span>
                                                 <span class="text-sm font-[500] uppercase tracking-[0.06em]">Beds</span>
                                             </div>
                                         </div>
