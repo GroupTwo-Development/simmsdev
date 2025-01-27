@@ -1,0 +1,178 @@
+<?php
+
+add_action('init', 'design_center');
+
+function design_center()
+{
+	if( function_exists('acf_add_local_field_group') ):
+
+		acf_add_local_field_group(array(
+			'key' => 'group_63485cd28d510',
+			'title' => 'Design Center',
+			'fields' => array(
+				array(
+					'key' => 'field_63485d6259f84',
+					'label' => 'Intro Content',
+					'name' => '',
+					'type' => 'tab',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'placement' => 'left',
+					'endpoint' => 0,
+					'no_preference' => 0,
+					'acfe_field_group_condition' => 0,
+				),
+				array(
+					'key' => 'field_63485d7d59f85',
+					'label' => 'Intro Title',
+					'name' => 'intro_title',
+					'type' => 'text',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => '',
+					'maxlength' => '',
+					'acfe_field_group_condition' => 0,
+				),
+				array(
+					'key' => 'field_63485d8c59f86',
+					'label' => 'Intro Content',
+					'name' => 'intro_content',
+					'type' => 'textarea',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
+					'placeholder' => '',
+					'maxlength' => 200,
+					'rows' => 3,
+					'new_lines' => 'wpautop',
+					'acfe_textarea_code' => 0,
+					'acfe_field_group_condition' => 0,
+				),
+
+
+                array(
+                    'key' => 'field_6499b98ec688c',
+                    'label' => 'Video',
+                    'name' => '',
+                    'aria-label' => '',
+                    'type' => 'tab',
+                    'instructions' => '',
+                    'required' => 0,
+                    'conditional_logic' => 0,
+                    'wrapper' => array(
+                        'width' => '',
+                        'class' => '',
+                        'id' => '',
+                    ),
+                    'acfe_field_group_condition' => 0,
+                    'placement' => 'top',
+                    'endpoint' => 0,
+                    'no_preference' => 0,
+                ),
+                array(
+                    'key' => 'field_6499b9b0c688d',
+                    'label' => 'Video URL',
+                    'name' => 'video_url',
+                    'aria-label' => '',
+                    'type' => 'url',
+                    'instructions' => '',
+                    'required' => 0,
+                    'conditional_logic' => 0,
+                    'wrapper' => array(
+                        'width' => '',
+                        'class' => '',
+                        'id' => '',
+                    ),
+                    'acfe_field_group_condition' => 0,
+                    'default_value' => '',
+                    'placeholder' => '',
+                ),
+
+				array(
+					'key' => 'field_63485dcf59f88',
+					'label' => 'Intro Gallery',
+					'name' => 'intro_gallery',
+					'type' => 'gallery',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'return_format' => 'array',
+					'preview_size' => 'medium',
+					'insert' => 'append',
+					'library' => 'all',
+					'min' => 6,
+					'max' => 6,
+					'min_width' => '',
+					'min_height' => '',
+					'min_size' => '',
+					'max_width' => '',
+					'max_height' => '',
+					'max_size' => '',
+					'mime_types' => '',
+					'acfe_field_group_condition' => 0,
+				),
+
+			),
+			'location' => array(
+				array(
+					array(
+						'param' => 'post_template',
+						'operator' => '==',
+						'value' => 'page-design-center.blade.php',
+					),
+				),
+			),
+			'menu_order' => 0,
+			'position' => 'acf_after_title',
+			'style' => 'default',
+			'label_placement' => 'left',
+			'instruction_placement' => 'label',
+			'hide_on_screen' => array(
+				0 => 'author',
+				1 => 'block_editor',
+				2 => 'categories',
+				3 => 'comments',
+				4 => 'the_content',
+				5 => 'discussion',
+				6 => 'excerpt',
+				7 => 'featured_image',
+				8 => 'format',
+			),
+			'active' => true,
+			'description' => '',
+			'show_in_rest' => 0,
+			'acfe_autosync' => '',
+			'acfe_form' => 0,
+			'acfe_display_title' => '',
+			'acfe_meta' => '',
+			'acfe_note' => '',
+		));
+
+	endif;
+}

@@ -96,7 +96,7 @@
                             @if ($energySectionTwo['description'])
                                 <ul class="text-white">
                                     @foreach ($energySectionTwo['description'] as $item)
-                                        <li class="flex flex-row items-baseline justify-center gap-2 mb-4">
+                                        <li class="flex flex-row items-baseline gap-2 mb-4">
                                             <svg id="Component_50_1" data-name="Component 50 – 1" xmlns="http://www.w3.org/2000/svg" width="11" height="13" viewBox="0 0 11 13">
                                                 <path id="Polygon_3" data-name="Polygon 3" d="M6.5,0,13,11H0Z" transform="translate(11) rotate(90)" fill="#cec778"/>
                                               </svg>
