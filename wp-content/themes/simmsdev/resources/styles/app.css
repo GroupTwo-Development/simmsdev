@@ -297,7 +297,7 @@ p {
 }
 
 .team-photo img {
-  @apply bg-cover bg-center w-full object-cover object-center sm:h-[300px];
+  @apply bg-cover bg-center w-full object-cover object-top sm:h-[300px];
 }
 
 .imag-full-h img {
