@@ -63,3 +63,12 @@ collect(['setup', 'filters', 'helpers', 'custom-post-types'])
             );
         }
     });
+
+
+add_action('init', 'zillowFeed');
+function zillowFeed(){
+    add_feed('zillow', 'zillowRSS');
+}
+function zillowRSS(){
+    get_template_part('feeds/zillow/xml', 'zillow');
+}

@@ -19,7 +19,7 @@
                
 
                 @if ($communities_items['sitemap_url'])
-                <x-cta-link href="{{ $communities_items['sitemap_url'] }}" class="text-secondary-green border-b-secondary-green mt-3 md:mt-5 hover:text-simms-gold transition-all ease-in-out">{{ __('View Interactive Site Map') }}</x-cta-link>
+                <x-cta-link href="{{ $communities_items['sitemap_url'] }}" target="_blank"  class="text-secondary-green border-b-secondary-green mt-3 md:mt-5 hover:text-simms-gold transition-all ease-in-out">{{ __('View Interactive Site Map') }}</x-cta-link>
                 @endif
             </div>
         </div>
