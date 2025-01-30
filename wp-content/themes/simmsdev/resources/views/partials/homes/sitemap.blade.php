@@ -29,7 +29,7 @@
                       </div>
 
                       @if ($homes_items['interactive_plan'])
-                        <x-cta-link href="{{ $homes_items['interactive_plan'] }}" class="text-secondary-green border-b-secondary-green mt-3 md:mt-5 hover:text-simms-gold transition-all ease-in-out">{{ __('View Interactive Plans') }}
+                        <x-cta-link href="{{ $homes_items['interactive_plan'] }}" target="_blank" class="text-secondary-green border-b-secondary-green mt-3 md:mt-5 hover:text-simms-gold transition-all ease-in-out">{{ __('View Interactive Plans') }}
                         </x-cta-link>
                       @endif
                   </div>
