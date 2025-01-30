@@ -71,3 +71,15 @@ add_filter( 'pre_get_posts', function($query){
     }
     return $query;
 } );
+
+
+  add_filter( 'facetwp_map_marker_args', function( $args, $post_id ) {
+    $args['icon'] = [
+      'url' => '/wp-content/uploads/2025/01/marker.png', // set your theme image path here
+      'scaledSize' => [
+        'width' => 30,
+        'height' => 40
+      ]
+    ];
+    return $args;
+  }, 10, 2 );
