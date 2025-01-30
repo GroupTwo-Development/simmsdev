@@ -101,6 +101,8 @@
                 <div class="community-wrapper relative facetwp-template grid grid-cols-1 sm:g sm:grid-cols-2 sm:gap-3 lg:grid-cols-3 content  justify-center items-start content-center lg:pt-12">
                     <?php while(have_posts()): ?> <?php (the_post()); ?>
                         <?php echo $__env->make('partials.content-homes', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+
+                        
                     <?php endwhile; ?>
                 </div>
                 <?php if (isset($component)) { $__componentOriginal44d6f84b10a19020b7858e09eb0b603d = $component; } ?>
@@ -125,25 +127,33 @@
 <?php endif; ?>
             </div>
 
+
+
           
         </div>
 
-
-        
         <div class="container mx-auto">
-          <div class="">
-            <div x-show="showMap" 
-                x-transition:enter="transition ease-out duration-300 transform"
-                x-transition:enter-start="opacity-0 -translate-x-full"
-                x-transition:enter-end="opacity-100 translate-x-0"
-                x-transition:leave="transition ease-in duration-300 transform"
-                x-transition:leave-start="opacity-100 translate-x-0"
-                x-transition:leave-end="opacity-0 -translate-x-full"
-            >
-                <h1>Google map</h1>
+            <div class="map-area">
+              <div x-show="showMap" 
+                  x-transition:enter="transition ease-out duration-300 transform"
+                  x-transition:enter-start="opacity-0 -translate-x-full"
+                  x-transition:enter-end="opacity-100 translate-x-0"
+                  x-transition:leave="transition ease-in duration-300 transform"
+                  x-transition:leave-start="opacity-100 translate-x-0"
+                  x-transition:leave-end="opacity-0 -translate-x-full"
+                  class="w-full"
+              >
+  
+              <?php echo do_shortcode('[facetwp facet="available_home_map"]'); ?>
+  
+              
+             
+              </div>
             </div>
           </div>
-        </div>
+
+
+       
     </div>
 
            

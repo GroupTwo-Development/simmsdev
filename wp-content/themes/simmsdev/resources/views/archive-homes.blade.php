@@ -45,30 +45,40 @@
                 <div class="community-wrapper relative facetwp-template grid grid-cols-1 sm:g sm:grid-cols-2 sm:gap-3 lg:grid-cols-3 content  justify-center items-start content-center lg:pt-12">
                     @while(have_posts()) @php(the_post())
                         @include('partials.content-homes')
+
+                        
                     @endwhile
                 </div>
                 <x-load-more />
             </div>
 
+
+
           
         </div>
 
-
-        {{-- Map Section - only visible when showMap is true --}}
         <div class="container mx-auto">
-          <div class="">
-            <div x-show="showMap" 
-                x-transition:enter="transition ease-out duration-300 transform"
-                x-transition:enter-start="opacity-0 -translate-x-full"
-                x-transition:enter-end="opacity-100 translate-x-0"
-                x-transition:leave="transition ease-in duration-300 transform"
-                x-transition:leave-start="opacity-100 translate-x-0"
-                x-transition:leave-end="opacity-0 -translate-x-full"
-            >
-                <h1>Google map</h1>
+            <div class="map-area">
+              <div x-show="showMap" 
+                  x-transition:enter="transition ease-out duration-300 transform"
+                  x-transition:enter-start="opacity-0 -translate-x-full"
+                  x-transition:enter-end="opacity-100 translate-x-0"
+                  x-transition:leave="transition ease-in duration-300 transform"
+                  x-transition:leave-start="opacity-100 translate-x-0"
+                  x-transition:leave-end="opacity-0 -translate-x-full"
+                  class="w-full"
+              >
+  
+              @shortcode('[facetwp facet="available_home_map"]')
+  
+              {{-- {!! facetwp_display('facet', 'community_map') !!} --}}
+             
+              </div>
             </div>
           </div>
-        </div>
+
+
+       
     </div>
 
            {{-- page content --}}

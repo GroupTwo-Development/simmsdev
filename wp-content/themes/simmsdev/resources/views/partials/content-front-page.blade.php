@@ -168,7 +168,7 @@
                                         @endforeach
                                     </div>
                                     <div class="swiper-pagination"></div>
-                                    <div class="swiper-button-next bg-primary-green rounded-full h-[28px] w-[28px] flex items-center justify-center">
+                                    <div class="swiper-button-next bg-primary-green rounded-full h-[28px] w-[28px] flex https://simmsdev.com/wp-content/uploads/2024/12/Simms-Logo_White.pngitems-center justify-center">
                                         <svg id="Component_47_1" data-name="Component 47 – 1" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35">
                                             <g id="Group_586" data-name="Group 586" transform="translate(35 34.875) rotate(180)">
                                               <circle id="Ellipse_153" data-name="Ellipse 153" cx="17.5" cy="17.5" r="17.5" transform="translate(0 -0.125)" fill="#CEC778"/>
