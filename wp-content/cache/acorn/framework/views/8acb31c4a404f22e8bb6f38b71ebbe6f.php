@@ -38,7 +38,7 @@
 <?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag && $constructor = (new ReflectionClass(App\View\Components\CtaLink::class))->getConstructor()): ?>
 <?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
 <?php endif; ?>
-<?php $component->withAttributes(['href' => ''.e($homes_items['interactive_plan']).'','class' => 'text-secondary-green border-b-secondary-green mt-3 md:mt-5 hover:text-simms-gold transition-all ease-in-out']); ?><?php echo e(__('View Interactive Plans')); ?>
+<?php $component->withAttributes(['href' => ''.e($homes_items['interactive_plan']).'','target' => '_blank','class' => 'text-secondary-green border-b-secondary-green mt-3 md:mt-5 hover:text-simms-gold transition-all ease-in-out']); ?><?php echo e(__('View Interactive Plans')); ?>
 
                          <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>

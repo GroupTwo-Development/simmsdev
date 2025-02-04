@@ -24,16 +24,17 @@
             <?php if(isset($floorplan_item['min_beds']) || isset($floorplan_item['min_bath'] )|| $communities_items['min_sqft'] || $floorplan_item['baths']): ?>
                 <div class="border-b-[1px] border-simms-gold">
                     <div class="px-3 pb-3 flex flex-row justify-between items-center content-center gap-1">
-                        <?php if(isset($floorplan_item['min_beds'])): ?>
+                        <?php if($floorplan_item['min_beds'] || $floorplan_item['max_beds']): ?>
                             <div class="flex flex-row sm:flex-col md:flex-row lg:flex-col xl:flex-row  gap-2 items-center content-center">
                                 <img class="bg-cover object-cover" src="<?= \Roots\asset('images/bbeds-icon.png'); ?> " /> 
                                 <div>
-                                    <span class="text-sm font-semibold"><?php echo e(($floorplan_item['min_beds'])); ?></span>
+                                    
+                                    <span class="text-sm font-semibold"><?php echo ($floorplan_item['max_beds'] > $floorplan_item['min_beds']) ? ($floorplan_item['min_beds'] . '<i class="text-[12px]">-</i>' . $floorplan_item['max_beds']) : $floorplan_item['min_beds']; ?></span>
                                     <span class="text-sm font-semibold uppercase tracking-[0.06em]">Beds</span>
                                 </div>
                             </div>
                         <?php endif; ?>
-                        <?php if(isset($floorplan_item['min_bath']) && $floorplan_item['max_bath']): ?>
+                        <?php if($floorplan_item['min_bath'] && $floorplan_item['max_bath']): ?>
                             <div class="flex flex-row sm:flex-col md:flex-row lg:flex-col xl:flex-row  gap-2 items-center content-center">
                                 <img class="bg-cover object-cover" src="<?= \Roots\asset('images/bathroom-icon.png'); ?> " /> 
                                 <div>

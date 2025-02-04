@@ -15,7 +15,7 @@
 
             @if ($plans_items['sitemap'])
                 <x-scroll-to-menu-link href="#sitemap">
-                    <x-slot name="title">Sitemap</x-slot>
+                    <x-slot name="title">Floorplan</x-slot>
                 </x-scroll-to-menu-link>
             @endif
            
