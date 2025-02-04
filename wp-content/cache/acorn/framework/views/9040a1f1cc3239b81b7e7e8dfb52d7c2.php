@@ -11,8 +11,8 @@
                     <div class="relative mb-4 md:mb-0">
                         <a href="<?php echo e($elevation['sizes']['large']); ?>" data-fancybox="elevations" class="relative block overflow-hidden h-[250px] lg:h-[200px]">
                             <img alt="<?php echo e($elevation['alt']); ?>" src="<?php echo e($elevation['sizes']['medium']); ?>" class="w-full h-full" />
-                            <div class="absolute bottom-0 left-0 h-full w-full bg-secondary-green bg-opacity-90 text-white text-center py-2 flex flex-col justify-center items-center">
-                                <i class="fa-solid fa-plus text-xl"></i>
+                            <div class="absolute bottom-0 left-0 h-full w-full  bg-opacity-90 text-white text-center py-2 flex flex-col justify-center items-center">
+                                <i class="fa-solid fa-plus text-xl text-simms-lime"></i>
                             </div>
                         </a>
                     </div>

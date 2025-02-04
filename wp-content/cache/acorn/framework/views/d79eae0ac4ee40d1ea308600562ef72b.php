@@ -24,7 +24,7 @@
                                         <div class="flex flex-row  md:flex-row lg:flex-row xl:flex-row  gap-2 items-center content-center">
                                             <img class="bg-cover object-cover" src="<?= \Roots\asset('images/bbeds-icon.png'); ?> " /> 
                                             <div>
-                                                <span class="text-sm font-[500]"><?php echo e($floorplan_item['min_beds']); ?></span>
+                                                <span class="text-sm font-[500]"><?php echo ($floorplan_item['max_beds'] > $floorplan_item['min_beds']) ? ($floorplan_item['min_beds'] . '<i class="text-[12px]">-</i>' . $floorplan_item['max_beds']) : $floorplan_item['min_beds']; ?></span>
                                                 <span class="text-sm font-[500] uppercase tracking-[0.06em]">Beds</span>
                                             </div>
                                         </div>
